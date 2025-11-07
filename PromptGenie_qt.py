@@ -81,12 +81,46 @@ def setup_logging():
 # Инициализация логгера
 logger = setup_logging()
 
-# Декоратор для логирования вызовов методов
-log_method_call = lambda func: lambda *args, **kwargs: (
-    logger.debug(f"Вызов {func.__name__} с аргументами: {args[1:]}, {kwargs}") or 
-    func(*args, **kwargs) and 
-    logger.debug(f"Завершение {func.__name__}")
-) if logger.level <= logging.DEBUG else func
+def log_method_call(func):
+    """Декоратор для логирования вызовов методов.
+    
+    Args:
+        func: Декорируемая функция или метод.
+        
+    Returns:
+        Обертка вокруг функции, добавляющая логирование вызовов.
+    """
+    def wrapper(*args, **kwargs):
+        if logger.level > logging.DEBUG:
+            return func(*args, **kwargs)
+            
+        # Логируем вызов метода
+        logger.debug(
+            "Вызов %s с аргументами: %s, %s",
+            func.__name__,
+            args[1:],  # Пропускаем self
+            kwargs
+        )
+        
+        try:
+            # Вызываем оригинальную функцию
+            result = func(*args, **kwargs)
+            
+            # Логируем успешное завершение
+            logger.debug("Завершение %s", func.__name__)
+            return result
+            
+        except Exception as e:
+            # Логируем исключение, если оно возникло
+            logger.exception("Ошибка в методе %s: %s", func.__name__, str(e))
+            raise
+            
+    # Копируем имя и документацию оригинальной функции
+    wrapper.__name__ = func.__name__
+    wrapper.__doc__ = func.__doc__
+    wrapper.__module__ = func.__module__
+    
+    return wrapper
 
 
 class TooltipCheckBox(QCheckBox):
@@ -105,6 +139,15 @@ class TooltipCheckBox(QCheckBox):
 
 
 class PromptGenie(QMainWindow):
+    def get_data_dir(self):
+        """Возвращает путь к директории с данными приложения."""
+        if getattr(sys, 'frozen', False):
+            # Если приложение упаковано (например, в exe)
+            return Path(sys.executable).parent
+        else:
+            # При запуске из исходников
+            return Path(__file__).parent
+
     def __init__(self):
         super(QMainWindow, self).__init__()
         logger.info("Инициализация приложения PromptGenie")
@@ -114,6 +157,7 @@ class PromptGenie(QMainWindow):
             self.themes = []
             self.kw_data = {}
             self.selected_words = {}
+            self.data_dir = self.get_data_dir()
             
             # Сначала загружаем данные
             logger.debug("Загрузка данных...")
@@ -154,32 +198,52 @@ class PromptGenie(QMainWindow):
             return True
 
     def safe_json_load(self, file_path: str, default: Any = None, schema: Optional[Dict] = None) -> Any:
-        """Безопасная загрузка JSON с обработкой ошибок."""
+        """Безопасная загрузка JSON с обработкой ошибок.
+        
+        Args:
+            file_path: Путь к файлу JSON (может быть строкой или объектом Path).
+            default: Значение по умолчанию, возвращаемое при ошибке загрузки.
+            schema: Схема для валидации JSON (опционально).
+            
+        Returns:
+            Загруженные данные или значение по умолчанию в случае ошибки.
+        """
         try:
-            file_path = str(Path(file_path).resolve())  # Convert to absolute path
-            if not os.path.exists(file_path):
+            # Преобразуем в Path, если это строка
+            file_path = Path(file_path) if isinstance(file_path, str) else file_path
+            file_path = file_path.resolve()  # Получаем абсолютный путь
+            
+            # Проверяем существование файла
+            if not file_path.exists():
                 error_msg = f"Файл не найден: {file_path}"
-                logger.error(error_msg)
+                logger.warning(error_msg)
                 if default is not None:
                     return default
                 raise FileNotFoundError(error_msg)
 
-            with open(file_path, 'r', encoding='utf-8') as f:
-                try:
+            # Читаем и парсим JSON
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                    if schema and not self.validate_json_schema(data, schema, file_path):
-                        return default if default is not None else {}
-                    return data
-                except json.JSONDecodeError as e:
-                    error_msg = f"Ошибка разбора JSON в файле {file_path}: {str(e)}"
-                    logger.error(error_msg)
-                    QMessageBox.critical(
-                        self, 
-                        "Ошибка формата", 
-                        f"Ошибка в файле {file_path}:\n{str(e)}\n\n"
-                        "Проверьте правильность формата JSON."
-                    )
-                    return default if default is not None else {}
+                    
+                # Валидируем по схеме, если она предоставлена
+                if schema and not self.validate_json_schema(data, schema, str(file_path)):
+                    if default is not None:
+                        return default
+                    return {}
+                    
+                return data
+                
+            except json.JSONDecodeError as e:
+                error_msg = f"Ошибка разбора JSON в файле {file_path}: {str(e)}"
+                logger.error(error_msg)
+                QMessageBox.critical(
+                    self, 
+                    "Ошибка формата", 
+                    f"Ошибка в файле {file_path}:\n{str(e)}\n\n"
+                    "Проверьте правильность формата JSON."
+                )
+                return default if default is not None else {}
 
         except Exception as e:
             error_msg = f"Ошибка при загрузке файла {file_path}: {str(e)}"
@@ -192,19 +256,38 @@ class PromptGenie(QMainWindow):
             return default if default is not None else {}
 
     def create_backup(self, file_path: str) -> None:
-        """Создание резервной копии файла."""
+        """Создание резервной копии файла.
+        
+        Args:
+            file_path: Путь к файлу, для которого создается резервная копия.
+        """
         try:
             from datetime import datetime
-            backup_path = f"{file_path}.{datetime.now().strftime('%Y%m%d_%H%M%S')}.bak"
+            file_path = Path(file_path)
+            if not file_path.exists():
+                logger.warning(f"Файл для резервного копирования не найден: {file_path}")
+                return
+                
+            # Создаем имя резервной копии с временной меткой
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            backup_path = file_path.parent / f"{file_path.stem}_{timestamp}{file_path.suffix}.bak"
+            
+            # Копируем файл
             import shutil
             shutil.copy2(file_path, backup_path)
             logger.info(f"Создана резервная копия: {backup_path}")
+            
         except Exception as e:
-            logger.error(f"Не удалось создать резервную копию {file_path}: {str(e)}")
+            error_msg = f"Не удалось создать резервную копию {file_path}: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            raise RuntimeError(error_msg) from e
 
     def load_data(self) -> None:
         """Загрузка данных из JSON файлов."""
         logger.info("Начало загрузки данных")
+        
+        # Словарь для быстрого поиска категории по слову
+        self.word_to_category = {}
         
         # Схема для валидации keyword_library.json
         keyword_schema = {
@@ -231,23 +314,34 @@ class PromptGenie(QMainWindow):
                 }
             }
         }
-
-        # Получаем абсолютный путь к директории скрипта
-        script_dir = os.path.dirname(os.path.abspath(__file__))
         
-        # Загрузка тем
-        themes_path = os.path.join(script_dir, "theme_prompts.json")
-        logger.debug(f"Загрузка тем из {themes_path}")
-        themes_data = self.safe_json_load(themes_path, {"themes": []})
-        self.themes = themes_data.get("themes", [])
-        logger.info(f"Загружено {len(self.themes)} тем")
-        logger.info(f"Загружено шаблонов: {len(self.themes)}")
+        try:
+            # Формируем пути к файлам
+            themes_path = self.data_dir / "theme_prompts.json"
+            keywords_path = self.data_dir / "keyword_library.json"
+            
+            logger.debug(f"Загрузка тем из {themes_path}")
+            themes_data = self.safe_json_load(str(themes_path), {"themes": []})
+            self.themes = themes_data.get("themes", [])
+            logger.info(f"Загружено {len(self.themes)} тем")
 
-        # Загрузка ключевых слов
-        kw_path = os.path.join(script_dir, "keyword_library.json")
-        logger.debug(f"Загрузка ключевых слов из {kw_path}")
-        kw_data = self.safe_json_load(kw_path, {"keywords": {}}, keyword_schema)
-        self.kw_data = kw_data.get("keywords", {})
+            # Загрузка ключевых слов
+            logger.debug(f"Загрузка ключевых слов из {keywords_path}")
+            kw_data = self.safe_json_load(keywords_path, {"keywords": {}}, keyword_schema)
+            self.kw_data = kw_data.get("keywords", {})
+            
+            # Создаем словарь для быстрого поиска категории по слову
+            for category, words in self.kw_data.items():
+                for word_info in words:
+                    word = word_info.get("word")
+                    if word:
+                        self.word_to_category[word] = category
+            
+            logger.info(f"Загружено {sum(len(v) for v in self.kw_data.values())} ключевых слов в {len(self.kw_data)} категориях")
+            
+        except Exception as e:
+            logger.error(f"Ошибка при загрузке данных: {str(e)}", exc_info=True)
+            raise
         logger.info(f"Загружено категорий: {len(self.kw_data)}")
         
         # Логируем статистику по загруженным данным
@@ -446,21 +540,6 @@ class PromptGenie(QMainWindow):
             
             r.addWidget(btn_frame)
             
-            # Просмотр шаблона
-            self.template_view = QTextEdit()
-            self.template_view.setReadOnly(True)
-            self.template_view.setStyleSheet("""
-                QTextEdit {
-                    background-color: #252526;
-                    border: 1px solid #444;
-                    border-radius: 4px;
-                    padding: 10px;
-                    font-family: 'Consolas', 'Courier New', monospace;
-                    font-size: 12px;
-                }
-            """)
-            r.addWidget(self.template_view)
-            
             # Добавляем панели в основной макет
             lay.addWidget(left, 1)
             lay.addWidget(right, 2)
@@ -471,25 +550,6 @@ class PromptGenie(QMainWindow):
         except Exception as e:
             logger.error(f"Ошибка при инициализации вкладки шаблонов: {str(e)}", exc_info=True)
             raise
-        self.temp_preview.setReadOnly(True)
-        r.addWidget(self.temp_preview)
-
-        btns = QHBoxLayout()
-        btn_copy = QPushButton("Копировать")
-        btn_copy.clicked.connect(self.copy_template_prompt)
-        btn_edit = QPushButton("Редактировать")
-        btn_edit.clicked.connect(self.edit_current_template)
-        btn_del = QPushButton("Удалить")
-        btn_del.clicked.connect(self.delete_current_template)
-
-        for btn in (btn_copy, btn_edit, btn_del):
-            btn.setFixedHeight(36)
-            btns.addWidget(btn)
-        btns.addStretch()
-        r.addLayout(btns)
-
-        lay.addWidget(left, 1)
-        lay.addWidget(right, 2)
         return w
 
     def refresh_template_list(self):
@@ -528,42 +588,45 @@ class PromptGenie(QMainWindow):
             themes_count = len(self.themes)
             logger.debug(f"Сохранение {themes_count} тем")
             
+            # Определяем пути к файлам
+            themes_path = self.data_dir / "theme_prompts.json"
+            temp_path = self.data_dir / "theme_prompts.json.tmp"
+            
             # Создаем резервную копию перед сохранением
-            if Path("theme_prompts.json").exists():
+            if themes_path.exists():
                 logger.debug("Создание резервной копии файла тем")
-                self.create_backup("theme_prompts.json")
+                self.create_backup(str(themes_path))
             
             # Сохраняем во временный файл, затем переименовываем
-            temp_file = "theme_prompts.json.tmp"
-            with open(temp_file, 'w', encoding='utf-8') as f:
-                json.dump({"themes": self.themes}, f, ensure_ascii=False, indent=2)
-            
-            # Атомарная операция замены файла
-            if sys.platform == 'win32':
-                # На Windows сначала удаляем старый файл, если он существует
-                if os.path.exists("theme_prompts.json"):
-                    os.remove("theme_prompts.json")
-                os.rename(temp_file, "theme_prompts.json")
-            else:
-                # На Unix-подобных системах replace атомарный
-                os.replace(temp_file, "theme_prompts.json")
-            
-            logger.info(f"Успешно сохранено {themes_count} тем в theme_prompts.json")
-            return True
+            try:
+                with open(temp_path, 'w', encoding='utf-8') as f:
+                    json.dump({"themes": self.themes}, f, ensure_ascii=False, indent=2, sort_keys=True)
+                
+                # Атомарная операция замены файла
+                if sys.platform == 'win32':
+                    # На Windows сначала удаляем старый файл, если он существует
+                    if themes_path.exists():
+                        themes_path.unlink()
+                    temp_path.rename(themes_path)
+                else:
+                    # На Unix-подобных системах replace атомарный
+                    temp_path.replace(themes_path)
+                
+                logger.info(f"Успешно сохранено {themes_count} тем в {themes_path}")
+                return True
+                
+            except Exception as e:
+                # Удаляем временный файл в случае ошибки
+                if temp_path.exists():
+                    try:
+                        temp_path.unlink()
+                    except Exception as cleanup_error:
+                        logger.error(f"Ошибка при удалении временного файла: {cleanup_error}")
+                raise
             
         except Exception as e:
             error_msg = f"Ошибка при сохранении тем: {str(e)}"
             logger.error(error_msg, exc_info=True)
-            
-            # Пытаемся восстановить из бэкапа в случае ошибки
-            try:
-                if os.path.exists("theme_prompts.json.bak"):
-                    logger.warning("Попытка восстановления из резервной копии")
-                    os.replace("theme_prompts.json.bak", "theme_prompts.json")
-            except Exception as restore_error:
-                logger.critical("Не удалось восстановить из резервной копии", exc_info=True)
-            
-            # Показываем пользователю сообщение об ошибке
             QMessageBox.critical(
                 self,
                 "Ошибка сохранения",
@@ -689,19 +752,23 @@ class PromptGenie(QMainWindow):
         self.temp_preview.clear()
 
     def show_temp(self, item):
+        """Показывает выбранный шаблон в интерфейсе.
+        
+        Args:
+            item: QListWidgetItem, содержащий данные шаблона
+        """
         theme = item.data(Qt.ItemDataRole.UserRole)
         if theme:
             self.temp_title.setText(theme.get("title_ru", ""))
             self.temp_desc.setPlainText(theme.get("description_ru", ""))
             self.temp_preview.setPlainText(theme.get("prompt_combined_en", ""))
-            pyperclip.copy(theme.get("prompt_combined_en", ""))
             
-            # Enable action buttons when a template is selected
+            # Включаем кнопки действий при выборе шаблона
             self.btn_edit.setEnabled(True)
             self.btn_delete.setEnabled(True)
             self.btn_copy.setEnabled(True)
         else:
-            # Disable buttons if no template is selected
+            # Отключаем кнопки, если шаблон не выбран
             self.btn_edit.setEnabled(False)
             self.btn_delete.setEnabled(False)
             self.btn_copy.setEnabled(False)
@@ -712,12 +779,6 @@ class PromptGenie(QMainWindow):
             pyperclip.copy(txt)
             self.statusBar().showMessage("Промпт скопирован")
 
-    def save_themes(self):
-        try:
-            with open("theme_prompts.json", "w", encoding="utf-8") as f:
-                json.dump({"themes": self.themes}, f, ensure_ascii=False, indent=2)
-        except Exception as e:
-            QMessageBox.critical(self, "Ошибка", f"Не удалось сохранить: {e}")
 
     def builder_tab(self):
         w = QWidget()
@@ -828,10 +889,18 @@ class PromptGenie(QMainWindow):
         self.preview.setPlainText("\n".join(lines).strip() or "Выберите ключевые слова")
 
     def is_positive(self, word):
-        for cat, items in self.kw_data.items():
-            if any(i["word"] == word for i in items):
-                return "негатив" not in cat.lower()
-        return True
+        """Проверяет, является ли ключевое слово позитивным.
+        
+        Args:
+            word: Ключевое слово для проверки.
+            
+        Returns:
+            bool: True, если слово позитивное, иначе False.
+        """
+        category = self.word_to_category.get(word)
+        if category is not None:
+            return "негатив" not in category.lower()
+        return True  # По умолчанию считаем слово позитивным
 
     def copy_prompt(self):
         txt = self.preview.toPlainText()
