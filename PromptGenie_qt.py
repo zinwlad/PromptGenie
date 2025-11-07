@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Any, Union, Tuple
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import Qt, QSettings
-from PyQt6.QtGui import QAction, QIcon
+from PyQt6.QtGui import QAction, QIcon, QFont
 
 def setup_logging():
     """Настройка системы логирования."""
@@ -129,13 +129,42 @@ class TooltipCheckBox(QCheckBox):
         self.trans = trans
         self.effect = effect
         self.type = type_
-        self.setStyleSheet("padding: 6px; font-size: 11pt;")
+        self.setStyleSheet("""
+            QCheckBox {
+                padding: 6px;
+                font-size: 11pt;
+            }
+            QToolTip {
+                background-color: #0a0a0a;
+                color: #ffffff;
+                border: 1px solid #2a2a2a;
+                border-radius: 4px;
+                padding: 10px 14px;
+                font-family: 'Segoe UI', Arial, sans-serif;
+                font-size: 11pt;
+                line-height: 1.5;
+                max-width: 500px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            }
+        """)
         if type_ == "negative":
             self.setStyleSheet(self.styleSheet() + "color: #d9534f; font-weight: bold;")
 
     def enterEvent(self, event):
-        tip = f"<b>{self.text()}</b><br><i>{self.trans}</i><hr><small>{self.effect}</small>"
-        QToolTip.showText(event.globalPosition().toPoint(), tip)
+        tip = f"""
+        <div style='color:#ffffff; font-family: "Segoe UI", Arial, sans-serif; max-width: 450px;'>
+            <div style='font-size: 12pt; font-weight: 600; color: #ffffff; margin-bottom: 6px;'>{self.text()}</div>
+            <div style='font-size: 11pt; font-style: italic; color: #80b0ff; margin-bottom: 8px;'>{self.trans}</div>
+            <div style='height: 1px; background: linear-gradient(90deg, transparent, #505050, transparent); margin: 10px 0;'></div>
+            <div style='font-size: 10.5pt; color: #ffffff; line-height: 1.5;'>{self.effect}</div>
+        </div>
+        """
+        QToolTip.setFont(QFont('Segoe UI', 10))
+        QToolTip.showText(
+            event.globalPosition().toPoint(),
+            tip,
+            msecShowTime=10000  # Show tooltip for 10 seconds
+        )
 
 
 class PromptGenie(QMainWindow):

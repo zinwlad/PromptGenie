@@ -4,13 +4,13 @@
       "category": "Фотография",
       "title_ru": "Одиночный: Кинематографический Нуар (Ч/Б)",
       "description_ru": "Превращает ваше фото в кадр из классического фильма Нуар. Жесткий свет, глубокие тени (chiaroscuro), мокрый асфальт и атмосфера дождя. Сохраняет лицо и позу.",
-      "prompt_combined_en": "Cinematic portrait shot, film noir aesthetic, solo subject, identical face, wearing a trench coat, standing in heavy rain on a wet city street, spotlight from above, deep shadows, chiaroscuro lighting, black and white monochrome, micro-details, dramatic atmosphere, full body shot, 8K RAW. ||| warm tones, bright colors, low quality, deformed, blurry, extra limbs, text, watermark, soft light, high key"
+      "prompt_combined_en": "Cinematic portrait shot, film noir aesthetic, solo subject, identical face and pose, wearing a trench coat, standing in heavy rain on a wet city street, spotlight from above, deep shadows, chiaroscuro lighting, black and white monochrome, micro-details, dramatic atmosphere, full body shot, 8K RAW, masterpiece, best quality. ||| warm tones, bright colors, low quality, deformed, blurry, extra limbs, text, watermark, soft light, high key"
     },
     {
       "category": "Иллюстрация",
       "title_ru": "Одиночный: Портрет в стиле Поп-арт",
       "description_ru": "Стилизует крупный план под комикс 60-х: яркие цвета, жирные черные линии, точки Бендея (halftone dots) и четкие тени. Сохраняет выражение лица.",
-      "prompt_combined_en": "Close-up portrait of the same person, identical face and expression, rendered in vibrant Pop Art style. Bold, thick black outlines, primary colors (red, yellow, blue), halftone dot pattern (Ben-Day dots) for shading, posterized texture. Flat, hard light, 4K digital painting. ||| photorealistic, blurry, soft, gentle light, 3D render, deformed, worst quality, realistic textures, text"
+      "prompt_combined_en": "Close-up portrait of the same person, identical face and expression, rendered in vibrant Pop Art style. Bold, thick black outlines, primary colors (red, yellow, blue), halftone dot pattern (Ben-Day dots) for shading, posterized texture. Flat, hard light, 8K digital painting. ||| photorealistic, blurry, soft, gentle light, 3D render, deformed, worst quality, realistic textures, text"
     },
     {
       "category": "Футуризм",
@@ -75,8 +75,8 @@
     {
       "category": "Сюрреализм",
       "title_ru": "Одиночный: Эффект Двойной Экспозиции (Природа)",
-      "description_ru": "Накладывает изображение природы (лес, звезды) на силуэт или лицо человека. Сохраняет контуры, но заполняет их другим изображением.",
-      "prompt_combined_en": "Surreal portrait, double exposure effect. The silhouette of the subject (maintain subject identity) blend seamlessly into silhouette, filled with a dense, detailed image of an autumn forest and a starry night sky. The background is minimal and clean. High contrast, sharp edges, artistic concept, 16:9 aspect ratio. ||| blurry, messy composition, low quality, deformed, worst quality, text, watermark, simple, flat color"
+      "description_ru": "Создает эффект двойной экспозиции, совмещая портрет с природным пейзажем (лес, горы, океан). Сохраняет черты лица, но добавляет прозрачность и текстуры природы.",
+      "prompt_combined_en": "Surreal portrait, double exposure effect. The silhouette of the subject (maintain subject identity) blend seamlessly, filled with a dense, detailed image of an autumn forest and a starry night sky. The background is minimal and clean. High contrast, sharp edges, artistic concept, 16:9 aspect ratio. ||| blurry, messy composition, low quality, deformed, worst quality, text, watermark, simple, flat color"
     },
     {
       "category": "3D Рендер",
@@ -274,7 +274,7 @@
       "category": "Фотография",
       "title_ru": "Групповой: Зеркальная Симметрия",
       "description_ru": "Усиливает симметрию композиции, размещая группу идеально по центру, с зеркальным отражением или архитектурным фоном.",
-      "prompt_combined_en": "Group photo with strong symmetrical composition (Rule of Thirds, Golden Ratio). Group positioned perfectly in the center of the frame against a highly symmetrical architectural background. Sharp focus, cinematic. ||| asymmetrical, random composition, busy background, blurry, low quality, deformed, text, watermark"
+      "prompt_combined_en": "Group photo with strong symmetrical composition (centered framing). Group positioned perfectly in the center of the frame against a highly symmetrical architectural background. Sharp focus, cinematic, maintain all subjects' identities and poses. ||| asymmetrical, random composition, busy background, blurry, low quality, deformed, text, watermark"
     },
     {
       "category": "Фотография",
@@ -298,7 +298,7 @@
       "category": "Сюрреализм",
       "title_ru": "Одиночный: Отражение в Зеркале (Сюрреализм)",
       "description_ru": "Создает эффект, будто отражение в зеркале имеет совершенно другой стиль или выражение лица, чем оригинал.",
-      "prompt_combined_en": "Solo shot of the subject (maintain subject identity) looking into a mirror. The person is hyperrealistic, but their reflection in the mirror is stylized as a low-poly 3D render or a different art style (e.g., Cubism). Conceptual, surreal lighting. ||| reflection is identical, blurry, low quality, text, watermark, worst quality"
+      "prompt_combined_en": "Solo shot of the subject (maintain subject identity) looking into a mirror. The person is hyperrealistic, but their reflection in the mirror is stylized as a low-poly 3D render. Conceptual, surreal lighting, masterpiece. ||| reflection is identical, blurry, low quality, text, watermark, worst quality"
     },
     {
       "category": "Фотография",
@@ -461,6 +461,336 @@
       "title_ru": "Групповой: Выравнивание Взглядов (Глаза в Камеру)",
       "description_ru": "Корректирует направление взгляда всех людей в группе, чтобы они смотрели прямо в камеру. Позы и выражения лиц сохраняются максимально близко к оригиналу.",
       "prompt_combined_en": "Group photo with all subjects adjusted to look directly into the camera. Original expressions, poses, and clothing preserved as much as possible. Natural eye direction correction, no distortion. Professional group portrait. ||| changed expressions, altered poses, cartoon, blur, deformed, low quality, text, watermark"
+    },
+    {
+      "category": "Glow-Up",
+      "title_ru": "Glow-Up: Натуральная Красота",
+      "description_ru": "Мягкое улучшение внешности: сияющая кожа, яркий взгляд, ухоженные волосы. Сохраняет все черты лица и индивидуальность. Идеально для аватарок и соцсетей.",
+      "prompt_combined_en": "Natural beauty glow-up, same person, identical face and features, flawless but realistic skin texture, bright and clear eyes with subtle catchlight, healthy shiny hair. Soft, even lighting, shallow depth of field. No plastic surgery look, no cartoonish features. ||| deformed, blurry, over-smoothed, plastic skin, cartoon, low quality, text, watermark"
+    },
+    {
+      "category": "Профессия",
+      "title_ru": "Профессия: Кибер-Детектив",
+      "description_ru": "Преобразует одежду в стильную кибер-экипировку: кожаная куртка с неоновыми вставками, AR-очки. Фон — дождливый ночной город. Лицо остаётся без изменений.",
+      "prompt_combined_en": "Cyber-detective portrait, same person, identical face, wearing a sleek black leather jacket with glowing neon blue lines, augmented reality smart glasses. Background: rainy neon-lit city street at night. Cinematic, volumetric fog, sharp focus on eyes. ||| historical costume, photorealistic, daylight, low quality, blurry, text, watermark"
+    },
+    {
+      "category": "История",
+      "title_ru": "История: Джазовая Эпоха (1920-е)",
+      "description_ru": "Погружает в эпоху джаза: женщина в платье с бахромой и перьями, мужчина в костюме и федоре. Фон — дымный джаз-клуб. Лицо и поза сохраняются.",
+      "prompt_combined_en": "1920s Jazz Age portrait, same person, identical face and pose, wearing authentic Roaring Twenties attire (flapper dress with fringe or pinstripe suit with fedora). Background: smoky, dimly lit jazz club with brass instruments. Warm, amber lighting, film grain. ||| modern clothing, daylight, blurry, low quality, deformed, text"
+    },
+    {
+      "category": "Пара",
+      "title_ru": "Пара: В Диснеевском Стиле",
+      "description_ru": "Преобразует пару в классических диснеевских персонажей (стиль 1990-х): мягкие линии, выразительные глаза, яркие, но не кричащие цвета. Сохраняет прически и позы.",
+      "prompt_combined_en": "Disney animation style (1990s Renaissance era), couple portrait, maintain both subjects' identities, hairstyles and poses. Soft outlines, expressive eyes, rich but natural colors. Background: enchanted forest or castle. ||| Pixar style, 3D render, photorealistic, low quality, deformed, text, watermark"
+    },
+    {
+      "category": "Сезон",
+      "title_ru": "Сезон: Зимний Гламур",
+      "description_ru": "Добавляет зимнюю эстетику: иней на ресницах, перламутровое сияние кожи, теплая одежда (кашемир, мех). Фон — уютный интерьер с огнём. Идеально для новогодних аватарок.",
+      "prompt_combined_en": "Winter glamour portrait, same person, identical face, subtle frost on eyelashes, luminous pearl-like skin, wearing luxurious cashmere or faux fur. Background: cozy interior with fireplace glow. Cool blue and warm amber tones, cinematic. ||| summer, beach, sunny, low quality, blurry, deformed, text, watermark"
+    },
+    {
+      "category": "Абстракция",
+      "title_ru": "Одиночный: Абстрактный Фрагмент",
+      "description_ru": "Разбивает фото на абстрактные геометрические фрагменты, сохраняя цветовую гамму и контуры лица.",
+      "prompt_combined_en": "Abstract portrait, identical face fragmented into geometric shapes (cubes, triangles), vibrant original colors preserved. Minimal background, high contrast, conceptual art, 8K. ||| photorealistic, whole figure, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "category": "Космос",
+      "title_ru": "Одиночный: Космический Путешественник",
+      "description_ru": "Помещает фигуру в космический скафандр на фоне звезд и планет, с эффектом невесомости.",
+      "prompt_combined_en": "Space explorer portrait, same person, identical face, in detailed spacesuit floating in space. Nebula background, zero gravity pose, volumetric stars, cinematic, 8K hyperrealistic. ||| earthbound, blurry, low quality, cartoon, text, watermark"
+    },
+    {
+      "category": "Мифология",
+      "title_ru": "Одиночный: Греческий Бог",
+      "description_ru": "Преобразует в образ греческого бога (Зевс/Афина), с лавровым венком и тогой на фоне Олимпа.",
+      "prompt_combined_en": "Mythical Greek god portrait, identical face, wearing toga and laurel wreath, standing on Mount Olympus. Dramatic thunder lighting, epic atmosphere, masterpiece, 8K. ||| modern clothing, low quality, deformed, blurry, text, watermark"
+    },
+    {
+      "category": "Подводный",
+      "title_ru": "Одиночный: Подводный Мир",
+      "description_ru": "Добавляет подводную среду: пузыри, рыбы, кораллы, с эффектом преломления света.",
+      "prompt_combined_en": "Underwater portrait, same person, identical face, surrounded by bubbles and colorful fish. Refracted light, blue-green tones, sharp focus, hyperrealistic 8K. ||| surface level, dry, blurry, low quality, text, watermark"
+    },
+    {
+      "category": "Викторианский",
+      "title_ru": "Одиночный: Викторианская Леди/Джентльмен",
+      "description_ru": "Стилизует под викторианскую эпоху: корсет/сюртук, кружева, на фоне интерьера 19 века.",
+      "prompt_combined_en": "Victorian era portrait, identical face, in elaborate gown or tailcoat with lace. Opulent room background, soft gaslight, oil painting style, 8K. ||| casual wear, modern, blurry, deformed, text, watermark"
+    },
+    {
+      "category": "Минимализм",
+      "title_ru": "Одиночный: Минималистичный Силуэт",
+      "description_ru": "Упрощает до черного силуэта на цветном градиенте, подчеркивая форму.",
+      "prompt_combined_en": "Minimalist silhouette portrait, identical outline, black figure on smooth gradient background (pastel). Clean lines, no details, conceptual, 8K. ||| detailed face, busy, photorealistic, blurry, text, watermark"
+    },
+    {
+      "category": "Экология",
+      "title_ru": "Одиночный: Эко-Воин",
+      "description_ru": "Добавляет элементы природы: листья в волосах, зеленые тона, на фоне леса.",
+      "prompt_combined_en": "Eco-warrior portrait, same person, identical face, with leaves and vines integrated. Lush forest background, natural green tones, cinematic, 8K. ||| urban, synthetic, low quality, blurry, text, watermark"
+    },
+    {
+      "category": "Спорт",
+      "title_ru": "Одиночный: Спортивный Герой",
+      "description_ru": "Преобразует в атлета в форме, с медалью, на фоне стадиона.",
+      "prompt_combined_en": "Athletic hero portrait, identical face, in sportswear with medal. Stadium background, dynamic lighting, motivational, hyperrealistic 8K. ||| sedentary pose, blurry, deformed, text, watermark"
+    },
+    {
+      "category": "Музыка",
+      "title_ru": "Одиночный: Рок-Звезда",
+      "description_ru": "Стилизует под рок-музыканта: гитара, кожаная куртка, на сцене с огнями.",
+      "prompt_combined_en": "Rock star portrait, same person, identical face, holding electric guitar in leather jacket. Stage with spotlights, energetic, 8K RAW. ||| classical music, calm, low quality, blurry, text"
+    },
+    {
+      "category": "Кино",
+      "title_ru": "Одиночный: Супергерой Marvel",
+      "description_ru": "Превращает в супергероя в костюме, с плащом, на фоне города.",
+      "prompt_combined_en": "Marvel superhero portrait, identical face, in detailed costume with cape. City skyline background, heroic pose, cinematic, 8K. ||| villain, realistic, blurry, low quality, text, watermark"
+    },
+    {
+      "category": "Абстракция",
+      "title_ru": "Групповой: Абстрактный Коллаж",
+      "description_ru": "Собирает группу в коллаж из форм и цветов, сохраняя лица.",
+      "prompt_combined_en": "Group abstract collage, maintain identities, faces in geometric overlays. Vibrant colors, layered, conceptual, 8K. ||| photorealistic, separate, blurry, deformed, text"
+    },
+    {
+      "category": "Космос",
+      "title_ru": "Групповой: Космическая Команда",
+      "description_ru": "Группа в скафандрах на космической станции, с видом на Землю.",
+      "prompt_combined_en": "Space team group shot, identical faces, in suits on station. Earth view, zero-g, sci-fi, hyperrealistic 8K. ||| earthbound, casual, low quality, blurry, text"
+    },
+    {
+      "category": "Мифология",
+      "title_ru": "Групповой: Олимпийские Боги",
+      "description_ru": "Стилизует группу под пантеон богов на Олимпе.",
+      "prompt_combined_en": "Olympian gods group portrait, maintain identities, in togas. Cloudy summit background, divine light, epic, 8K. ||| mortals, modern, deformed, blurry, text"
+    },
+    {
+      "category": "Подводный",
+      "title_ru": "Групповой: Подводное Приключение",
+      "description_ru": "Группа в аквалангах среди рифов и рыб.",
+      "prompt_combined_en": "Underwater group adventure, identical poses, in diving gear. Coral reef background, bubbles, blue tones, 8K. ||| surface, dry, low quality, text, watermark"
+    },
+    {
+      "category": "Викторианский",
+      "title_ru": "Групповой: Викторианский Бал",
+      "description_ru": "Группа в бальных нарядах на фоне зала 19 века.",
+      "prompt_combined_en": "Victorian ball group shot, maintain identities, in gowns and suits. Grand hall background, candlelight, elegant, 8K. ||| casual, modern, blurry, deformed"
+    },
+    {
+      "category": "Минимализм",
+      "title_ru": "Групповой: Минималистичные Силуэты",
+      "description_ru": "Группа как черные силуэты на белом фоне.",
+      "prompt_combined_en": "Minimalist group silhouettes, identical outlines, black on white. Clean, no details, conceptual, 8K. ||| colored, detailed, photorealistic, text"
+    },
+    {
+      "category": "Экология",
+      "title_ru": "Групповой: Эко-Активисты",
+      "description_ru": "Группа с плакатами в зеленой зоне, подчеркивая единство.",
+      "prompt_combined_en": "Eco-activists group, identical faces, holding signs in park. Natural light, green tones, inspirational, 8K. ||| pollution, urban, low quality, blurry"
+    },
+    {
+      "category": "Спорт",
+      "title_ru": "Групповой: Команда Чемпионов",
+      "description_ru": "Группа в униформе с трофеем на поле.",
+      "prompt_combined_en": "Champion team group shot, maintain poses, in uniforms with trophy. Field background, victorious, dynamic, 8K. ||| losing, casual, deformed, text"
+    },
+    {
+      "category": "Музыка",
+      "title_ru": "Групповой: Рок-Группа",
+      "description_ru": "Группа с инструментами на сцене.",
+      "prompt_combined_en": "Rock band group portrait, identical faces, with instruments on stage. Spotlights, energetic, rock aesthetic, 8K. ||| solo, calm, low quality"
+    },
+    {
+      "category": "Кино",
+      "title_ru": "Групповой: Отряд Супергероев",
+      "description_ru": "Группа в костюмах на фоне апокалипсиса.",
+      "prompt_combined_en": "Superhero squad group, maintain identities, in costumes. Apocalyptic city, heroic, cinematic, 8K. ||| villains, realistic, blurry"
+    },
+    {
+      "category": "Фантастика",
+      "title_ru": "Одиночный: Волшебник Гарри Поттер",
+      "description_ru": "В образе волшебника с палочкой в Хогвартсе.",
+      "prompt_combined_en": "Harry Potter wizard portrait, identical face, with wand in robes. Hogwarts hall background, magical glow, 8K. ||| muggle, modern, low quality"
+    },
+    {
+      "category": "Хоррор",
+      "title_ru": "Одиночный: Зомби-Апокалипсис",
+      "description_ru": "Преобразует в зомби с рваной одеждой на фоне руин.",
+      "prompt_combined_en": "Zombie portrait, same face, torn clothes in ruins. Eerie green light, horror atmosphere, detailed, 8K. ||| healthy, bright, cartoon"
+    },
+    {
+      "category": "Романтика",
+      "title_ru": "Одиночный: Романтический Герой",
+      "description_ru": "В элегантном наряде на фоне розового сада.",
+      "prompt_combined_en": "Romantic hero portrait, identical face, in suit/gown. Rose garden background, soft pink tones, dreamy, 8K. ||| action, dark, deformed"
+    },
+    {
+      "category": "Наука",
+      "title_ru": "Одиночный: Ученый в Лаборатории",
+      "description_ru": "В белом халате с пробирками на фоне оборудования.",
+      "prompt_combined_en": "Scientist portrait, same person, in lab coat with beakers. High-tech lab background, focused light, realistic 8K. ||| fantasy, blurry, text"
+    },
+    {
+      "category": "Искусство",
+      "title_ru": "Одиночный: В Стиле Пикассо",
+      "description_ru": "Кубистический портрет с искаженными формами.",
+      "prompt_combined_en": "Picasso cubist portrait, identical features distorted. Angular shapes, bold colors, artistic, 8K. ||| realistic, smooth, low quality"
+    },
+    {
+      "category": "Путешествия",
+      "title_ru": "Одиночный: Путешественник в Джунглях",
+      "description_ru": "В экспедиционной одежде среди лиан.",
+      "prompt_combined_en": "Jungle explorer portrait, identical face, in gear among vines. Humid green tones, adventurous, 8K. ||| urban, dry, blurry"
+    },
+    {
+      "category": "Еда",
+      "title_ru": "Одиночный: Шеф-Повар",
+      "description_ru": "С ножом и ингредиентами на кухне.",
+      "prompt_combined_en": "Chef portrait, same person, with knife and ingredients. Kitchen background, warm light, appetizing, 8K. ||| fast food, messy, deformed"
+    },
+    {
+      "category": "Танец",
+      "title_ru": "Одиночный: Балерина",
+      "description_ru": "В пачке на сцене с грациозной позой.",
+      "prompt_combined_en": "Ballerina portrait, identical face, in tutu on stage. Soft spotlight, elegant, hyperrealistic 8K. ||| casual, static, low quality"
+    },
+    {
+      "category": "Авто",
+      "title_ru": "Одиночный: Гонщик Формулы-1",
+      "description_ru": "В шлеме у болида на трассе.",
+      "prompt_combined_en": "F1 racer portrait, same face, in helmet by car. Racetrack background, speed blur, dynamic, 8K. ||| slow, pedestrian, blurry"
+    },
+    {
+      "category": "Животные",
+      "title_ru": "Одиночный: Друид с Животными",
+      "description_ru": "Окруженный лесными животными в магическом лесу.",
+      "prompt_combined_en": "Druid portrait, identical face, surrounded by animals. Enchanted forest, mystical light, detailed, 8K. ||| alone, urban, cartoon"
+    },
+    {
+      "category": "Фантастика",
+      "title_ru": "Групповой: Волшебники Хогвартса",
+      "description_ru": "Группа в мантиях с палочками в замке.",
+      "prompt_combined_en": "Hogwarts wizards group, maintain identities, in robes with wands. Castle hall, magical, 8K. ||| muggles, modern, low quality"
+    },
+    {
+      "category": "Хоррор",
+      "title_ru": "Групповой: Зомби-Орда",
+      "description_ru": "Группа как зомби в постапокалипсисе.",
+      "prompt_combined_en": "Zombie horde group shot, identical faces decayed. Ruins background, horror, green tones, 8K. ||| healthy, bright, text"
+    },
+    {
+      "category": "Романтика",
+      "title_ru": "Групповой: Романтическая Компания",
+      "description_ru": "Группа на пикнике при свечах.",
+      "prompt_combined_en": "Romantic group picnic, maintain poses, candlelight in garden. Soft pink, dreamy, 8K. ||| action, dark horror, deformed"
+    },
+    {
+      "category": "Наука",
+      "title_ru": "Групповой: Лабораторная Команда",
+      "description_ru": "Группа в халатах за экспериментами.",
+      "prompt_combined_en": "Lab team group, identical faces, in coats at benches. Equipment background, focused, 8K. ||| fantasy, chaotic, blurry"
+    },
+    {
+      "category": "Искусство",
+      "title_ru": "Групповой: Кубистическая Группа",
+      "description_ru": "Группа в кубистическом стиле Пикассо.",
+      "prompt_combined_en": "Picasso cubist group portrait, maintain features distorted. Angular, bold colors, 8K. ||| realistic, smooth, low quality"
+    },
+    {
+      "category": "Путешествия",
+      "title_ru": "Групповой: Экспедиция в Пустыне",
+      "description_ru": "Группа в пустыне с верблюдами.",
+      "prompt_combined_en": "Desert expedition group, identical poses, with camels. Sandy dunes, hot light, adventurous, 8K. ||| snowy, urban, blurry"
+    },
+    {
+      "category": "Еда",
+      "title_ru": "Групповой: Кулинарная Команда",
+      "description_ru": "Группа шефов на кухне.",
+      "prompt_combined_en": "Culinary team group, maintain identities, with utensils. Busy kitchen, warm, appetizing, 8K. ||| empty, cold, deformed"
+    },
+    {
+      "category": "Танец",
+      "title_ru": "Групповой: Танцевальный Ансамбль",
+      "description_ru": "Группа в движении на сцене.",
+      "prompt_combined_en": "Dance ensemble group shot, identical poses dynamic. Stage lights, graceful, 8K hyperrealistic. ||| static, solo, low quality"
+    },
+    {
+      "category": "Авто",
+      "title_ru": "Групповой: Гоночная Команда",
+      "description_ru": "Группа у машин на пит-стопе.",
+      "prompt_combined_en": "Racing team group, maintain faces, by cars on pit. Track background, fast-paced, 8K. ||| slow, pedestrian, text"
+    },
+    {
+      "category": "Животные",
+      "title_ru": "Групповой: Сафари Группа",
+      "description_ru": "Группа с животными в саванне.",
+      "prompt_combined_en": "Safari group shot, identical poses, with wildlife. Savanna background, natural light, 8K. ||| zoo, urban, cartoon"
+    },
+    {
+      "category": "Архитектура",
+      "title_ru": "Одиночный: Архитектор с Чертежами",
+      "description_ru": "С чертежами на фоне современного здания.",
+      "prompt_combined_en": "Architect portrait, same face, with blueprints. Modern building background, professional, 8K. ||| amateur, blurry, deformed"
+    },
+    {
+      "category": "Мода",
+      "title_ru": "Одиночный: Модель на Подиуме",
+      "description_ru": "В haute couture на подиуме.",
+      "prompt_combined_en": "Fashion model portrait, identical face, in couture on runway. Spotlights, glamorous, 8K. ||| casual, low quality, text"
+    },
+    {
+      "category": "Игры",
+      "title_ru": "Одиночный: Геймер в VR",
+      "description_ru": "В VR-шлеме с контроллерами.",
+      "prompt_combined_en": "Gamer portrait, same person, in VR headset with controllers. Virtual background bleed, immersive, 8K. ||| analog, blurry, watermark"
+    },
+    {
+      "category": "Природа",
+      "title_ru": "Одиночный: Альпинист на Вершине",
+      "description_ru": "На пике горы с видом.",
+      "prompt_combined_en": "Mountaineer portrait, identical face, on summit with view. Crisp air, epic, hyperrealistic 8K. ||| flat land, indoor, deformed"
+    },
+    {
+      "category": "Технологии",
+      "title_ru": "Одиночный: Хакер в Матрице",
+      "description_ru": "С кодом на фоне, зеленые тона.",
+      "prompt_combined_en": "Hacker portrait, same face, with code overlay. Matrix green tones, cyber, detailed, 8K. ||| analog, bright, low quality"
+    },
+    {
+      "category": "Архитектура",
+      "title_ru": "Групповой: Архитектурная Фирма",
+      "description_ru": "Группа с моделями зданий.",
+      "prompt_combined_en": "Architecture firm group, maintain identities, with models. Office background, professional, 8K. ||| chaotic, blurry, text"
+    },
+    {
+      "category": "Мода",
+      "title_ru": "Групповой: Модный Шоу",
+      "description_ru": "Группа моделей на подиуме.",
+      "prompt_combined_en": "Fashion show group shot, identical poses, in couture. Runway lights, glamorous, 8K. ||| casual, solo, deformed"
+    },
+    {
+      "category": "Игры",
+      "title_ru": "Групповой: Команда Геймеров",
+      "description_ru": "Группа за компьютерами в LAN.",
+      "prompt_combined_en": "Gamer team group, maintain faces, at PCs in LAN. Neon setup, competitive, 8K. ||| outdoor, analog, low quality"
+    },
+    {
+      "category": "Природа",
+      "title_ru": "Групповой: Экотуристы",
+      "description_ru": "Группа в походе по лесу.",
+      "prompt_combined_en": "Ecotourist group shot, identical poses, hiking in forest. Natural light, adventurous, 8K. ||| urban, sedentary, blurry"
+    },
+    {
+      "category": "Технологии",
+      "title_ru": "Групповой: IT-Команда",
+      "description_ru": "Группа за кодом в офисе.",
+      "prompt_combined_en": "IT team group, maintain identities, coding at desks. Tech office, innovative, 8K. ||| manual labor, old tech, deformed"
     }
   ]
 }
