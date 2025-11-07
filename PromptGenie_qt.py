@@ -445,18 +445,6 @@ class PromptGenie(QMainWindow):
             btn_layout.addWidget(self.btn_copy)
             
             r.addWidget(btn_frame)
-            self.btn_delete.clicked.connect(self.delete_current_template)
-            self.btn_delete.setEnabled(False)
-            
-            self.btn_copy = QPushButton("Копировать")
-            self.btn_copy.clicked.connect(self.copy_template_prompt)
-            self.btn_copy.setEnabled(False)
-            
-            btn_layout.addWidget(self.btn_edit)
-            btn_layout.addWidget(self.btn_delete)
-            btn_layout.addWidget(self.btn_copy)
-            
-            r.addWidget(btn_frame)
             
             # Просмотр шаблона
             self.template_view = QTextEdit()
@@ -508,7 +496,7 @@ class PromptGenie(QMainWindow):
         self.tlist.clear()
         for t in self.themes:
             item = QListWidgetItem(t.get("title_ru", "Без названия"))
-            item.setData(Qt.ItemDataRole.UserRole, t)
+            item.setData(Qt.ItemDataRole.UserRole, t)  # Store the theme data with the item
             self.tlist.addItem(item)
 
     def filter_templates(self, text):
@@ -702,10 +690,21 @@ class PromptGenie(QMainWindow):
 
     def show_temp(self, item):
         theme = item.data(Qt.ItemDataRole.UserRole)
-        self.temp_title.setText(theme.get("title_ru", ""))
-        self.temp_desc.setPlainText(theme.get("description_ru", ""))
-        self.temp_preview.setPlainText(theme.get("prompt_combined_en", ""))
-        pyperclip.copy(theme.get("prompt_combined_en", ""))
+        if theme:
+            self.temp_title.setText(theme.get("title_ru", ""))
+            self.temp_desc.setPlainText(theme.get("description_ru", ""))
+            self.temp_preview.setPlainText(theme.get("prompt_combined_en", ""))
+            pyperclip.copy(theme.get("prompt_combined_en", ""))
+            
+            # Enable action buttons when a template is selected
+            self.btn_edit.setEnabled(True)
+            self.btn_delete.setEnabled(True)
+            self.btn_copy.setEnabled(True)
+        else:
+            # Disable buttons if no template is selected
+            self.btn_edit.setEnabled(False)
+            self.btn_delete.setEnabled(False)
+            self.btn_copy.setEnabled(False)
 
     def copy_template_prompt(self):
         txt = self.temp_preview.toPlainText()
