@@ -23,14 +23,15 @@ a = Analysis(
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=[],
+    excludes=['PyQt6', 'PySide2', 'PySide6'],
     noarchive=False,
-    optimize=0,
+    optimize=1,
 )
 
 pyz = PYZ(a.pure)
 
-exe = EXE(
+# Создаем исполняемый файл
+app = EXE(
     pyz,
     a.scripts,
     a.binaries,
@@ -43,11 +44,10 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,  # <-- скрывает консоль при запуске
+    console=False,  # Скрываем консоль при запуске
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=os.path.join(base_path, 'icon.ico') if os.path.exists(os.path.join(base_path, 'icon.ico')) else None,
 )

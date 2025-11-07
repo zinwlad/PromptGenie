@@ -419,110 +419,42 @@ class PromptGenie(QMainWindow):
         try:
             logger.debug("Инициализация вкладки шаблонов")
             
-            # Инициализируем атрибуты, которые будут использоваться в других методах
-            self.temp_title = None
-            self.temp_desc = None
-            self.temp_preview = None
-            
             # Основной виджет вкладки
             w = QWidget()
-            lay = QHBoxLayout(w)
-            lay.setSpacing(15)
-            lay.setContentsMargins(5, 5, 5, 5)
-
+            layout = QHBoxLayout(w)
+            layout.setSpacing(15)
+            layout.setContentsMargins(5, 5, 5, 5)
+            
             # Левая панель - список шаблонов
-            left = QGroupBox("Список шаблонов")
-            left.setStyleSheet("""
-                QGroupBox {
-                    font-weight: bold;
-                    border: 1px solid #444;
-                    border-radius: 6px;
-                    padding: 10px;
-                    margin-top: 10px;
-                }
-                QGroupBox::title {
-                    subcontrol-origin: margin;
-                    left: 10px;
-                    padding: 0 5px;
-                }
-            """)
-            l = QVBoxLayout(left)
-            l.setSpacing(10)
+            left_panel = QWidget()
+            left_layout = QVBoxLayout(left_panel)
+            left_layout.setSpacing(10)
             
             # Поле поиска
-            self.search_temp = QLineEdit()
-            self.search_temp.setPlaceholderText("Поиск по названию или описанию")
-            self.search_temp.textChanged.connect(self.filter_templates)
-            l.addWidget(self.search_temp)
+            self.search_edit = QLineEdit()
+            self.search_edit.setPlaceholderText("Поиск по названию или описанию...")
+            self.search_edit.textChanged.connect(self.filter_templates)
+            left_layout.addWidget(self.search_edit)
             
-            # Кнопка добавления шаблона
-            btn_add = QPushButton("Добавить шаблон")
-            btn_add.clicked.connect(lambda: self.open_template_dialog())
-            l.addWidget(btn_add)
+            # Выбор категории
+            self.category_combo = QComboBox()
+            self.category_combo.addItem("Все категории", "")
+            self.category_combo.currentIndexChanged.connect(self.filter_templates)
+            left_layout.addWidget(self.category_combo)
             
             # Список шаблонов
-            self.tlist = QListWidget()
-            self.tlist.itemClicked.connect(self.show_temp)
-            l.addWidget(self.tlist)
-            
-            # Проверка загруженных данных
-            if not self.themes:
-                self.tlist.addItem("Шаблоны не загружены")
-                logger.warning("Список шаблонов пуст при инициализации UI")
-            else:
-                # Обновляем список шаблонов, если данные загружены
-                self.refresh_template_list()
-            
-            # Правая панель - просмотр шаблона
-            right = QGroupBox("Просмотр шаблона")
-            right.setStyleSheet("""
-                QGroupBox {
-                    font-weight: bold;
-                    border: 1px solid #444;
-                    border-radius: 6px;
-                    padding: 10px;
-                    margin-top: 10px;
-                }
-                QGroupBox::title {
-                    subcontrol-origin: margin;
-                    left: 10px;
-                    padding: 0 5px;
-                }
-            """)
-            r = QVBoxLayout(right)
-            
-            # Заголовок шаблона
-            self.temp_title = QLabel("Выберите шаблон")
-            self.temp_title.setStyleSheet("font-size:13pt; font-weight:bold;")
-            r.addWidget(self.temp_title)
-            
-            # Описание шаблона
-            self.temp_desc = QTextEdit()
-            self.temp_desc.setReadOnly(True)
-            self.temp_desc.setMaximumHeight(80)
-            r.addWidget(self.temp_desc)
-            
-            # Превью шаблона
-            self.temp_preview = QTextEdit()
-            self.temp_preview.setReadOnly(True)
-            self.temp_preview.setStyleSheet("""
-                QTextEdit {
-                    background-color: #252526;
-                    border: 1px solid #444;
-                    border-radius: 4px;
-                    padding: 10px;
-                    font-family: 'Consolas', 'Courier New', monospace;
-                    font-size: 12px;
-                }
-            """)
-            r.addWidget(self.temp_preview)
+            self.template_list = QListWidget()
+            self.template_list.itemClicked.connect(self.show_temp)
+            left_layout.addWidget(self.template_list, 1)  # Растягиваем на все доступное пространство
             
             # Кнопки управления
             btn_frame = QFrame()
             btn_layout = QHBoxLayout(btn_frame)
-            btn_layout.setContentsMargins(0, 0, 0, 0)
             
-            self.btn_edit = QPushButton("Редактировать")
+            self.btn_add = QPushButton("Добавить")
+            self.btn_add.clicked.connect(lambda: self.open_template_dialog())
+            
+            self.btn_edit = QPushButton("Изменить")
             self.btn_edit.clicked.connect(self.edit_current_template)
             self.btn_edit.setEnabled(False)
             
@@ -534,15 +466,69 @@ class PromptGenie(QMainWindow):
             self.btn_copy.clicked.connect(self.copy_template_prompt)
             self.btn_copy.setEnabled(False)
             
+            btn_layout.addWidget(self.btn_add)
             btn_layout.addWidget(self.btn_edit)
             btn_layout.addWidget(self.btn_delete)
             btn_layout.addWidget(self.btn_copy)
             
-            r.addWidget(btn_frame)
+            left_layout.addWidget(btn_frame)
+            
+            # Правая панель - просмотр шаблона
+            right_panel = QWidget()
+            right_layout = QVBoxLayout(right_panel)
+            right_layout.setSpacing(10)
+            
+            # Категория шаблона
+            self.temp_category = QLabel()
+            self.temp_category.setStyleSheet("font-size: 14px; color: #4fc3f7;")
+            right_layout.addWidget(self.temp_category)
+            
+            # Заголовок шаблона
+            self.temp_title = QLabel()
+            self.temp_title.setStyleSheet("font-size: 16px; font-weight: bold; margin-bottom: 10px;")
+            right_layout.addWidget(self.temp_title)
+            
+            # Описание шаблона
+            self.temp_desc = QTextEdit()
+            self.temp_desc.setReadOnly(True)
+            self.temp_desc.setStyleSheet("""
+                QTextEdit {
+                    background: #252526;
+                    border: 1px solid #444;
+                    border-radius: 4px;
+                    padding: 10px;
+                    min-height: 80px;
+                    max-height: 120px;
+                }
+            """)
+            right_layout.addWidget(self.temp_desc)
+            
+            # Просмотр шаблона
+            self.temp_preview = QTextEdit()
+            self.temp_preview.setReadOnly(True)
+            self.temp_preview.setStyleSheet("""
+                QTextEdit {
+                    background: #252526;
+                    border: 1px solid #444;
+                    border-radius: 4px;
+                    padding: 10px;
+                    font-family: 'Consolas', 'Courier New', monospace;
+                    font-size: 12px;
+                }
+            """)
+            right_layout.addWidget(self.temp_preview, 1)  # Растягиваем на все доступное пространство
+            
+            # Кнопка копирования
+            self.copy_btn = QPushButton("Копировать промпт")
+            self.copy_btn.clicked.connect(self.copy_template_prompt)
+            right_layout.addWidget(self.copy_btn)
             
             # Добавляем панели в основной макет
-            lay.addWidget(left, 1)
-            lay.addWidget(right, 2)
+            layout.addWidget(left_panel, 1)
+            layout.addWidget(right_panel, 2)
+            
+            # Загружаем список шаблонов
+            self.refresh_template_list()
             
             logger.debug("Вкладка шаблонов успешно инициализирована")
             return w
@@ -550,206 +536,246 @@ class PromptGenie(QMainWindow):
         except Exception as e:
             logger.error(f"Ошибка при инициализации вкладки шаблонов: {str(e)}", exc_info=True)
             raise
-        return w
 
     def refresh_template_list(self):
-        self.tlist.clear()
-        for t in self.themes:
-            item = QListWidgetItem(t.get("title_ru", "Без названия"))
-            item.setData(Qt.ItemDataRole.UserRole, t)  # Store the theme data with the item
-            self.tlist.addItem(item)
-
-    def filter_templates(self, text):
-        text = text.lower()
-        self.tlist.clear()
-        for t in self.themes:
-            if text in t.get("title_ru", "").lower() or text in t.get("description_ru", "").lower():
-                item = QListWidgetItem(t.get("title_ru", "Без названия"))
-                item.setData(Qt.ItemDataRole.UserRole, t)
-                self.tlist.addItem(item)
-
-    def validate_template_data(self, title: str, prompt: str) -> tuple[bool, str]:
-        """Валидация данных шаблона."""
-        if not title.strip():
-            return False, "Название шаблона не может быть пустым"
-        if not prompt.strip():
-            return False, "Промпт не может быть пустым"
-        if len(title) > 100:
-            return False, "Слишком длинное название (макс. 100 символов)"
-        if len(prompt) > 10000:
-            return False, "Слишком длинный промпт (макс. 10000 символов)"
-        return True, ""
-
-    def save_themes(self) -> bool:
-        """Сохранение тем в файл с обработкой ошибок."""
-        logger.info("Сохранение тем в файл")
+        """Обновляет список шаблонов и категорий."""
+        self.template_list.clear()
         
+        # Собираем все категории
+        categories = set()
+        for theme in self.themes:
+            category = theme.get("category", "Без категории")
+            categories.add(category)
+            
+            item = QListWidgetItem(f"{category} - {theme['title_ru']}")
+            item.setData(Qt.ItemDataRole.UserRole, theme)
+            self.template_list.addItem(item)
+        
+        # Обновляем список категорий
+        current_category = self.category_combo.currentData()
+        self.category_combo.clear()
+        self.category_combo.addItem("Все категории", "")
+        for category in sorted(categories):
+            self.category_combo.addItem(category, category)
+            
+        # Восстанавливаем выбранную категорию, если она есть
+        if current_category:
+            index = self.category_combo.findData(current_category)
+            if index >= 0:
+                self.category_combo.setCurrentIndex(index)
+        
+        # Применяем фильтры
+        self.filter_templates()
+        
+        # Сбрасываем превью при обновлении списка
+        if self.template_list.count() > 0:
+            self.template_list.setCurrentRow(0)
+            self.show_temp(self.template_list.currentItem())
+        else:
+            self.clear_template_preview()
+
+    def filter_templates(self, text=None):
+        """Фильтрует список шаблонов по категории и введенному тексту."""
         try:
-            themes_count = len(self.themes)
-            logger.debug(f"Сохранение {themes_count} тем")
-            
-            # Определяем пути к файлам
-            themes_path = self.data_dir / "theme_prompts.json"
-            temp_path = self.data_dir / "theme_prompts.json.tmp"
-            
-            # Создаем резервную копию перед сохранением
-            if themes_path.exists():
-                logger.debug("Создание резервной копии файла тем")
-                self.create_backup(str(themes_path))
-            
-            # Сохраняем во временный файл, затем переименовываем
-            try:
-                with open(temp_path, 'w', encoding='utf-8') as f:
-                    json.dump({"themes": self.themes}, f, ensure_ascii=False, indent=2, sort_keys=True)
+            # Обработка текста для поиска
+            search_text = ""
+            if text is not None and not isinstance(text, int):
+                search_text = str(text).lower()
+            elif hasattr(self, 'search_edit'):
+                search_text = self.search_edit.text().lower()
                 
-                # Атомарная операция замены файла
-                if sys.platform == 'win32':
-                    # На Windows сначала удаляем старый файл, если он существует
-                    if themes_path.exists():
-                        themes_path.unlink()
-                    temp_path.rename(themes_path)
-                else:
-                    # На Unix-подобных системах replace атомарный
-                    temp_path.replace(themes_path)
+            # Получаем выбранную категорию
+            selected_category = self.category_combo.currentData()
+            
+            for i in range(self.template_list.count()):
+                item = self.template_list.item(i)
+                if not item:
+                    continue
+                    
+                theme = item.data(Qt.ItemDataRole.UserRole)
+                if not theme:
+                    continue
                 
-                logger.info(f"Успешно сохранено {themes_count} тем в {themes_path}")
-                return True
+                # Проверяем категорию
+                category_match = not selected_category or (theme.get("category") == selected_category)
                 
-            except Exception as e:
-                # Удаляем временный файл в случае ошибки
-                if temp_path.exists():
-                    try:
-                        temp_path.unlink()
-                    except Exception as cleanup_error:
-                        logger.error(f"Ошибка при удалении временного файла: {cleanup_error}")
-                raise
+                # Проверяем вхождение текста в название или описание, если текст задан
+                text_match = True
+                if search_text:
+                    title = str(theme.get("title_ru", "")).lower()
+                    desc = str(theme.get("description_ru", "")).lower()
+                    text_match = (search_text in title) or (search_text in desc)
+                
+                item.setHidden(not (category_match and text_match))
+                
+        except Exception as e:
+            logger.error(f"Ошибка при фильтрации шаблонов: {str(e)}", exc_info=True)
+            
+    def copy_template_prompt(self):
+        """Копирует текст промпта выбранного шаблона в буфер обмена."""
+        try:
+            if not hasattr(self, 'temp_preview') or not self.temp_preview.toPlainText():
+                QMessageBox.information(self, "Информация", "Нет активного шаблона для копирования")
+                return
+                
+            # Получаем текст из превью
+            prompt_text = self.temp_preview.toPlainText()
+            
+            # Копируем в буфер обмена
+            clipboard = QApplication.clipboard()
+            clipboard.setText(prompt_text)
+            
+            # Показываем уведомление
+            QMessageBox.information(self, "Успех", "Промпт скопирован в буфер обмена")
             
         except Exception as e:
-            error_msg = f"Ошибка при сохранении тем: {str(e)}"
-            logger.error(error_msg, exc_info=True)
+            logger.error(f"Ошибка при копировании промпта: {str(e)}", exc_info=True)
             QMessageBox.critical(
                 self,
-                "Ошибка сохранения",
-                f"Не удалось сохранить темы.\n\n"
-                f"Ошибка: {str(e)}\n\n"
-                "Проверьте права доступа к файлу и наличие свободного места на диске."
+                "Ошибка",
+                f"Не удалось скопировать промпт:\n{str(e)}"
             )
-            return False
+            
+    def edit_current_template(self):
+        """Открывает диалог редактирования выбранного шаблона."""
+        current_item = self.template_list.currentItem()
+        if not current_item:
+            QMessageBox.information(self, "Информация", "Выберите шаблон для редактирования")
+            return
+            
+        theme_data = current_item.data(Qt.ItemDataRole.UserRole)
+        self.open_template_dialog(edit_mode=True, theme=theme_data)
+        
+    def delete_current_template(self):
+        """Удаляет выбранный шаблон."""
+        current_item = self.template_list.currentItem()
+        if not current_item:
+            QMessageBox.information(self, "Информация", "Выберите шаблон для удаления")
+            return
+            
+        theme_data = current_item.data(Qt.ItemDataRole.UserRole)
+        theme_title = theme_data.get('title_ru', 'Неизвестный шаблон')
+        
+        # Подтверждение удаления
+        reply = QMessageBox.question(
+            self,
+            'Подтверждение удаления',
+            f'Вы уверены, что хотите удалить шаблон "{theme_title}"?',
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No
+        )
+        
+        if reply == QMessageBox.StandardButton.Yes:
+            try:
+                # Удаляем шаблон из списка
+                for i, theme in enumerate(self.themes):
+                    if theme.get('title_ru') == theme_title:
+                        del self.themes[i]
+                        break
+                
+                # Обновляем список шаблонов
+                self.refresh_template_list()
+                self.clear_template_preview()
+                
+                # Сохраняем изменения
+                self.save_themes()
+                
+                QMessageBox.information(self, "Успех", "Шаблон успешно удален")
+                
+            except Exception as e:
+                logger.error(f"Ошибка при удалении шаблона: {str(e)}", exc_info=True)
+                QMessageBox.critical(
+                    self,
+                    "Ошибка",
+                    f"Не удалось удалить шаблон:\n{str(e)}"
+                )
 
-    def open_template_dialog(self, edit_mode: bool = False, theme: Optional[Dict] = None) -> None:
-        """Открытие диалога редактирования шаблона."""
+    def open_template_dialog(self, edit_mode=False, theme=None):
+        """Открывает диалог редактирования шаблона.
+        
+        Args:
+            edit_mode: Режим редактирования (True) или создания (False)
+            theme: Словарь с данными шаблона для редактирования
+        """
         dialog = QDialog(self)
         dialog.setWindowTitle("Редактирование шаблона" if edit_mode else "Новый шаблон")
-        dialog.setMinimumSize(600, 500)
-
+        dialog.setMinimumWidth(500)
         layout = QVBoxLayout(dialog)
-
-        # Название
-        title_label = QLabel("Название (RU): *")
-        title_edit = QLineEdit(theme.get("title_ru", "") if edit_mode else "")
-        title_edit.setPlaceholderText("Введите название шаблона")
-        title_edit.setMaxLength(100)
         
-        # Описание
-        desc_label = QLabel("Описание (RU):")
+        # Поля ввода
+        form = QFormLayout()
+        
+        # Категория с подсказкой
+        category_edit = QComboBox()
+        category_edit.setEditable(True)
+        category_edit.setInsertPolicy(QComboBox.InsertPolicy.InsertAtBottom)
+        
+        # Добавляем существующие категории
+        categories = set()
+        for t in self.themes:
+            if "category" in t:
+                categories.add(t["category"])
+        
+        for category in sorted(categories):
+            category_edit.addItem(category)
+        
+        # Если это новая категория, добавляем её в список
+        if theme and "category" in theme and theme["category"] not in categories:
+            category_edit.addItem(theme["category"])
+        
+        form.addRow("Категория:", category_edit)
+        
+        # Поля для ввода
+        title_edit = QLineEdit()
+        title_edit.setPlaceholderText("Название шаблона")
+        form.addRow("Название:", title_edit)
+        
         desc_edit = QTextEdit()
-        desc_edit.setPlainText(theme.get("description_ru", "") if edit_mode else "")
-        desc_edit.setPlaceholderText("Введите описание шаблона")
-        desc_edit.setMaximumHeight(90)
+        desc_edit.setPlaceholderText("Описание шаблона")
+        desc_edit.setMaximumHeight(100)
+        form.addRow("Описание:", desc_edit)
         
-        # Промпт
-        prompt_label = QLabel("Промпт (EN): *")
         prompt_edit = QTextEdit()
-        prompt_edit.setPlainText(theme.get("prompt_combined_en", "") if edit_mode else "")
-        prompt_edit.setPlaceholderText("Введите текст промпта")
+        prompt_edit.setPlaceholderText("Промпт (можно использовать ||| для разделения позитивных и негативных подсказок)")
+        form.addRow("Промпт:", prompt_edit)
         
-        # Счетчики символов
-        title_counter = QLabel(f"{len(title_edit.text())}/100")
-        prompt_counter = QLabel(f"{len(prompt_edit.toPlainText())}/10000")
+        # Заполняем поля, если это редактирование
+        if theme:
+            category_edit.setCurrentText(theme.get("category", ""))
+            title_edit.setText(theme.get("title_ru", ""))
+            desc_edit.setText(theme.get("description_ru", ""))
+            prompt_edit.setText(theme.get("prompt_combined_en", ""))
         
-        # Обновление счетчиков
-        def update_title_counter(text):
-            title_counter.setText(f"{len(text)}/100")
-            
-        def update_prompt_counter():
-            text = prompt_edit.toPlainText()
-            prompt_counter.setText(f"{len(text)}/10000")
+        layout.addLayout(form)
         
-        title_edit.textChanged.connect(update_title_counter)
-        prompt_edit.textChanged.connect(update_prompt_counter)
-        
-        # Компоновка
-        form_layout = QFormLayout()
-        form_layout.addRow(title_label, title_edit)
-        form_layout.addRow("", title_counter)
-        form_layout.addRow(desc_label, desc_edit)
-        form_layout.addRow(prompt_label, prompt_edit)
-        form_layout.addRow("", prompt_counter)
-        
-        layout.addLayout(form_layout)
-
         # Кнопки
-        btns = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
-        btns.accepted.connect(dialog.accept)
-        btns.rejected.connect(dialog.reject)
-        layout.addWidget(btns)
-
+        btn_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
+        btn_box.accepted.connect(dialog.accept)
+        btn_box.rejected.connect(dialog.reject)
+        layout.addWidget(btn_box)
+        
         if dialog.exec() == QDialog.DialogCode.Accepted:
-            title = title_edit.text().strip()
-            desc = desc_edit.toPlainText().strip()
-            prompt = prompt_edit.toPlainText().strip()
-
-            # Валидация
-            is_valid, error_msg = self.validate_template_data(title, prompt)
-            if not is_valid:
-                QMessageBox.warning(self, "Ошибка валидации", error_msg)
-                return self.open_template_dialog(edit_mode, theme)  # Повторно открываем диалог
-
-            # Подготовка данных
-            data = {
-                "title_ru": title,
-                "description_ru": desc or "Без описания",
-                "prompt_combined_en": prompt,
-                "last_modified": datetime.now().isoformat()
+            # Собираем данные
+            new_theme = {
+                "category": category_edit.currentText().strip(),
+                "title_ru": title_edit.text().strip(),
+                "description_ru": desc_edit.toPlainText().strip(),
+                "prompt_combined_en": prompt_edit.toPlainText().strip()
             }
-
-            # Сохранение
+            
+            # Валидация
+            if not self.validate_template_data(new_theme["title_ru"], new_theme["prompt_combined_en"]):
+                return
+                
+            # Обновляем или добавляем шаблон
             if edit_mode and theme:
-                theme.update(data)
-                action = "обновлён"
+                theme.update(new_theme)
             else:
-                data["created_at"] = datetime.now().isoformat()
-                self.themes.append(data)
-                action = "добавлен"
-
+                self.themes.append(new_theme)
+                
+            # Сохраняем и обновляем интерфейс
             if self.save_themes():
                 self.refresh_template_list()
-                self.statusBar().showMessage(f"Шаблон успешно {action}", 3000)
-                logger.info(f"Шаблон '{title}' {action}")
-
-    def edit_current_template(self):
-        item = self.tlist.currentItem()
-        if not item:
-            return
-        theme = item.data(Qt.ItemDataRole.UserRole)
-        self.open_template_dialog(edit_mode=True, theme=theme)
-
-    def delete_current_template(self):
-        item = self.tlist.currentItem()
-        if not item:
-            return
-        theme = item.data(Qt.ItemDataRole.UserRole)
-        if QMessageBox.question(self, "Удалить", f"Удалить шаблон «{theme.get('title_ru')}»?") == QMessageBox.StandardButton.Yes:
-            self.themes.remove(theme)
-            self.save_themes()
-            self.refresh_template_list()
-            self.clear_template_preview()
-            self.statusBar().showMessage("Шаблон удалён")
-
-    def clear_template_preview(self):
-        self.temp_title.setText("Выберите шаблон")
-        self.temp_desc.clear()
-        self.temp_preview.clear()
 
     def show_temp(self, item):
         """Показывает выбранный шаблон в интерфейсе.
@@ -757,13 +783,17 @@ class PromptGenie(QMainWindow):
         Args:
             item: QListWidgetItem, содержащий данные шаблона
         """
-        theme = item.data(Qt.ItemDataRole.UserRole)
-        if theme:
-            self.temp_title.setText(theme.get("title_ru", ""))
-            self.temp_desc.setPlainText(theme.get("description_ru", ""))
-            self.temp_preview.setPlainText(theme.get("prompt_combined_en", ""))
+        if not item:
+            return
             
-            # Включаем кнопки действий при выборе шаблона
+        theme = item.data(Qt.ItemDataRole.UserRole)
+        self.temp_category.setText(theme.get("category", "Без категории"))
+        self.temp_title.setText(theme["title_ru"])
+        self.temp_desc.setText(theme["description_ru"])
+        self.temp_preview.setText(theme["prompt_combined_en"])
+        
+        # Активируем кнопки
+        if hasattr(self, 'btn_edit'):
             self.btn_edit.setEnabled(True)
             self.btn_delete.setEnabled(True)
             self.btn_copy.setEnabled(True)
@@ -772,13 +802,6 @@ class PromptGenie(QMainWindow):
             self.btn_edit.setEnabled(False)
             self.btn_delete.setEnabled(False)
             self.btn_copy.setEnabled(False)
-
-    def copy_template_prompt(self):
-        txt = self.temp_preview.toPlainText()
-        if txt.strip():
-            pyperclip.copy(txt)
-            self.statusBar().showMessage("Промпт скопирован")
-
 
     def builder_tab(self):
         w = QWidget()
