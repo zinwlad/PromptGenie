@@ -138,12 +138,32 @@ def log_method_call(func):
 class PromptGenie(QMainWindow):
     def get_data_dir(self):
         """Возвращает путь к директории с данными приложения."""
+        base_path = Path()
         if getattr(sys, 'frozen', False):
             # Если приложение упаковано (например, в exe)
-            return Path(sys.executable).parent
+            base_path = Path(sys.executable).parent
         else:
             # При запуске из исходников
-            return Path(__file__).parent
+            base_path = Path(__file__).parent
+        
+        # Проверяем возможные пути к данным
+        possible_paths = [
+            base_path,                          # Текущая директория
+            base_path / 'data',                 # Поддиректория data
+            base_path.parent / 'data',          # data в родительской директории
+            base_path / 'dist' / 'data',        # Для PyInstaller --onefile
+            base_path.parent / 'dist' / 'data'  # Для PyInstaller --onefile (если запускаем из корня)
+        ]
+        
+        # Ищем существующую директорию с данными
+        for path in possible_paths:
+            if (path / 'theme_prompts.json').exists() and (path / 'keyword_library.json').exists():
+                logger.debug(f"Найдена директория с данными: {path}")
+                return path
+        
+        # Если не нашли, возвращаем базовый путь и логируем предупреждение
+        logger.warning(f"Не удалось найти директорию с данными. Используется: {base_path}")
+        return base_path
 
     def __init__(self):
         super(QMainWindow, self).__init__()

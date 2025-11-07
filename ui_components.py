@@ -5,7 +5,6 @@ from PyQt6.QtCore import Qt, QSize, QPropertyAnimation, QEasingCurve, QTimer
 
 
 class TooltipCheckBox(QCheckBox):
-    """КАЗАХСКИЙ ТУЛТИП — ЛУЧШИЙ В МИРЕ"""
     
     def __init__(self, word, trans, effect, type_="positive"):
         super().__init__(word)
@@ -111,7 +110,6 @@ class TooltipCheckBox(QCheckBox):
 
 
 class StyledTabWidget(QTabWidget):
-    """ТАБЫ — КАК В FIGMA"""
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setStyleSheet("""

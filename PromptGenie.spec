@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['I:\\MY_PROGRAMS\\PromptGenie\\PromptGenie_qt.py'],
+    ['i:\\MY_PROGRAMS\\PromptGenie\\PromptGenie_qt.py'],
     pathex=[],
     binaries=[],
-    datas=[('I:\\MY_PROGRAMS\\PromptGenie/theme_prompts.json', '.'), ('I:\\MY_PROGRAMS\\PromptGenie/keyword_library.json', '.')],
+    datas=[('i:\\MY_PROGRAMS\\PromptGenie/theme_prompts.json', '.'), ('i:\\MY_PROGRAMS\\PromptGenie/keyword_library.json', '.')],
     hiddenimports=['PyQt6', 'PyQt6.QtCore', 'PyQt6.QtGui', 'PyQt6.QtWidgets', 'pyperclip'],
     hookspath=[],
     hooksconfig={},

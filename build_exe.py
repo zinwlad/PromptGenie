@@ -44,6 +44,27 @@ def main():
     print("Installing/updating required packages...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip", "pyinstaller", "pyqt6", "pyperclip"])
     
+    # Create a data directory in both build and dist folders
+    build_data_dir = build_dir / "data"
+    dist_data_dir = script_dir / "dist" / "data"
+    
+    # Create directories if they don't exist
+    os.makedirs(build_data_dir, exist_ok=True)
+    os.makedirs(dist_data_dir, exist_ok=True)
+    
+    # Copy data files to both locations
+    data_files = ["theme_prompts.json", "keyword_library.json"]
+    for file in data_files:
+        src = script_dir / file
+        if src.exists():
+            # Copy to build directory
+            shutil.copy2(src, build_data_dir / file)
+            print(f"Copied {file} to {build_data_dir}")
+            
+            # Also copy to dist/data directory
+            shutil.copy2(src, dist_data_dir / file)
+            print(f"Copied {file} to {dist_data_dir}")
+    
     # Prepare PyInstaller command
     pyinstaller_cmd = [
         sys.executable, "-m", "PyInstaller",
@@ -60,6 +81,7 @@ def main():
         "--hidden-import", "PyQt6.QtWidgets",
         "--hidden-import", "pyperclip",
         "--clean",
+        "--distpath", str(build_dir.parent),  # Output to dist/PromptGenie
         str(script_dir / "PromptGenie_qt.py")
     ]
     
