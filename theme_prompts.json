@@ -1,0 +1,501 @@
+{
+  "themes": [
+    {
+      "title_ru": "Одиночный: Кинематографический Нуар (Ч/Б)",
+      "description_ru": "Превращает ваше фото в кадр из классического фильма Нуар. Жесткий свет, глубокие тени (chiaroscuro), мокрый асфальт и атмосфера дождя. Сохраняет лицо и позу.",
+      "prompt_combined_en": "Cinematic portrait shot, film noir aesthetic, solo subject, identical face, wearing a trench coat, standing in heavy rain on a wet city street, spotlight from above, deep shadows, chiaroscuro lighting, black and white monochrome, micro-details, dramatic atmosphere, full body shot, 8K RAW. ||| warm tones, bright colors, low quality, deformed, blurry, extra limbs, text, watermark, soft light, high key"
+    },
+    {
+      "title_ru": "Одиночный: Портрет в стиле Поп-арт",
+      "description_ru": "Стилизует крупный план под комикс 60-х: яркие цвета, жирные черные линии, точки Бендея (halftone dots) и четкие тени. Сохраняет выражение лица.",
+      "prompt_combined_en": "Close-up portrait of the same person, identical face and expression, rendered in vibrant Pop Art style. Bold, thick black outlines, primary colors (red, yellow, blue), halftone dot pattern (Ben-Day dots) for shading, posterized texture. Flat, hard light, 4K digital painting. ||| photorealistic, blurry, soft, gentle light, 3D render, deformed, worst quality, realistic textures, text"
+    },
+    {
+      "title_ru": "Одиночный: Футуристичный Неон (Киберпанк)",
+      "description_ru": "Переосвещает ваше фото в ночной городской среде: неоновый свет (пурпурный и бирюзовый) отражается от влажной кожи, создавая атмосферу киберпанка. Сохраняет прическу и лицо.",
+      "prompt_combined_en": "Solo head shot, same person, identical face, with neon light reflecting off wet skin. Volumetric fog, cyberpunk aesthetic, lighting in bright magenta and cyan tones, cinematic depth of field, sharp focus on eyes, micro-details, 8K, dark urban background, rain-soaked environment. ||| daylight, warm tones, natural light, low quality, blurry, cartoon, oil painting, extra fingers, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Портрет в Золотом Часе",
+      "description_ru": "Применяет эффект 'Золотого часа': мягкий, теплый свет на закате. Использует контурное освещение для отделения фигуры от фона. Идеально для уличных или природных портретов.",
+      "prompt_combined_en": "Portrait of the same person, maintain subject identity. Captured during golden hour, low angle soft light, deep warm tones, subtle lens flare, strong rim lighting separating the subject from a blurred natural background (bokeh). Hyperrealistic, 8K RAW, half body shot. ||| cold tones, hard light, shadows on face, midday sun, blurry, worst quality, cartoon, digital painting, deformed"
+    },
+    {
+      "title_ru": "Одиночный: Ледяная Скульптура",
+      "description_ru": "Полностью меняет текстуру объекта/человека, делая его похожим на прозрачную, ледяную скульптуру на темном фоне. Сохраняет позу и форму.",
+      "prompt_combined_en": "Full material transformation of the subject (preserve original pose) into a clear, translucent ice sculpture. Subsurface scattering, detailed crystalline texture, cold blue atmosphere, extreme micro-details, solid black background, studio light, 8K photorealistic render. ||| warm colors, fire, melted, ugly, deformed, worst quality, low quality, blurry, text, watermark, wet look, skin texture"
+    },
+    {
+      "title_ru": "Одиночный: Элегантный Эльфийский Воин",
+      "description_ru": "Преобразует человека в образ элегантного фэнтези-персонажа (эльфа) с добавлением доспехов и магического света. Фон меняется на зачарованный лес.",
+      "prompt_combined_en": "Fantasy portrait of the same person, identical face, as an elegant Elven warrior with silver armor and glowing details, subtle magical glow around armor edges. Standing in an enchanted forest with volumetric mist and sun rays. Cinematic lighting, soft bokeh, high detail, masterpiece, full body shot, maintain subject identity. ||| cyberpunk, modern clothing, ugly, deformed, worst quality, low quality, plastic texture, text, watermark, blurry, extra fingers"
+    },
+    {
+      "title_ru": "Одиночный: Минимализм (Негативное Пространство)",
+      "description_ru": "Упрощает фон до чистого, однотонного пространства (белого или черного), оставляя фигуру в фокусе. Идеально для редакционного стиля.",
+      "prompt_combined_en": "Solo figure portrait, simplify the image into a minimalist composition (Negative Space). The subject (maintain subject identity) should be sharply isolated against a vast, clean, bright white background. Only primary forms and lines are visible. Subtle soft shadows, high key, sharp focus, editorial style, 8K RAW. ||| busy background, cluttered, text, watermark, dark, low key, low contrast, messy, blurry, deformed, worst quality"
+    },
+    {
+      "title_ru": "Одиночный: Портрет маслом (Барокко)",
+      "description_ru": "Стилизует ваше фото под живопись Старых Мастеров (Рембрандт, Караваджо). Используется техника светотени (chiaroscuro) и текстура масляной краски.",
+      "prompt_combined_en": "Oil painting style portrait, in the manner of Caravaggio/Rembrandt. Transform the subject's face features (maintain subject identity) using deep, rich chiaroscuro shadows and a single, warm spotlight to highlight the skin. The background is a dark, sepia-toned wall. Dramatic lighting, high contrast, masterpiece. ||| photorealistic, cartoon, anime, bright background, low quality, blurry, text, watermark, extra fingers, smooth texture"
+    },
+    {
+      "title_ru": "Одиночный: Фэшн-съемка (Геометрические тени)",
+      "description_ru": "Переносит человека в студию, добавляя резкий, контрастный свет, который отбрасывает геометрические тени (жалюзи, линии) на лицо и фон. Идеально для модных аватарок.",
+      "prompt_combined_en": "High fashion editorial portrait, solo subject, identical face, characterized by hard studio light that casts sharp, geometric shadows (striped, diamond pattern) across the face and torso. Deep black background, vibrant colors in clothing, sharp focus, 8K RAW. ||| soft light, natural light, low contrast, blurry, ugly, deformed, worst quality, text, watermark, extra limbs"
+    },
+    {
+      "title_ru": "Одиночный: Астронавт на Марсе",
+      "description_ru": "Переносит человека в скафандр на фоне марсианского пейзажа. Меняет окружение, сохраняя позу и отражение в шлеме (если лицо было видно).",
+      "prompt_combined_en": "Full body shot of the same person, preserve original pose, wearing a detailed futuristic spacesuit, standing on a red planet (Mars). Earth's reflection visible on the helmet visor. Low-angle shot, cinematic lighting, ultra-detailed, volumetric light, 8K RAW, hyperrealistic. ||| low quality, low-res, blurry, cartoon, text, watermark, bad anatomy, deformed, no reflection, soft light"
+    },
+    {
+      "title_ru": "Одиночный: Размытие Движения (Panning)",
+      "description_ru": "Добавляет эффект панорамирования: резкий объект на переднем плане, а фон размыт в движении. Создает ощущение скорости (бег, быстрая ходьба). Сохраняет позу.",
+      "prompt_combined_en": "Action shot, solo subject, preserve original pose, motion blur effect (panning). The person is sharp and in focus, but the background (street/nature) is streaked and blurred, indicating high speed. Cinematic color grading, 8K photorealistic, sharp focus. ||| static pose, blurry subject, entirely sharp, worst quality, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Портрет в стиле Жан-Мишеля Баския",
+      "description_ru": "Стилизует фото под грубый, экспрессивный стиль Баския: многослойные линии, граффити, яркие цвета и текстура холста. Сохраняет контуры лица.",
+      "prompt_combined_en": "Close-up portrait of the same person, identical face, stylized as a Neo-Expressionist painting by Jean-Michel Basquiat. Energetic, rough brushstrokes, bold colors, graffiti elements, layered textures, messy canvas, mixed media, posterized texture. ||| photorealistic, smooth, soft light, clean lines, worst quality, blurry, text, cartoon, 3D render"
+    },
+    {
+      "title_ru": "Одиночный: Эффект Двойной Экспозиции (Природа)",
+      "description_ru": "Накладывает изображение природы (лес, звезды) на силуэт или лицо человека. Сохраняет контуры, но заполняет их другим изображением.",
+      "prompt_combined_en": "Surreal portrait, double exposure effect. The silhouette of the subject (maintain subject identity) blend seamlessly into silhouette, filled with a dense, detailed image of an autumn forest and a starry night sky. The background is minimal and clean. High contrast, sharp edges, artistic concept, 16:9 aspect ratio. ||| blurry, messy composition, low quality, deformed, worst quality, text, watermark, simple, flat color"
+    },
+    {
+      "title_ru": "Одиночный: Фарфоровая Кукла",
+      "description_ru": "Придает коже идеально гладкий, матовый вид (фарфор) и меняет материал одежды на винтажный шелк/бархат. Идеально для портретов с холодным или нейтральным светом.",
+      "prompt_combined_en": "Bust shot portrait, same person, identical face, transformed into a detailed porcelain doll. Extremely smooth, flawless matte skin (porcelain texture), vintage lace and silk clothing, neutral studio lighting, subtle diffused light, micro-details, hyperrealistic, studio backdrop neutral gray. ||| wet skin, shiny, rough texture, low quality, deformed, blurry, cyberpunk, neon light, ugly, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Отражение в Водной Глади",
+      "description_ru": "Меняет фон на мокрую, отражающую поверхность (например, лужа), которая искажает отражение фигуры. Добавляет кинематографический, дождливый вид.",
+      "prompt_combined_en": "Full body shot, maintain subject identity, standing on a dark, wet street at night. Subject is sharply reflected in a large puddle on the ground, creating a subtle liquid distortion. Cinematic lighting, low key, volumetric fog, blue and yellow neon colors, hyperrealistic. ||| no reflection, sunny, bright day, cartoon, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Высокий Ключ (High Key)",
+      "description_ru": "Осветляет фото, делая его чистым, воздушным и почти без теней (кроме контурных). Идеально для позитивных, студийных портретов.",
+      "prompt_combined_en": "High key portrait shot of the same person, soft and bright studio lighting, minimal shadows, pure white background, subtle details and clean lines. Creates an ethereal, pure, and airy mood. Sharp focus, best quality. ||| low key, deep shadows, dark background, hard light, ugly, deformed, worst quality, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Портрет в стиле Аниме (Ghibli)",
+      "description_ru": "Стилизует ваше фото под акварельное аниме от студии 'Гибли'. Мягкие цвета, воздушная атмосфера и детализированная природа на фоне. Сохраняет черты лица.",
+      "prompt_combined_en": "Transform the portrait of the subject (identical face) into a high-detail Ghibli Studio anime style illustration. Soft watercolor background (lush green forest/sky), warm lighting, gentle tones, subtle outline. Emotional and poetic tone. ||| photorealistic, 3D render, cyberpunk, hard light, ugly, deformed, worst quality, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Сюрреалистический Портал",
+      "description_ru": "Создает эффект, будто фигура выходит из вихря или магического портала. Яркие, светящиеся частицы и динамическое освещение.",
+      "prompt_combined_en": "Surreal portrait of the same person, maintain subject identity, half-emerging from a glowing, dynamic vortex or portal of pure light. Volumetric dust and energy particles swirling around the figure. Dramatic rim lighting, deep shadows, 8K ultra-detailed. ||| natural light, normal background, ugly, deformed, worst quality, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Винтаж 70-х (Фотография)",
+      "description_ru": "Применяет винтажный эффект: теплые сепия-тона, легкое пленочное зерно (35 мм) и выцветшие цвета. Сохраняет одежду и фон, но меняет обработку.",
+      "prompt_combined_en": "Vintage 1970s analog photograph of the subject (preserve original scene and pose). Warm, faded sepia tones, film grain 35 mm, soft focus, high saturation, retro aesthetic. Preserve original background. ||| sharp focus, modern photo, low quality, deformed, blurry, text, watermark, clean digital look"
+    },
+    {
+      "title_ru": "Одиночный: Низкополигональная Графика (Low Poly)",
+      "description_ru": "Преобразует фото в 3D-модель с угловатыми, упрощенными формами, характерными для ранней компьютерной графики. Идеально для аватарок в стиле Low Poly.",
+      "prompt_combined_en": "Low Poly 3D render of the same person, identical face, using simplified, large angular polygons and minimal textures. Bright, even lighting, solid color background, sharp edges, geometric style. ||| photorealistic, hyperrealistic, soft, blurry, oil painting, watercolor, worst quality, deformed, text"
+    },
+    {
+      "title_ru": "Одиночный: Скульптурная Элегантность",
+      "description_ru": "Использует свет, чтобы придать лицу и телу скульптурный вид, подчеркивая костную структуру и линии. Идеально для черно-белых портретов.",
+      "prompt_combined_en": "Close-up portrait, identical face, with sculptural elegance and powerful lighting. Hard side light emphasizes the jawline, cheekbones, and muscle tone. Deep shadows, strong contrast, bust shot, black and white monochrome, micro-details, 8K RAW. ||| soft light, high key, blurry, low quality, warm tones, color photo, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Портрет под дождем",
+      "description_ru": "Добавляет драматический эффект ливня: капли воды на коже, мокрые волосы, яркие отражения от источников света.",
+      "prompt_combined_en": "Dramatic portrait of the same person, identical face, standing in heavy rain at night. Water droplets clinging to hair and skin (wet look), cinematic blue and white lighting, depth of field, sharp focus on eyes, ultra-detailed. ||| sunny, warm day, dry, low quality, blurry, cartoon, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Пейзаж в стиле Ван Гога",
+      "description_ru": "Превращает человека и фон в картину, написанную густыми, вихревыми мазками в стиле Ван Гога. Сохраняет фигуру, но меняет текстуру и стиль.",
+      "prompt_combined_en": "Full body shot of the subject (preserve original pose) transformed into a highly textural oil painting in the style of Van Gogh. Thick, expressive, swirling brushstrokes (Impressionism). Vibrant colors, dramatic, moving sky background. ||| photorealistic, smooth, clean lines, digital art, cartoon, blurry, low quality, text"
+    },
+    {
+      "title_ru": "Одиночный: Мистика с Туманом",
+      "description_ru": "Добавляет атмосферу таинственности и мистики: фигура окутана густым, низким туманом, а свет пробивается через него мягкими лучами.",
+      "prompt_combined_en": "Mysterious portrait of the same person, full body shot, standing in a field covered in thick, volumetric ground fog/mist. Soft, cool lighting, subtle glow effect, deep focus, cinematic. Preserve original clothing and pose. ||| bright sun, clear sky, sunny, cartoon, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Эффект Цифрового Сбоя (Glitch Art)",
+      "description_ru": "Применяет стилизацию под цифровой сбой или 'глюк': смещенные пиксели, цветовые полосы и эффект искажения сигнала.",
+      "prompt_combined_en": "Close-up portrait of the same person, identical face, rendered with a Glitch Art / Data Moshing aesthetic. Digital distortion effect, RGB split, color shifting, horizontal and vertical pixel misalignment, chromatic aberration. Sharp focus, conceptual style. ||| clean image, no distortion, photorealistic, smooth, soft light, worst quality, text"
+    },
+    {
+      "title_ru": "Групповой: Уютный Рождественский Портрет (Семья)",
+      "description_ru": "Превращает групповое фото в идеальный рождественский кадр: теплый свет камина, свитера, мягкий фокус и атмосфера уюта. Сохраняет позы и композицию.",
+      "prompt_combined_en": "Family group portrait (maintain subject identities), cozy Christmas setting indoors. Soft, warm lighting from a fireplace and string lights (bokeh). Subjects wearing chunky knit sweaters, relaxed and happy expressions. Golden hour, cinematic, hyperrealistic. ||| hard light, cold tones, summer scene, blurred faces, deformed hands, worst quality, low quality, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Семейный Кадр 70-х (Винтаж)",
+      "description_ru": "Стилизует групповое фото под винтажную семейную фотографию 70-х годов с высокой насыщенностью, зерном и ретро-одеждой.",
+      "prompt_combined_en": "Family group shot (preserve original poses) stylized as a vintage 1970s photograph. High color saturation, subtle sepia tint, heavy film grain, retro clothing and interior design, analog look, 3:2 aspect ratio. ||| sharp focus, modern aesthetic, clean quality, low quality, deformed, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Силуэт на Закате (Пляж)",
+      "description_ru": "Переносит семью на пляж на закате, превращая фигуры в четкие силуэты на фоне яркого неба. Идеально для фото, где не нужно сохранять черты лица.",
+      "prompt_combined_en": "Family group photo (preserve original poses), silhouettes against a dramatic, colorful sunset over the ocean. Low angle, wide shot, deep focus, warm golden light, cinematic. Crisp outlines, deep shadows, 16:9 aspect ratio. ||| visible face details, midday sun, blurry, low quality, text, watermark, deformed, worst quality"
+    },
+    {
+      "title_ru": "Групповой: Семейный Арт в Акварели",
+      "description_ru": "Преобразует групповой снимок в мягкую, воздушную акварельную картину с использованием пастельных тонов. Сохраняет расположение фигур.",
+      "prompt_combined_en": "Family group photo transformed into a watercolor painting. Soft, diffused edges, visible brushstrokes, pastel color palette. Preserved composition and joyful mood. Artistic, gentle light, fine art. ||| photorealistic, hyperrealistic, oil painting, hard light, low quality, deformed, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Репортажный Стиль (Ч/Б)",
+      "description_ru": "Придает групповому фото документальный, 'живой' вид, используя черно-белую обработку, зерно и высокий контраст.",
+      "prompt_combined_en": "Candid family moment, documentary style photography. Black and white monochrome, strong contrast, visible film grain 35mm, natural expressions. Preserve original environment (street/park). ||| color photo, low quality, blurry, cartoon, text, watermark, soft light, low contrast"
+    },
+    {
+      "title_ru": "Групповой: Эпическое Фэнтези",
+      "description_ru": "Стилизует членов семьи под эпических фэнтези-персонажей (рыцарей, магов) в средневековых костюмах на фоне замка или гор. Сохраняет композицию и позы.",
+      "prompt_combined_en": "Epic fantasy group portrait (family/group of people), dressed as detailed medieval characters (knights, mages). Standing on a mountain overlooking a valley/castle. Dramatic volumetric light, cinematic, high detail, masterpiece. ||| modern clothing, car, street scene, photorealistic, ugly, deformed, worst quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Семейный Снимок в Стиле Pixar",
+      "description_ru": "Преобразует групповой портрет в 3D-графику, стилизованную под персонажей студии Pixar/Disney. Сохраняет лица и позы, но делает их мультяшными.",
+      "prompt_combined_en": "Family group photo transformed into a high-quality 3D render in the style of Pixar/Disney animation. Bright, cheerful colors, soft, exaggerated features (maintain subject identity), warm studio lighting. Full body shot, best quality. ||| photorealistic, oil painting, blurry, low quality, deformed, text, watermark, cartoon 2d"
+    },
+    {
+      "title_ru": "Групповой: Минималистичная Студия (Высокий Ключ)",
+      "description_ru": "Переносит группу в студию. Все одеты в белое, фон чистый белый. Фокус на эмоциях и линиях. Идеально для чистых, модных семейных портретов.",
+      "prompt_combined_en": "Family group shot, minimalist studio photography. Subjects wearing clean white clothing, isolated against a pure white background (high key). Soft, even lighting, focus on clean lines and subtle shadows. Sharp focus, editorial style. ||| low key, deep shadows, dark background, busy background, deformed, worst quality, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Динамичный Кадр (Прыжок)",
+      "description_ru": "Создает эффект, будто вся группа подпрыгивает в кадре с веселым выражением лица. Идеально для фото, где нужно усилить движение и радость.",
+      "prompt_combined_en": "Dynamic group photo, all subjects (maintain subject identities) captured mid-air, jumping together in an open field/beach. Joyful expressions, strong motion, full body shot. Bright natural lighting, cinematic. ||| static pose, blurry, deformed hands, worst quality, low quality, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Семейный Кадр у Окна",
+      "description_ru": "Меняет освещение и фон: группа стоит у большого окна, используя естественный, рассеянный свет. Мягкие, теплые тени. Идеально для уютных домашних снимков.",
+      "prompt_combined_en": "Family group portrait (preserve original composition) standing near a large window, utilizing soft, diffused natural light (window light). Warm tones, deep focus, interior scene, cozy atmosphere, micro-details. ||| hard light, night scene, neon light, blurry, deformed, worst quality, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Готический Портрет",
+      "description_ru": "Применяет готический стиль: бледная кожа, темная одежда, драматический свет и фон (заброшенный замок или собор).",
+      "prompt_combined_en": "Gothic portrait of the same person, identical face, standing in a dark, vaulted stone cathedral or abandoned castle. Dramatic low key lighting, pale skin, deep shadows, intricate details on velvet and lace clothing. ||| bright colors, high key, soft light, joyful, deformed, worst quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: В стиле 'Бегущего по лезвию' (Blade Runner)",
+      "description_ru": "Стилизует фото под атмосферу 'Бегущего по лезвию': влажные улицы, дым, туман и многоцветные, грязные неоновые огни.",
+      "prompt_combined_en": "Portrait shot, solo subject, 'Blade Runner' aesthetic. Standing in a dark, rainy, smoke-filled future city. Hard, multi-colored (orange, blue, green) neon lights reflecting off wet surfaces. Cinematic, high contrast, ultra-detailed. ||| daylight, clean street, natural light, cartoon, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Абстрактная Цифровая Живопись",
+      "description_ru": "Преобразует фото в цифровую живопись, используя абстрактные формы, линии и яркие цветовые блоки, сохраняя при этом контуры лица.",
+      "prompt_combined_en": "Abstract digital painting style portrait of the same person, identical face. Stylized with large, expressive, non-photorealistic color blocks, sharp geometric lines, and strong visual texture. High saturation, concept art. ||| photorealistic, blurry, smooth, soft light, worst quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Портрет с 'Эффектом Рыбьего Глаза'",
+      "description_ru": "Добавляет искажение, характерное для объектива 'рыбий глаз', делая кадр округлым и динамичным. Сохраняет лицо, но искажает окружение.",
+      "prompt_combined_en": "Full body shot, identical face, captured with strong fisheye lens distortion. The image edges are severely warped, central subject is magnified. Wide angle, dynamic composition, 8K photorealistic. ||| no distortion, clean lens, smooth, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Портрет на Пленочную Камеру 35 мм",
+      "description_ru": "Имитирует съемку на классическую пленочную камеру (Kodak Portra): легкая зернистость, мягкие тени и теплая цветовая гамма.",
+      "prompt_combined_en": "Portrait of the same person, shot on 35mm film (Kodak Portra 400). Visible fine grain texture, soft highlights, subtle warm tones, natural light, diffused shadows. Preserve original composition. ||| digital photo, high contrast, neon light, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Семейное Приключение (Горы)",
+      "description_ru": "Переносит группу на фон эпического горного пейзажа (Альпы/Гималаи). Широкий угол, ощущение масштаба и чистого воздуха. Идеально для фото на природе.",
+      "prompt_combined_en": "Family group shot (full body, preserve original pose) standing on a dramatic mountain ridge, wide angle shot, establishing shot. Clear atmosphere, deep blue sky, cinematic volumetric lighting, 8K hyperrealistic. ||| city scene, low quality, blurry, cartoon, text, watermark, deformed, soft focus"
+    },
+    {
+      "title_ru": "Групповой: Групповое Селфи в 8-битном Стиле",
+      "description_ru": "Преобразует групповое фото в пиксельную графику (Pixel Art), имитируя старые 8-битные видеоигры. Сохраняет расположение лиц и фигур.",
+      "prompt_combined_en": "Family group photo (preserve poses) rendered in detailed 8-bit Pixel Art style. Large, clear pixels, retro video game aesthetic, bright primary colors, clean lines. ||| photorealistic, 3D render, smooth, soft, blurry, worst quality, text"
+    },
+    {
+      "title_ru": "Групповой: Натюрморт с Людьми",
+      "description_ru": "Стилизует группу под классический натюрморт или картину эпохи Возрождения. Фокус на тканях, текстурах и драматическом свете.",
+      "prompt_combined_en": "Group portrait styled as a Renaissance painting (Still Life). Deep, rich fabric textures (velvet, silk), detailed faces (maintain subject identity), warm directional light, dark, painterly background. Masterpiece, oil painting. ||| photorealistic, modern clothing, ugly, deformed, worst quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Съемка для Журнала (Editorial)",
+      "description_ru": "Придает групповому фото гладкий, профессиональный вид для глянцевого журнала. Чистый фон, выверенный свет и поза.",
+      "prompt_combined_en": "Editorial style group portrait (family/group of people), clean composition, sharp focus, high-end commercial retouching. Minimalist background, professional studio lighting, perfect symmetry. 8K UHD, hyperrealistic. ||| documentary style, grainy, blurry, low quality, distorted anatomy, text, watermark, busy background"
+    },
+    {
+      "title_ru": "Групповой: В Стиле Дэвида Лашапеля",
+      "description_ru": "Стилизует группу под сюрреалистичный, яркий и высококонтрастный стиль модного фотографа Дэвида Лашапеля. Сверхнасыщенные цвета.",
+      "prompt_combined_en": "Family group photo (preserve original scene) stylized with the exaggerated, hyper-saturated, surreal aesthetic of David LaChapelle. Vibrant, almost plastic-like colors, intense contrast, high gloss finish, elaborate set design. ||| natural colors, documentary, black and white, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Зеркальная Симметрия",
+      "description_ru": "Усиливает симметрию композиции, размещая группу идеально по центру, с зеркальным отражением или архитектурным фоном.",
+      "prompt_combined_en": "Group photo with strong symmetrical composition (Rule of Thirds, Golden Ratio). Group positioned perfectly in the center of the frame against a highly symmetrical architectural background. Sharp focus, cinematic. ||| asymmetrical, random composition, busy background, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Фото на Полароид",
+      "description_ru": "Применяет эффект мгновенного фото Polaroid: квадратный кадр, блеклые, синеватые тона, мягкий фокус и белая рамка.",
+      "prompt_combined_en": "Family group photo rendered as an aged Polaroid instant film print. Square format, desaturated colors, subtle blue tint, soft focus, visible white border (frame). Vintage aesthetic. ||| sharp focus, 8K RAW, digital photo, high quality, low quality, deformed, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Драматичный Контурный Свет",
+      "description_ru": "Использует только контурный свет (Rim Light), оставляя большую часть лица и фигуры в тени. Подчеркивает форму.",
+      "prompt_combined_en": "Solo portrait, extreme rim lighting only (backlight), completely obscuring the face in shadow, highlighting only the contours of the hair and shoulders. Dark, solid background. High contrast, low key, sculptural. ||| front light, soft light, high key, visible face, low quality, blurry, text"
+    },
+    {
+      "title_ru": "Одиночный: Стимпанк (Викторианская Эпоха)",
+      "description_ru": "Преобразует одежду и фон в эстетику Стимпанка: механизмы, медь, латунь, викторианская одежда и гогглы. Сохраняет черты лица.",
+      "prompt_combined_en": "Steampunk portrait of the same person, identical face, wearing elaborate Victorian-era clothing with brass and leather mechanical elements (goggles, armor). Studio background with visible cogs and steam pipes. Oil painting texture, dramatic light. ||| modern clothing, clean, cyberpunk, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Одиночный: Отражение в Зеркале (Сюрреализм)",
+      "description_ru": "Создает эффект, будто отражение в зеркале имеет совершенно другой стиль или выражение лица, чем оригинал.",
+      "prompt_combined_en": "Solo shot of the subject (maintain subject identity) looking into a mirror. The person is hyperrealistic, but their reflection in the mirror is stylized as a low-poly 3D render or a different art style (e.g., Cubism). Conceptual, surreal lighting. ||| reflection is identical, blurry, low quality, text, watermark, worst quality"
+    },
+    {
+      "title_ru": "Одиночный: Макро-текстура (Мокрая Кожа)",
+      "description_ru": "Усиливает детализацию, добавляя эффект влажной кожи с видимыми каплями воды и порами. Идеально для крупного плана.",
+      "prompt_combined_en": "Extreme macro close-up portrait, identical face, emphasizing hyperrealistic wet skin texture with visible pores and suspended water droplets. Strong highlights on the wet surfaces, subsurface scattering. Studio light, 8K UHD. ||| matte skin, dry skin, blurry, low quality, cartoon, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Семейный Пикник (Теплый Свет)",
+      "description_ru": "Меняет фон на солнечный луг, добавляя атрибуты пикника (корзина, плед). Теплый, яркий свет, счастливые лица.",
+      "prompt_combined_en": "Family group shot (preserve original poses) enjoying a sunny picnic in a lush meadow. Warm, bright natural light, vibrant colors, soft bokeh background. Joyful, candid mood, hyperrealistic. ||| cold tones, rainy, dark, low quality, blurry, deformed hands, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Семейный Кадр в Стиле Коллажа",
+      "description_ru": "Преобразует групповое фото в креативный, многослойный коллаж с использованием текстур, газетных вырезок и мазков краски.",
+      "prompt_combined_en": "Family group photo (preserve faces and poses) rendered as a detailed artistic collage. Layered elements, paper textures, newspaper clippings, paint splatters, mixed media, high contrast. ||| photorealistic, smooth, clean, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Групповой: Пейзаж в Снежной Буре",
+      "description_ru": "Добавляет эффект снежной бури: группа стоит на открытом воздухе, сильный ветер, летящий снег, холодные тона и драматическое освещение.",
+      "prompt_combined_en": "Family group photo (full body, preserve original pose) standing outdoors in a strong blizzard/snow storm. Volumetric snow particles, strong wind effect, dramatic cold blue and white lighting. Cinematic, high contrast. ||| sunny, warm day, low quality, blurry, text, watermark, deformed, worst quality"
+    },
+    {
+      "title_ru": "Технический: Реставрация фотографий",
+      "description_ru": "Восстанавливает старое или поврежденное фото, улучшает детализацию, делает его чистым и профессиональным, добавляя реалистичную и исторически правдоподобную раскраску.",
+      "prompt_combined_en": "Restore this into a clean, detailed, professional photo with colorization, maintain subject identity: add accurate and historically plausible colors to this image. Enhance sharpness, remove scratches and noise, restore faded areas. ||| blurry, low quality, deformed, worst quality, black and white, grayscale, text, watermark, bad anatomy"
+    },
+    {
+      "title_ru": "Стилизация: Фото в стиле GTA",
+      "description_ru": "Преобразует загруженное фото в стилизацию под обложку видеоигры GTA. Лицо и фигура сохраняются узнаваемыми, но приобретают яркие, мультяшные контуры. Фон заменяется на городской пейзаж с пальмами, машинами и неоновыми вывесками. Освещение кинематографичное, закатное.",
+      "prompt_combined_en": "Transform the uploaded photo into a GTA video game cover style. Maintain subject identity, recognizable face and figure, but apply bright, cartoonish outlines and saturated colors with subtle gradients. Replace background with an urban landscape featuring palm trees, classic cars, and neon signs. Cinematic sunset lighting: warm orange glow and long shadows. Front camera angle with a slight tilt. HD quality, 2000s digital graphics style. Bold, stylish, criminal atmosphere. ||| photorealistic, blurry, low quality, watercolor, oil painting, soft light, natural light, deformed, worst quality, text, watermark"
+    },
+    {
+      "title_ru": "Профессиональный: Бизнес портрет",
+      "description_ru": "Создает профессиональный, высокодетализированный и гиперреалистичный бизнес-портрет. Сохраняет черты лица и идентичность человека. Кадр от груди, прямой взгляд в камеру. Фон — нейтральная студия. Мягкий, рассеянный свет подчеркивает лицо, создавая чистый и уверенный образ.",
+      "prompt_combined_en": "A professional, high-resolution, hyperrealism, profile photo, maintaining the exact facial structure, identity, and key features of the person in the input image. The subject is framed from the chest up, with ample headroom and negative space above their head, ensuring the top of their head is not cropped. The person looks directly at the camera, and the subject's body is also directly facing the camera. They are styled for a professional photo studio shoot, wearing a smart casual blazer. The background is a solid '#161616' neutral studio. Shot from a high angle with bright and airy soft, diffused studio lighting, gently illuminating the face and creating a subtle catchlight in the eyes, conveying a sense of clarity. Captured on an 85mm f/1.8 lens with a shallow depth of field, exquisite focus on the eyes, and beautiful, soft bokeh. Observe crisp detail on the fabric texture of the blazer, individual strands of hair, and natural, realistic skin texture. The atmosphere exudes confidence, professionalism, and approachability. Clean and bright cinematic color grading with subtle warmth and balanced tones, ensuring a polished and contemporary feel. ||| cartoon, painting, low quality, blurry, distorted anatomy, bad lighting, busy background, deformed, worst quality, text, watermark, exaggerated features"
+    },
+    {
+      "title_ru": "Иллюстрация: Новорожденный (Pixar)",
+      "description_ru": "Реалистичная 3D-иллюстрация в стиле упаковки куклы: милый малыш в ярком наряде лежит в красивой коробке как кукла. Стиль — Pixar. Внутри коробки игрушки, цветы. Цветовая палитра: синий, белый, зелёный, пастельный фон. С возможностью добавить текст (имя, параметры).",
+      "prompt_combined_en": "Realistic 3D illustration, Pixar style, like a doll packaging. Cute baby boy (or girl, specify gender if desired), identical face, in a bright watermelon-print outfit, lying in a beautiful box like a doll. Softness and vibrant details. Inside the box: colorful toys, ring, detailed leaves, flowers. Color palette: blue, white, green, pastel background. Text on the box: 'Mikhail', bottom parameters: '3902g, 56cm, 12.04'. Design: baby shower style, with floral elements, soft animated aesthetic. Sunny, summer, tropical joy, and family warmth atmosphere. ||| photorealistic, low quality, blurry, deformed, worst quality, text errors, watermark, cartoon 2d, oil painting"
+    },
+    {
+      "title_ru": "Аватар: 8-битная Аватарка (Пиксель-арт)",
+      "description_ru": "Создает пиксельный портрет, используя загруженного человека. Сохраняет 100% реальную структуру лица, выражение и прическу, но преобразует в детализированный аниме пиксельный стиль. Изображение напоминает классического ретро аниме персонажа, состоящего из маленьких квадратных блоков. Только половина лица, обрезанная вертикально по центру, с большой яркой улыбкой. С теплым персиковым оттенком кожи, черными контурами, белыми зубами и плоским цветом. [Во что одеты] - Заменить на описание одежды.",
+      "prompt_combined_en": "Create a pixel art portrait using the uploaded person. Keep 100% of the real facial structure, expression, and hairstyle, but transform it into a detailed anime pixel style. The art should resemble a classic retro anime character made entirely of small square color blocks. Show only half of the face, cropped vertically at the center, with a big bright smile. The person wearing [describe outfit] outfit. Use a warm peach skin tone, black outlines, white teeth, and flat color. ||| photorealistic, blurry, low quality, 3D render, cartoon 2d, deformed, worst quality, text, watermark, smooth lines, gradient"
+    },
+    {
+      "title_ru": "Профессиональный: Портрет на Паспорт/Визу",
+      "description_ru": "Максимально чистый, студийный портрет для документов. Нейтральное выражение лица, равномерный свет, белый или светло-серый фон. Фокус на сохранении идентичности.",
+      "prompt_combined_en": "Official ID photo, solo portrait, strictly identical face, neutral expression, centered composition, smooth white or light gray background (solid color). Flat, even studio lighting (fill light only), high detail, sharp focus, hyperrealistic. Preserve natural skin and hair texture. ||| artistic, exaggerated, dramatic light, shadows, cartoon, low quality, deformed, text, watermark, colorized"
+    },
+    {
+      "title_ru": "Профессиональный: Корпоративный Headshot",
+      "description_ru": "Профессиональный портрет крупным планом (headshot), выполненный с идеальным студийным освещением. Мягкие, но четкие тени. Фон — слегка размытый офис или нейтральный цвет.",
+      "prompt_combined_en": "Corporate headshot, same person, identical face, smart attire (suit/blouse). Professional studio setup, soft box lighting, gentle catchlights in the eyes. Blurred neutral office background (bokeh). Sharp focus, micro-details, editorial quality, hyperrealistic 8K. ||| dark, moody, artistic painting, wide shot, deformed, worst quality, text"
+    },
+    {
+      "title_ru": "Профессиональный: Портрет (Стиль Vanity Fair)",
+      "description_ru": "Глянцевый, высококонтрастный черно-белый портрет. Фокус на текстуре кожи и волос, драматическое освещение (часто боковое или верхнее) для придания 'звездности'.",
+      "prompt_combined_en": "Black and white editorial portrait, high fashion, style of Vanity Fair or Peter Lindbergh. Strong contrast, dramatic side light, emphasizing facial structure and texture of skin and hair. Medium close-up, black background, 8K RAW. ||| color photo, soft light, blurry, low quality, high key, cartoon, text, deformed"
+    },
+    {
+      "title_ru": "Стилизация: Портрет в стиле Кубизма (Пикассо)",
+      "description_ru": "Преобразует лицо в сложную, многогранную конструкцию из геометрических форм, сохраняя при этом узнаваемые черты. Использует землистые, пастельные тона.",
+      "prompt_combined_en": "Cubism style portrait (Pablo Picasso influence), subject's face is fragmented into geometric shapes and multiple perspectives. Earthy and subdued color palette (beige, brown, gray, pale blue). Oil on canvas texture, high contrast between planes. ||| photorealistic, smooth, round, soft light, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Стилизация: Портрет с Проволочной Моделью (Wireframe)",
+      "description_ru": "Рендер в стиле 3D-модели (Wireframe): лицо и фигура состоят из светящихся синих/зеленых линий на черном фоне. Подчеркивает структуру и форму.",
+      "prompt_combined_en": "3D render portrait, subject (maintain subject identity) transformed into a glowing blue and white wireframe model (wire mesh geometry). Isolated on a deep black background, futuristic digital aesthetic, volumetric light, ultra-detailed. ||| photorealistic, oil painting, solid surfaces, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Стилизация: Архитектурный Минимализм",
+      "description_ru": "Превращает лицо в гладкую, монолитную скульптуру, используя текстуры бетона, стали или мрамора. Строгие линии, отсутствие эмоций, чистый дизайн.",
+      "prompt_combined_en": "Architectural minimalist portrait. The subject's form (identical pose) is rendered as a smooth, monolithic sculpture made of polished concrete and steel. Clean, hard lines, no emotion. Neutral gray studio background, sharp directional light. ||| organic, soft, emotional, blurred, low quality, oil painting, cartoon, deformed, texture"
+    },
+    {
+      "title_ru": "Технический: Изображение с Шумом и Дефектами (VHS)",
+      "description_ru": "Применяет эффект старой видеокассеты VHS: низкое разрешение, аналоговый шум, горизонтальные полосы, сдвиг цвета (chroma shift) и легкое дрожание изображения.",
+      "prompt_combined_en": "Portrait shot with strong VHS cassette tape aesthetic. Low-resolution, grainy analog noise, horizontal tracking lines, subtle image jitter, heavy chroma shift (red/blue split). Dark room setting, 1990s retro feel. ||| high quality, 8K, clean, sharp focus, digital photo, no noise, text, watermark"
+    },
+    {
+      "title_ru": "Технический: Фотомонтаж (Стиль Дэвида Хокни)",
+      "description_ru": "Создает коллаж из множества пленочных фотографий, снятых с разных ракурсов и склеенных вместе, чтобы создать одно 'движущееся' изображение. Сохраняет лицо и фон.",
+      "prompt_combined_en": "Photo montage collage, inspired by David Hockney's joiners. Multiple overlapping 35mm film photo squares, each taken from a slightly different perspective, creating a cubist, fragmented image of the subject (maintain identity and scene). High detail, analog texture. ||| single photo, smooth, digital, low quality, blurry, text, watermark"
+    },
+    {
+      "title_ru": "Технический: Камера на Широком Углу (24 мм)",
+      "description_ru": "Использует объектив 24 мм, чтобы увеличить глубину кадра и немного исказить края, делая фигуру более динамичной и погруженной в окружение. Полный рост.",
+      "prompt_combined_en": "Full body portrait, captured with a wide-angle 24mm lens. Exaggerated perspective and deep depth of field, making the background immersive. Cinematic, natural light, 8K RAW. Preserve original pose and location. ||| telephoto lens, 85mm, flat perspective, blurry background, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Строгий: Портрет с Жестким Светом (Split Lighting)",
+      "description_ru": "Разделяет лицо на две части: одна ярко освещена, другая полностью в тени. Подчеркивает драматизм и силуэт.",
+      "prompt_combined_en": "Dramatic portrait shot, extreme Split Lighting technique. Exactly half of the face is brightly illuminated, the other half is in deep, solid shadow. Black background, strong single light source (Strobe), high contrast, cinematic. ||| soft light, fill light, high key, blurry, low contrast, low quality, deformed"
+    },
+    {
+      "title_ru": "Строгий: Силуэт на фоне Текстуры",
+      "description_ru": "Фигура полностью превращена в черный силуэт, стоящий на фоне сложной, но монохромной текстуры (например, волн, горной породы или дыма).",
+      "prompt_combined_en": "Crisp, full black silhouette of the subject (preserve original pose) against a detailed, high-contrast monochrome background texture (e.g., swirling smoke, rough stone wall, geometric pattern). Sharp edges, conceptual art. ||| visible face details, color, soft edges, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Технический: Фото с Аналоговым Сдвигом (Light Leaks)",
+      "description_ru": "Добавляет эффект утечки света (Light Leaks) и аналоговых дефектов пленки. Теплые красные/оранжевые полосы и легкое зерно. Идеально для уличных снимков.",
+      "prompt_combined_en": "Analog film photo, full body shot, with intentional light leaks and film imperfections. Warm red and orange streaks across the image, visible 35mm film grain, slightly oversaturated colors. Outdoor setting, cinematic. ||| clean digital photo, no noise, no defects, black and white, low quality, deformed"
+    },
+    {
+      "title_ru": "Бизнес: Стиль 'Wall Street' (Ч/Б)",
+      "description_ru": "Интенсивный, динамичный черно-белый портрет в деловом стиле. Человек стоит на фоне современного городского пейзажа или в лобби небоскреба. Высокий контраст, ощущение движения.",
+      "prompt_combined_en": "Dynamic black and white business portrait, powerful and confident pose. Subject in business attire (suit/dress) standing in a modern skyscraper lobby or against a blurred city skyline. High contrast, sharp focus, cinematic. ||| soft light, low key, cartoon, low quality, text, watermark, color photo"
+    },
+    {
+      "title_ru": "Стилизация: Портрет в стиле Мозаики",
+      "description_ru": "Преобразует изображение в детализированную мозаику из мелких, цветных керамических или стеклянных плиток. Сохраняет черты лица и общую цветовую гамму.",
+      "prompt_combined_en": "Portrait transformed into a detailed mosaic artwork (tessellation). Face and body composed of thousands of small, vibrant, square tiles (tesserae), visible grout lines. High contrast, highly textural, bright light. ||| smooth, photorealistic, oil painting, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Строгий: Геометрический Портрет (Art Deco)",
+      "description_ru": "Стилизация под арт-деко: сильные вертикальные и горизонтальные линии, геометрические узоры на фоне. Стилизованный, чистый свет, золото и черный цвет.",
+      "prompt_combined_en": "Art Deco style portrait, strong geometric patterns and lines integrated into the background and framing. Gold and black color scheme, clean, stylized lighting, subject wearing formal, patterned attire. Flat, graphic aesthetic. ||| photorealistic, soft light, natural scene, blurry, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Технический: Изображение с Эффектом Bokeh",
+      "description_ru": "Максимально усиливает эффект боке: фон превращается в мягкие, крупные круги света. Идеально для отделения фигуры от сложного заднего плана.",
+      "prompt_combined_en": "Solo portrait, extreme shallow depth of field (f/0.95 lens). Background completely blurred into large, circular, glowing bokeh lights (disco lights or city lights). Sharp focus on the eyes, cinematic, hyperrealistic. ||| deep focus, sharp background, blurry subject, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Стилизация: Комикс (Стиль Фрэнка Миллера)",
+      "description_ru": "Преобразует в жесткий, мрачный комикс в стиле Фрэнка Миллера ('Город грехов'). Высокий контраст, глубокие тени, минимум цвета (черный, белый, один яркий акцент).",
+      "prompt_combined_en": "Graphic novel comic art style, highly contrasted black and white (Sin City aesthetic by Frank Miller). Deep shadows, hard lines, the only color is a single, vivid splash (e.g., red lips/blue eye). Dramatic, noir atmosphere. ||| soft light, photorealistic, full color, blurry, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Профессиональный: Портрет в Стиле 'Стекло и Сталь'",
+      "description_ru": "Отражения в стеклянных поверхностях и блики от стали на лице. Человек стоит в современном небоскребе. Холодные, синие и серые тона. Фокус на текстуре и геометрии.",
+      "prompt_combined_en": "Corporate portrait, 'Glass and Steel' aesthetic. Subject standing inside a modern high-rise building, reflections of geometric architecture and cold light on the skin. Cool blue and gray color grading, sharp focus, 8K hyperrealistic. ||| warm tones, soft environment, natural setting, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Строгий: Симметричный Портрет (Wes Anderson)",
+      "description_ru": "Портрет с идеальной, навязчивой симметрией. Человек стоит строго по центру, фон — идеальные геометрические узоры. Пастельные, приглушенные цвета.",
+      "prompt_combined_en": "Portrait with strict, obsessive symmetry, Wes Anderson cinematic aesthetic. Subject perfectly centered, wearing pastel or muted colored clothing. Background features geometric, clean lines and patterns. Flat, even light. ||| asymmetrical, high contrast, dramatic shadows, vibrant colors, blurry, low quality, deformed"
+    },
+    {
+      "title_ru": "Технический: Изображение с Эффектом HDR",
+      "description_ru": "Максимально увеличивает динамический диапазон. Тени светлые, света темные. Гипер-детализация всех текстур и поверхностей.",
+      "prompt_combined_en": "Photo with extreme HDR (High Dynamic Range) effect. Maximized detail in both shadows and highlights, hyper-sharpened textures on skin and clothing. Overly dramatic, vibrant color grading. Cinematic shot. ||| flat light, low contrast, soft focus, natural, blurry, low quality, deformed, text, watermark"
+    },
+    {
+      "title_ru": "Статусный: Портрет Начальника (В Кожаном Кресле)",
+      "description_ru": "Портрет, передающий власть и статус. Человек сидит в большом, антикварном кожаном кресле в темном кабинете с деревянными панелями. Драматический, направленный свет (Rembrandt lighting).",
+      "prompt_combined_en": "High-status corporate portrait, full body shot, maintain subject identity, sitting confidently in a large, antique leather armchair. Dark, wood-paneled executive office background (library/study). Rembrandt lighting, deep shadows, rich mahogany and leather textures. Cinematic, 8K hyperrealistic. ||| low quality, blurry, bright room, cartoon, deformed, low contrast, text, watermark"
+    },
+    {
+      "title_ru": "Бизнес: За Столом Переговоров",
+      "description_ru": "Портрет в динамичном, деловом стиле. Человек сидит за современным стеклянным столом для переговоров. Отражения от стола и стеклянного фона (городской пейзаж). Четкий, профессиональный взгляд.",
+      "prompt_combined_en": "Business portrait, solo subject, identical face, sitting at a modern glass conference table. Reflective surfaces, blurred cityscape background through large window. Sharp, clean studio lighting, cool blue and white tones. Editorial quality, 8K UHD. ||| warm light, casual clothing, oil painting, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Строгий: Портрет в стиле Ар-Деко (Фокус на Геометрии)",
+      "description_ru": "Изысканный студийный портрет, вдохновленный стилем Ар-Деко. Человек стоит или сидит на фоне строгих геометрических узоров. Чистые линии, минимум цвета, золотые акценты.",
+      "prompt_combined_en": "Art Deco style studio portrait, elegant and strict. Subject (maintain identity) is framed by sharp geometric lines and stylized patterns (triangles, zigzags). Clean, flat light, limited palette of black, white, and gold accents. High contrast, graphic. ||| soft edges, blurry, photorealistic, natural scene, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Интерьер: Портрет у Камина (Теплый Свет)",
+      "description_ru": "Уютный, но статусный портрет в кресле у горящего камина. Теплый, оранжевый свет камина создает мягкое контурное освещение и глубокие тени. Фокус на текстуре шерсти/вельвета.",
+      "prompt_combined_en": "Cozy yet refined interior portrait, same person, half body shot, sitting in a velvet armchair near a roaring fireplace. Warm, golden-orange firelight, subtle rim lighting, deep contrast. Focus on textures (velvet, wool, firelight reflection). Cinematic, 8K. ||| harsh light, cool tones, outdoor scene, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Главный: Портрет в Стиле 'Крестный Отец'",
+      "description_ru": "Портрет с сильным Нуар-влиянием. Человек сидит, слегка отвернувшись, свет едва освещает глаза. Темный, мрачный кабинет, сигаретный дым. Высокий драматизм.",
+      "prompt_combined_en": "High-drama cinematic portrait, 'Godfather' aesthetic, solo subject. Sitting in a shadowy room, face partially obscured, intense gaze. Single, harsh light source (Noir style) creating deep contrast. Subtle smoke/cigar cloud in the background. Black and white monochrome. ||| soft light, full visibility, color photo, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Интерьер: Портрет в Стиле Лофт (Индустриальный)",
+      "description_ru": "Портрет в стиле лофт: человек сидит на минималистичном стуле на фоне кирпичных стен, труб и больших окон. Дневной, слегка рассеянный свет.",
+      "prompt_combined_en": "Industrial Loft style portrait, subject (maintain identity) sitting on a minimalist wooden/metal chair. Exposed brick walls, concrete floor, visible pipes and large industrial windows in the background. Bright, diffused daylight, cool tones. Editorial, 8K RAW. ||| dark, moody, opulent interior, cartoon, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Бизнес: Портрет с Фоном Городского Движения",
+      "description_ru": "Человек сидит или стоит у окна небоскреба ночью. Фон — размытые полосы огней машин (motion blur) и неоновые вывески, создающие динамику и ощущение 'вершины'.",
+      "prompt_combined_en": "Corporate night portrait, subject looking confident, standing by a skyscraper window. Background shows blurred streaking car lights and neon signs (motion blur) of the city below. Cool blue interior light vs. warm city light. Cinematic, long exposure effect. ||| daytime, clear background, soft light, oil painting, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Строгий: Портрет с Задним Контурным Светом (Rim Light)",
+      "description_ru": "Человек сидит в тени, а сильный, яркий свет сзади создает светящийся контур вокруг головы и плеч. Эффектный, скульптурный вид.",
+      "prompt_combined_en": "Sculptural portrait with extreme Rim Lighting (backlight). Subject (identical face) is sitting, entirely silhouetted against a bright, pure white light source, highlighting the contours of the body and hair. Dark, solid foreground. High contrast. ||| soft light, front light, high key, blurry, low quality, text, watermark"
+    },
+    {
+      "title_ru": "Технический: Портрет с Отражением (Стекло)",
+      "description_ru": "Портрет, где лицо частично закрыто или искажено отражениями в стекле (например, офисной перегородке). Фокус на перекрывающихся слоях и геометрических бликах.",
+      "prompt_combined_en": "Conceptual portrait focusing on reflections. Subject's face is partially obscured or distorted by reflections in a large glass surface (office divider/window). Geometric light flares, layered composition, 8K hyperrealistic. ||| no reflections, clean, smooth image, cartoon, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Статусный: Портрет с Антиквариатом",
+      "description_ru": "Портрет, где человек сидит или стоит рядом с антикварным объектом (глобус, старинная книга, скульптура), подчеркивая образованность и историю. Изысканная цветовая гамма.",
+      "prompt_combined_en": "Refined intellectual portrait, subject sitting or standing next to a detailed antique object (e.g., globe, bronze sculpture, classic book). Rich, deep color tones (sepia/maroon/forest green). Soft, directional gallery lighting. Editorial, high detail. ||| modern office, neon light, low quality, blurry, deformed, text"
+    },
+    {
+      "title_ru": "Профессиональный: Портрет в Стиле Минимализм/Ширма",
+      "description_ru": "Портрет в студии, где фон — чистая стена, но освещение создает вертикальные или горизонтальные полосы (как ширма) из тени. Чистый, но интригующий образ.",
+      "prompt_combined_en": "Minimalist studio portrait with patterned lighting. Subject (identical face) is against a clean, white wall. Hard light casts vertical or horizontal shadow stripes (like a divider) across the person and background. High key, clean lines, sharp focus. ||| busy background, soft shadows, low contrast, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Строгий: Портрет в Стиле 'Ретро-Фэшн'",
+      "description_ru": "Портрет в стиле глянцевых журналов 80-х/90-х: смелые, насыщенные цвета, графический макияж/прическа, сильный, фронтальный свет.",
+      "prompt_combined_en": "Bold Retro Fashion portrait (1980s/1990s style). Subject with stylized hair/makeup, wearing strong, block-colored clothing. Bright, flat, strong front flash lighting. High saturation, graphic composition. ||| soft light, natural tones, black and white, blurry, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Интерьер: Портрет в Оранжерее/Зимнем Саду",
+      "description_ru": "Портрет в кресле среди пышной зелени оранжереи или зимнего сада. Мягкий, рассеянный свет, много солнечных бликов и влажная атмосфера.",
+      "prompt_combined_en": "Elegant interior portrait, subject sitting in a stylish rattan/wrought iron chair inside a lush conservatory or winter garden. Soft, diffused natural light filtering through glass, heavy greenery, subtle mist/humidity effect. Warm, vibrant tones. ||| neon light, dark room, modern office, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Главный: Портрет с Низким Углом (Low Angle)",
+      "description_ru": "Портрет, снятый снизу вверх (низкий угол), чтобы фигура казалась монументальной и властной. Фокус на сильной челюсти и силуэте. Фон — небо или потолок.",
+      "prompt_combined_en": "Low-angle cinematic portrait, making the subject appear monumental and dominant. View from below, emphasizing the jawline and strong pose. Background is either clear sky or high ceiling architecture. Dramatic light, high contrast. ||| high angle, soft light, cartoon, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Технический: Портрет с Многократной Экспозицией",
+      "description_ru": "Сюрреалистический портрет, где две или три слегка смещенные копии фигуры наложены друг на друга. Эффект 'призрака' или 'движения' на статичном снимке.",
+      "prompt_combined_en": "Conceptual portrait using multiple exposure effect. Two or three slightly offset, translucent copies of the subject (identical face) are layered on a single frame. Creates a surreal ghosting or temporal movement effect. High contrast, clean background. ||| single exposure, blurry, low quality, deformed, text, watermark, photorealistic"
+    },
+    {
+      "title_ru": "Бизнес: Портрет с Планшетом/Гаджетом",
+      "description_ru": "Современный деловой портрет: человек держит светящийся планшет/гаджет, свет от которого освещает часть лица. Подчеркивает технологии и современность.",
+      "prompt_combined_en": "Modern business portrait, solo subject, identical face, using a glowing tablet or smart device. The screen light serves as the primary light source (screen lighting effect), casting blue/white light on the face. Dark, minimalist office background. Cinematic, 8K. ||| natural light, oil painting, old technology, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Строгий: Портрет в стиле Карандашного Эскиза",
+      "description_ru": "Преобразует фото в детализированный, высококонтрастный карандашный рисунок. Фокус на штриховке, линиях и игре черно-белых тонов.",
+      "prompt_combined_en": "Detailed graphite pencil sketch portrait, high contrast, maintain subject identity. Focus on visible hatching and cross-hatching techniques for shading. Black and white monochrome, crisp lines, white paper texture background. ||| color, oil painting, photorealistic, blurry, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Интерьер: Портрет у Библиотечной Полки",
+      "description_ru": "Интеллектуальный портрет: человек сидит или стоит, окруженный старыми, текстурированными книжными полками. Теплый, ламповый свет, ощущение уюта и мудрости.",
+      "prompt_combined_en": "Intellectual interior portrait, half body shot, subject (maintain identity) surrounded by densely packed, vintage wooden bookshelves (library setting). Warm, localized desk lamp light (Tungsten light), casting subtle shadows. Cozy and academic atmosphere. ||| modern bright room, neon light, cartoon, low quality, deformed, text"
+    },
+    {
+      "title_ru": "Статусный: Портрет в Стиле Королевской Семьи (Живопись)",
+      "description_ru": "Стилизация под классическую королевскую живопись. Богатое убранство, тяжелые ткани, глубокие, насыщенные цвета и золотая рама.",
+      "prompt_combined_en": "Royal portrait painting style (Renaissance/Baroque). Subject wearing rich, detailed velvet and silk clothing, opulent interior background (throne room/gallery). Deep, saturated colors, dramatic light, visible oil paint texture, elegant gilded frame surrounding the image. ||| photorealistic, cartoon, low quality, blurry, deformed, modern clothing, text"
+    },
+    {
+      "title_ru": "Технический: Портрет с Заменой Текстуры (Камень)",
+      "description_ru": "Фигура сохраняет позу, но ее поверхность полностью заменена на грубую, текстурированную горную породу или гранит. Статусное, монументальное исполнение.",
+      "prompt_combined_en": "Full material replacement portrait. Subject (identical pose) transformed into a monumental, rough-hewn stone statue (granite/marble texture). Deep gray tones, standing against a dark, foggy background. Hard, sculpting light. ||| soft texture, photorealistic, cartoon, low quality, deformed, text"
+    }
+
+
+  ]
+}
