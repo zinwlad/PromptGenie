@@ -9,7 +9,19 @@ from pathlib import Path
 from typing import Dict, List, Optional, Any, Union, Tuple
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import Qt, QSettings
-from PyQt6.QtGui import QAction, QIcon, QFont
+from PyQt6.QtGui import QAction, QIcon
+
+# Local UI components
+from ui_components import (
+    TooltipCheckBox, 
+    StyledTabWidget,
+    GradientButton,
+    SearchBox,
+    GlassPanel,
+    StatusLabel,
+    TemplateDescriptionEdit,
+    TemplatePreviewEdit
+)
 
 def setup_logging():
     """Настройка системы логирования."""
@@ -121,50 +133,6 @@ def log_method_call(func):
     wrapper.__module__ = func.__module__
     
     return wrapper
-
-
-class TooltipCheckBox(QCheckBox):
-    def __init__(self, word, trans, effect, type_="positive"):
-        super().__init__(word)
-        self.trans = trans
-        self.effect = effect
-        self.type = type_
-        self.setStyleSheet("""
-            QCheckBox {
-                padding: 6px;
-                font-size: 11pt;
-            }
-            QToolTip {
-                background-color: #0a0a0a;
-                color: #ffffff;
-                border: 1px solid #2a2a2a;
-                border-radius: 4px;
-                padding: 10px 14px;
-                font-family: 'Segoe UI', Arial, sans-serif;
-                font-size: 11pt;
-                line-height: 1.5;
-                max-width: 500px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            }
-        """)
-        if type_ == "negative":
-            self.setStyleSheet(self.styleSheet() + "color: #d9534f; font-weight: bold;")
-
-    def enterEvent(self, event):
-        tip = f"""
-        <div style='color:#ffffff; font-family: "Segoe UI", Arial, sans-serif; max-width: 450px;'>
-            <div style='font-size: 12pt; font-weight: 600; color: #ffffff; margin-bottom: 6px;'>{self.text()}</div>
-            <div style='font-size: 11pt; font-style: italic; color: #80b0ff; margin-bottom: 8px;'>{self.trans}</div>
-            <div style='height: 1px; background: linear-gradient(90deg, transparent, #505050, transparent); margin: 10px 0;'></div>
-            <div style='font-size: 10.5pt; color: #ffffff; line-height: 1.5;'>{self.effect}</div>
-        </div>
-        """
-        QToolTip.setFont(QFont('Segoe UI', 10))
-        QToolTip.showText(
-            event.globalPosition().toPoint(),
-            tip,
-            msecShowTime=10000  # Show tooltip for 10 seconds
-        )
 
 
 class PromptGenie(QMainWindow):
@@ -398,29 +366,8 @@ class PromptGenie(QMainWindow):
             layout.setContentsMargins(10, 10, 10, 10)
             layout.setSpacing(10)
 
-            # Создаем вкладки
-            tabs = QTabWidget()
-            tabs.setStyleSheet("""
-                QTabBar::tab {
-                    padding: 12px 30px;
-                    background: #2d2d2d;
-                    border: 1px solid #444;
-                    border-bottom: none;
-                    border-top-left-radius: 4px;
-                    border-top-right-radius: 4px;
-                    margin-right: 2px;
-                }
-                QTabBar::tab:selected {
-                    background: #007acc;
-                    color: white;
-                }
-                QTabWidget::pane {
-                    border: 1px solid #444;
-                    border-top: none;
-                    top: -1px;
-                    background: #252526;
-                }
-            """)
+            # Create styled tab widget
+            tabs = StyledTabWidget()
             
             # Добавляем вкладки
             templates_tab = self.templates_tab()
@@ -432,7 +379,8 @@ class PromptGenie(QMainWindow):
             layout.addWidget(tabs)
             
             # Статус бар
-            self.statusBar().showMessage("Готов к работе")
+            self.status_label = StatusLabel()
+            self.statusBar().addWidget(self.status_label)
             
             # Устанавливаем активную вкладку
             tabs.setCurrentIndex(0)
@@ -460,8 +408,7 @@ class PromptGenie(QMainWindow):
             left_layout.setSpacing(10)
             
             # Поле поиска
-            self.search_edit = QLineEdit()
-            self.search_edit.setPlaceholderText("Поиск по названию или описанию...")
+            self.search_edit = SearchBox("Поиск по названию или описанию...")
             self.search_edit.textChanged.connect(self.filter_templates)
             left_layout.addWidget(self.search_edit)
             
@@ -480,18 +427,18 @@ class PromptGenie(QMainWindow):
             btn_frame = QFrame()
             btn_layout = QHBoxLayout(btn_frame)
             
-            self.btn_add = QPushButton("Добавить")
+            self.btn_add = GradientButton("Добавить", "#007acc")
             self.btn_add.clicked.connect(lambda: self.open_template_dialog())
             
-            self.btn_edit = QPushButton("Изменить")
+            self.btn_edit = GradientButton("Изменить", "#ff9800")
             self.btn_edit.clicked.connect(self.edit_current_template)
             self.btn_edit.setEnabled(False)
             
-            self.btn_delete = QPushButton("Удалить")
+            self.btn_delete = GradientButton("Удалить", "#f44336")
             self.btn_delete.clicked.connect(self.delete_current_template)
             self.btn_delete.setEnabled(False)
             
-            self.btn_copy = QPushButton("Копировать")
+            self.btn_copy = GradientButton("Копировать", "#4caf50")
             self.btn_copy.clicked.connect(self.copy_template_prompt)
             self.btn_copy.setEnabled(False)
             
@@ -518,22 +465,12 @@ class PromptGenie(QMainWindow):
             right_layout.addWidget(self.temp_title)
             
             # Описание шаблона
-            self.temp_desc = QTextEdit()
+            self.temp_desc = TemplateDescriptionEdit(self)
             self.temp_desc.setReadOnly(True)
-            self.temp_desc.setStyleSheet("""
-                QTextEdit {
-                    background: #252526;
-                    border: 1px solid #444;
-                    border-radius: 4px;
-                    padding: 10px;
-                    min-height: 80px;
-                    max-height: 120px;
-                }
-            """)
             right_layout.addWidget(self.temp_desc)
             
             # Просмотр шаблона
-            self.temp_preview = QTextEdit()
+            self.temp_preview = TemplatePreviewEdit(self)
             self.temp_preview.setReadOnly(True)
             self.temp_preview.setStyleSheet("""
                 QTextEdit {
@@ -548,7 +485,7 @@ class PromptGenie(QMainWindow):
             right_layout.addWidget(self.temp_preview, 1)  # Растягиваем на все доступное пространство
             
             # Кнопка копирования
-            self.copy_btn = QPushButton("Копировать промпт")
+            self.copy_btn = GradientButton("Копировать промпт", "#4caf50")
             self.copy_btn.clicked.connect(self.copy_template_prompt)
             right_layout.addWidget(self.copy_btn)
             
@@ -565,6 +502,26 @@ class PromptGenie(QMainWindow):
         except Exception as e:
             logger.error(f"Ошибка при инициализации вкладки шаблонов: {str(e)}", exc_info=True)
             raise
+
+    def clear_template_preview(self):
+        """Очищает предпросмотр шаблона."""
+        # Обработка старых имен атрибутов
+        if hasattr(self, 'temp_preview'):
+            self.temp_preview.clear()
+        if hasattr(self, 'temp_desc'):
+            self.temp_desc.clear()
+        if hasattr(self, 'temp_category'):
+            self.temp_category.clear()
+        if hasattr(self, 'temp_title'):
+            self.temp_title.clear()
+            
+        # Обработка новых имен атрибутов
+        if hasattr(self, 'template_preview'):
+            self.template_preview.clear()
+        if hasattr(self, 'template_description'):
+            self.template_description.clear()
+        if hasattr(self, 'template_variables_list'):
+            self.template_variables_list.clear()
 
     def refresh_template_list(self):
         """Обновляет список шаблонов и категорий."""
@@ -877,9 +834,9 @@ class PromptGenie(QMainWindow):
         self.preview.setReadOnly(True)
         prev_lay.addWidget(self.preview)
 
-        btn_copy = QPushButton("Копировать")
+        btn_copy = GradientButton("Копировать", "#4caf50")
         btn_copy.clicked.connect(self.copy_prompt)
-        btn_clear = QPushButton("Очистить")
+        btn_clear = GradientButton("Очистить", "#f44336")
         btn_clear.clicked.connect(self.clear_all)
         btns = QHBoxLayout()
         btns.addWidget(btn_copy)
@@ -958,7 +915,17 @@ class PromptGenie(QMainWindow):
         txt = self.preview.toPlainText()
         if "Выберите" not in txt:
             pyperclip.copy(txt)
-            self.statusBar().showMessage("Промпт скопирован")
+            self.status_label.setText("Промпт скопирован в буфер обмена")
+            self.status_label.setStyleSheet("""
+                QLabel {
+                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                        stop:0 #00aa55, stop:1 #008844);
+                    color: white;
+                    padding: 12px 20px;
+                    border-radius: 0 0 16px 16px;
+                    font-weight: 600;
+                }
+            """)
 
     def clear_all(self):
         self.selected_words.clear()

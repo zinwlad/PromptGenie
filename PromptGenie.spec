@@ -1,37 +1,22 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-import os
-import sys
 
-# Путь к директории с исходниками (где лежит .spec и .py)
-base_path = os.path.abspath('.')
-
-# Список файлов данных, которые нужно включить
-data_files = [
-    ('theme_prompts.json', '.'),
-    ('keyword_library.json', '.'),
-    # Добавьте другие файлы, если понадобятся (например, icons/, docs/ и т.д.)
-]
-
-# Анализ
 a = Analysis(
-    ['PromptGenie_qt.py'],
-    pathex=[base_path],
+    ['I:\\MY_PROGRAMS\\PromptGenie\\PromptGenie_qt.py'],
+    pathex=[],
     binaries=[],
-    datas=data_files,
-    hiddenimports=[],
+    datas=[('I:\\MY_PROGRAMS\\PromptGenie/theme_prompts.json', '.'), ('I:\\MY_PROGRAMS\\PromptGenie/keyword_library.json', '.')],
+    hiddenimports=['PyQt6', 'PyQt6.QtCore', 'PyQt6.QtGui', 'PyQt6.QtWidgets', 'pyperclip'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=['PyQt6', 'PySide2', 'PySide6'],
+    excludes=[],
     noarchive=False,
-    optimize=1,
+    optimize=0,
 )
-
 pyz = PYZ(a.pure)
 
-# Создаем исполняемый файл
-app = EXE(
+exe = EXE(
     pyz,
     a.scripts,
     a.binaries,
@@ -44,10 +29,11 @@ app = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,  # Скрываем консоль при запуске
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='NONE',
 )

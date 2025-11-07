@@ -1,21 +1,27 @@
 # PromptGenie
 
-A PyQt6-based application for generating and managing AI prompts with a user-friendly interface.
+A powerful PyQt6-based application for generating and managing AI prompts with a modern, user-friendly interface.
 
-## Features
+## 🌟 Features
 
-- Generate AI prompts with customizable options
-- Copy generated prompts to clipboard with one click
-- Clear and intuitive user interface
-- Built with PyQt6 for cross-platform compatibility
+- 🎨 Modern, responsive UI with dark theme
+- 📋 Copy generated prompts to clipboard with one click
+- 🔍 Search and filter templates
+- 🎭 Multiple prompt generation modes
+- 📁 Save and load prompt templates
+- 🚀 Built with PyQt6 for cross-platform compatibility
+- 🛠️ Easy deployment with PyInstaller
 
-## Requirements
+## 📋 Requirements
 
 - Python 3.8+
 - PyQt6
 - pyperclip
+- pyinstaller (for building standalone executable)
 
-## Installation
+## 🚀 Installation
+
+### Development Setup
 
 1. Clone the repository:
    ```bash
@@ -38,15 +44,42 @@ A PyQt6-based application for generating and managing AI prompts with a user-fri
    
    Or install them manually:
    ```bash
-   pip install PyQt6 pyperclip
+   pip install PyQt6 pyperclip pyinstaller
    ```
 
-## Usage
+### Building Standalone Executable
 
-Run the application:
+1. Make sure you have all dependencies installed
+
+2. Run the build script:
+   ```bash
+   python build_exe.py
+   ```
+
+3. The built application will be available in the `dist/PromptGenie` directory
+
+## 🖥️ Usage
+
+### Running from Source
 ```bash
 python PromptGenie_qt.py
 ```
+
+### Running Built Executable
+1. Navigate to the `dist/PromptGenie` directory
+2. Run `PromptGenie.exe` (Windows) or `PromptGenie` (macOS/Linux)
+
+## 🛠️ Project Structure
+
+- `PromptGenie_qt.py` - Main application file
+- `ui_components.py` - Custom UI components and styling
+- `build_exe.py` - Build script for creating standalone executable
+- `theme_prompts.json` - Template prompts database
+- `keyword_library.json` - Keywords and effects library
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Features in Detail
 
