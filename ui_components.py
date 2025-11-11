@@ -101,12 +101,10 @@ class TooltipCheckBox(QCheckBox):
         """
         
         QToolTip.setFont(QFont('Segoe UI', 11))
-        QToolTip.showText(
-            event.globalPosition().toPoint(),
-            tip,
-            self,
-            msecShowTime=15000
-        )
+        pos = event.globalPosition().toPoint()
+        QToolTip.showText(pos, tip, self)
+        # Hide tooltip after 15 seconds
+        QTimer.singleShot(15000, lambda: QToolTip.hideText())
 
 
 class StyledTabWidget(QTabWidget):

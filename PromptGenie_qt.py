@@ -299,6 +299,38 @@ class PromptGenie(QMainWindow):
             logger.error(error_msg, exc_info=True)
             raise RuntimeError(error_msg) from e
 
+    def save_themes(self) -> bool:
+        """Сохраняет темы в JSON файл.
+        
+        Returns:
+            bool: True если сохранение прошло успешно, иначе False.
+        """
+        try:
+            themes_path = self.data_dir / "theme_prompts.json"
+            # Создаем резервную копию перед сохранением
+            self.create_backup(themes_path)
+            
+            # Подготавливаем данные для сохранения
+            data = {"themes": self.themes}
+            
+            # Сохраняем с отступами для читаемости
+            with open(themes_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+                
+            logger.info(f"Темы успешно сохранены в {themes_path}")
+            self.status_label.show_message("Темы успешно сохранены", "success")
+            return True
+            
+        except Exception as e:
+            error_msg = f"Ошибка при сохранении тем: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            QMessageBox.critical(
+                self,
+                "Ошибка сохранения",
+                f"Не удалось сохранить темы:\n{str(e)}"
+            )
+            return False
+
     def load_data(self) -> None:
         """Загрузка данных из JSON файлов."""
         logger.info("Начало загрузки данных")

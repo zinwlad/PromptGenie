@@ -4,793 +4,788 @@
       "category": "Фотография",
       "title_ru": "Одиночный: Кинематографический Нуар (Ч/Б)",
       "description_ru": "Превращает ваше фото в кадр из классического фильма Нуар. Жесткий свет, глубокие тени (chiaroscuro), мокрый асфальт и атмосфера дождя. Сохраняет лицо и позу.",
-      "prompt_combined_en": "Cinematic portrait shot, film noir aesthetic, solo subject, identical face and pose, wearing a trench coat, standing in heavy rain on a wet city street, spotlight from above, deep shadows, chiaroscuro lighting, black and white monochrome, micro-details, dramatic atmosphere, full body shot, 8K RAW, masterpiece, best quality. ||| warm tones, bright colors, low quality, deformed, blurry, extra limbs, text, watermark, soft light, high key"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, cinematic portrait shot, film noir aesthetic, solo subject, identical face and pose, wearing a trench coat, standing in heavy rain on a wet city street, spotlight from above, deep shadows, chiaroscuro lighting, black and white monochrome, dramatic atmosphere, full body shot ||| warm tones, bright colors, low quality, deformed, blurry, extra limbs, text, watermark, soft light, high key, worst quality, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Иллюстрация",
       "title_ru": "Одиночный: Портрет в стиле Поп-арт",
       "description_ru": "Стилизует крупный план под комикс 60-х: яркие цвета, жирные черные линии, точки Бендея (halftone dots) и четкие тени. Сохраняет выражение лица.",
-      "prompt_combined_en": "Close-up portrait of the same person, identical face and expression, rendered in vibrant Pop Art style. Bold, thick black outlines, primary colors (red, yellow, blue), halftone dot pattern (Ben-Day dots) for shading, posterized texture. Flat, hard light, 8K digital painting. ||| photorealistic, blurry, soft, gentle light, 3D render, deformed, worst quality, realistic textures, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, close-up portrait of the same person, identical face and expression, rendered in vibrant Pop Art style, bold thick black outlines, primary colors (red, yellow, blue), halftone dot pattern (Ben-Day dots) for shading, posterized texture, flat hard light, 8K digital painting ||| photorealistic, blurry, soft, gentle light, 3D render, deformed, worst quality, realistic textures, text, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Футуризм",
       "title_ru": "Одиночный: Футуристичный Неон (Киберпанк)",
       "description_ru": "Переосвещает ваше фото в ночной городской среде: неоновый свет (пурпурный и бирюзовый) отражается от влажной кожи, создавая атмосферу киберпанка. Сохраняет прическу и лицо.",
-      "prompt_combined_en": "Solo head shot, same person, identical face, with neon light reflecting off wet skin. Volumetric fog, cyberpunk aesthetic, lighting in bright magenta and cyan tones, cinematic depth of field, sharp focus on eyes, micro-details, 8K, dark urban background, rain-soaked environment. ||| daylight, warm tones, natural light, low quality, blurry, cartoon, oil painting, extra fingers, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, solo head shot, same person, identical face, with neon light reflecting off wet skin, volumetric fog, cyberpunk aesthetic, lighting in bright magenta and cyan tones, cinematic depth of field, sharp focus on eyes, dark urban background, rain-soaked environment ||| daylight, warm tones, natural light, low quality, blurry, cartoon, oil painting, extra fingers, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Портрет в Золотом Часе",
       "description_ru": "Применяет эффект 'Золотого часа': мягкий, теплый свет на закате. Использует контурное освещение для отделения фигуры от фона. Идеально для уличных или природных портретов.",
-      "prompt_combined_en": "Portrait of the same person, maintain subject identity. Captured during golden hour, low angle soft light, deep warm tones, subtle lens flare, strong rim lighting separating the subject from a blurred natural background (bokeh). Hyperrealistic, 8K RAW, half body shot. ||| cold tones, hard light, shadows on face, midday sun, blurry, worst quality, cartoon, digital painting, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, portrait of the same person, captured during golden hour, low angle soft light, deep warm tones, subtle lens flare, strong rim lighting separating the subject from a blurred natural background (bokeh), half body shot ||| cold tones, hard light, shadows on face, midday sun, blurry, worst quality, cartoon, digital painting, deformed, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "3D Рендер",
       "title_ru": "Одиночный: Ледяная Скульптура",
       "description_ru": "Полностью меняет текстуру объекта/человека, делая его похожим на прозрачную, ледяную скульптуру на темном фоне. Сохраняет позу и форму.",
-      "prompt_combined_en": "Full material transformation of the subject (preserve original pose) into a clear, translucent ice sculpture. Subsurface scattering, detailed crystalline texture, cold blue atmosphere, extreme micro-details, solid black background, studio light, 8K photorealistic render. ||| warm colors, fire, melted, ugly, deformed, worst quality, low quality, blurry, text, watermark, wet look, skin texture"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, full material transformation of the subject into a clear translucent ice sculpture, subsurface scattering, detailed crystalline texture, cold blue atmosphere, extreme micro-details, solid black background, studio light, 8K photorealistic render ||| warm colors, fire, melted, ugly, deformed, worst quality, low quality, blurry, text, watermark, wet look, skin texture, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фэнтези",
       "title_ru": "Одиночный: Элегантный Эльфийский Воин",
       "description_ru": "Преобразует человека в образ элегантного фэнтези-персонажа (эльфа) с добавлением доспехов и магического света. Фон меняется на зачарованный лес.",
-      "prompt_combined_en": "Fantasy portrait of the same person, identical face, as an elegant Elven warrior with silver armor and glowing details, subtle magical glow around armor edges. Standing in an enchanted forest with volumetric mist and sun rays. Cinematic lighting, soft bokeh, high detail, masterpiece, full body shot, maintain subject identity. ||| cyberpunk, modern clothing, ugly, deformed, worst quality, low quality, plastic texture, text, watermark, blurry, extra fingers"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, fantasy portrait of the same person, identical face, as an elegant Elven warrior with silver armor and glowing details, subtle magical glow around armor edges, standing in an enchanted forest with volumetric mist and sun rays, cinematic lighting, soft bokeh, high detail, full body shot ||| cyberpunk, modern clothing, ugly, deformed, worst quality, low quality, plastic texture, text, watermark, blurry, extra fingers, bad anatomy, over-smoothed skin, distorted face, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Минимализм (Негативное Пространство)",
       "description_ru": "Упрощает фон до чистого, однотонного пространства (белого или черного), оставляя фигуру в фокусе. Идеально для редакционного стиля.",
-      "prompt_combined_en": "Solo figure portrait, simplify the image into a minimalist composition (Negative Space). The subject (maintain subject identity) should be sharply isolated against a vast, clean, bright white background. Only primary forms and lines are visible. Subtle soft shadows, high key, sharp focus, editorial style, 8K RAW. ||| busy background, cluttered, text, watermark, dark, low key, low contrast, messy, blurry, deformed, worst quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, solo figure portrait, minimalist composition (Negative Space), subject sharply isolated against a vast clean bright white background, only primary forms and lines visible, subtle soft shadows, high key, editorial style ||| busy background, cluttered, text, watermark, dark, low key, low contrast, messy, blurry, deformed, worst quality, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Живопись",
       "title_ru": "Одиночный: Портрет маслом (Барокко)",
       "description_ru": "Стилизует ваше фото под живопись Старых Мастеров (Рембрандт, Караваджо). Используется техника светотени (chiaroscuro) и текстура масляной краски.",
-      "prompt_combined_en": "Oil painting style portrait, in the manner of Caravaggio/Rembrandt. Transform the subject's face features (maintain subject identity) using deep, rich chiaroscuro shadows and a single, warm spotlight to highlight the skin. The background is a dark, sepia-toned wall. Dramatic lighting, high contrast, masterpiece. ||| photorealistic, cartoon, anime, bright background, low quality, blurry, text, watermark, extra fingers, smooth texture"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, oil painting style portrait in the manner of Caravaggio/Rembrandt, deep rich chiaroscuro shadows, single warm spotlight highlighting skin, dark sepia-toned background wall, dramatic lighting, high contrast ||| photorealistic, cartoon, anime, bright background, low quality, blurry, text, watermark, extra fingers, smooth texture, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Фэшн-съемка (Геометрические тени)",
       "description_ru": "Переносит человека в студию, добавляя резкий, контрастный свет, который отбрасывает геометрические тени (жалюзи, линии) на лицо и фон. Идеально для модных аватарок.",
-      "prompt_combined_en": "High fashion editorial portrait, solo subject, identical face, characterized by hard studio light that casts sharp, geometric shadows (striped, diamond pattern) across the face and torso. Deep black background, vibrant colors in clothing, sharp focus, 8K RAW. ||| soft light, natural light, low contrast, blurry, ugly, deformed, worst quality, text, watermark, extra limbs"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, high fashion editorial portrait, solo subject, identical face, hard studio light casting sharp geometric shadows (striped, diamond pattern) across face and torso, deep black background, vibrant colors in clothing ||| soft light, natural light, low contrast, blurry, ugly, deformed, worst quality, text, watermark, extra limbs, low quality, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Футуризм",
       "title_ru": "Одиночный: Астронавт на Марсе",
       "description_ru": "Переносит человека в скафандр на фоне марсианского пейзажа. Меняет окружение, сохраняя позу и отражение в шлеме (если лицо было видно).",
-      "prompt_combined_en": "Full body shot of the same person, preserve original pose, wearing a detailed futuristic spacesuit, standing on a red planet (Mars). Earth's reflection visible on the helmet visor. Low-angle shot, cinematic lighting, ultra-detailed, volumetric light, 8K RAW, hyperrealistic. ||| low quality, low-res, blurry, cartoon, text, watermark, bad anatomy, deformed, no reflection, soft light"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, full body shot of the same person, wearing detailed futuristic spacesuit, standing on red planet (Mars), Earth's reflection visible on helmet visor, low-angle shot, cinematic lighting, ultra-detailed, volumetric light ||| low quality, low-res, blurry, cartoon, text, watermark, bad anatomy, deformed, no reflection, soft light, worst quality, ugly, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Размытие Движения (Panning)",
       "description_ru": "Добавляет эффект панорамирования: резкий объект на переднем плане, а фон размыт в движении. Создает ощущение скорости (бег, быстрая ходьба). Сохраняет позу.",
-      "prompt_combined_en": "Action shot, solo subject, preserve original pose, motion blur effect (panning). The person is sharp and in focus, but the background (street/nature) is streaked and blurred, indicating high speed. Cinematic color grading, 8K photorealistic, sharp focus. ||| static pose, blurry subject, entirely sharp, worst quality, low quality, deformed, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, action shot, solo subject, motion blur effect (panning), person sharp and in focus, background (street/nature) streaked and blurred indicating high speed, cinematic color grading ||| static pose, blurry subject, entirely sharp, worst quality, low quality, deformed, text, watermark, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Живопись",
       "title_ru": "Одиночный: Портрет в стиле Жан-Мишеля Баския",
       "description_ru": "Стилизует фото под грубый, экспрессивный стиль Баския: многослойные линии, граффити, яркие цвета и текстура холста. Сохраняет контуры лица.",
-      "prompt_combined_en": "Close-up portrait of the same person, identical face, stylized as a Neo-Expressionist painting by Jean-Michel Basquiat. Energetic, rough brushstrokes, bold colors, graffiti elements, layered textures, messy canvas, mixed media, posterized texture. ||| photorealistic, smooth, soft light, clean lines, worst quality, blurry, text, cartoon, 3D render"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, close-up portrait of the same person, identical face, stylized as Neo-Expressionist painting by Jean-Michel Basquiat, energetic rough brushstrokes, bold colors, graffiti elements, layered textures, messy canvas, mixed media ||| photorealistic, smooth, soft light, clean lines, worst quality, blurry, text, cartoon, 3D render, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Сюрреализм",
       "title_ru": "Одиночный: Эффект Двойной Экспозиции (Природа)",
       "description_ru": "Создает эффект двойной экспозиции, совмещая портрет с природным пейзажем (лес, горы, океан). Сохраняет черты лица, но добавляет прозрачность и текстуры природы.",
-      "prompt_combined_en": "Surreal portrait, double exposure effect. The silhouette of the subject (maintain subject identity) blend seamlessly, filled with a dense, detailed image of an autumn forest and a starry night sky. The background is minimal and clean. High contrast, sharp edges, artistic concept, 16:9 aspect ratio. ||| blurry, messy composition, low quality, deformed, worst quality, text, watermark, simple, flat color"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless blend, surreal portrait, double exposure effect, silhouette of subject blends seamlessly filled with dense detailed autumn forest and starry night sky, minimal clean background, high contrast, sharp edges, 16:9 aspect ratio ||| blurry, messy composition, low quality, deformed, worst quality, text, watermark, simple, flat color, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "3D Рендер",
       "title_ru": "Одиночный: Фарфоровая Кукла",
       "description_ru": "Придает коже идеально гладкий, матовый вид (фарфор) и меняет материал одежды на винтажный шелк/бархат. Идеально для портретов с холодным или нейтральным светом.",
-      "prompt_combined_en": "Bust shot portrait, same person, identical face, transformed into a detailed porcelain doll. Extremely smooth, flawless matte skin (porcelain texture), vintage lace and silk clothing, neutral studio lighting, subtle diffused light, micro-details, hyperrealistic, studio backdrop neutral gray. ||| wet skin, shiny, rough texture, low quality, deformed, blurry, cyberpunk, neon light, ugly, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, bust shot portrait, same person, identical face, transformed into detailed porcelain doll, extremely smooth flawless matte skin (porcelain texture), vintage lace and silk clothing, neutral studio lighting, subtle diffused light, studio backdrop neutral gray ||| wet skin, shiny, rough texture, low quality, deformed, blurry, cyberpunk, neon light, ugly, text, watermark, worst quality, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Отражение в Водной Глади",
       "description_ru": "Меняет фон на мокрую, отражающую поверхность (например, лужа), которая искажает отражение фигуры. Добавляет кинематографический, дождливый вид.",
-      "prompt_combined_en": "Full body shot, maintain subject identity, standing on a dark, wet street at night. Subject is sharply reflected in a large puddle on the ground, creating a subtle liquid distortion. Cinematic lighting, low key, volumetric fog, blue and yellow neon colors, hyperrealistic. ||| no reflection, sunny, bright day, cartoon, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, full body shot, standing on dark wet street at night, subject sharply reflected in large puddle on ground creating subtle liquid distortion, cinematic lighting, low key, volumetric fog, blue and yellow neon colors ||| no reflection, sunny, bright day, cartoon, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Высокий Ключ (High Key)",
       "description_ru": "Осветляет фото, делая его чистым, воздушным и почти без теней (кроме контурных). Идеально для позитивных, студийных портретов.",
-      "prompt_combined_en": "High key portrait shot of the same person, soft and bright studio lighting, minimal shadows, pure white background, subtle details and clean lines. Creates an ethereal, pure, and airy mood. Sharp focus, best quality. ||| low key, deep shadows, dark background, hard light, ugly, deformed, worst quality, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, high key portrait shot of the same person, soft bright studio lighting, minimal shadows, pure white background, subtle details and clean lines, ethereal pure airy mood ||| low key, deep shadows, dark background, hard light, ugly, deformed, worst quality, low quality, blurry, text, watermark, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Аниме",
       "title_ru": "Одиночный: Портрет в стиле Аниме (Ghibli)",
       "description_ru": "Стилизует ваше фото под акварельное аниме от студии 'Гибли'. Мягкие цвета, воздушная атмосфера и детализированная природа на фоне. Сохраняет черты лица.",
-      "prompt_combined_en": "Transform the portrait of the subject (identical face) into a high-detail Ghibli Studio anime style illustration. Soft watercolor background (lush green forest/sky), warm lighting, gentle tones, subtle outline. Emotional and poetic tone. ||| photorealistic, 3D render, cyberpunk, hard light, ugly, deformed, worst quality, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, transform portrait into high-detail Ghibli Studio anime style illustration, soft watercolor background (lush green forest/sky), warm lighting, gentle tones, subtle outline, emotional poetic tone ||| photorealistic, 3D render, cyberpunk, hard light, ugly, deformed, worst quality, low quality, blurry, text, watermark, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Сюрреализм",
       "title_ru": "Одиночный: Сюрреалистический Портал",
       "description_ru": "Создает эффект, будто фигура выходит из вихря или магического портала. Яркие, светящиеся частицы и динамическое освещение.",
-      "prompt_combined_en": "Surreal portrait of the same person, maintain subject identity, half-emerging from a glowing, dynamic vortex or portal of pure light. Volumetric dust and energy particles swirling around the figure. Dramatic rim lighting, deep shadows, 8K ultra-detailed. ||| natural light, normal background, ugly, deformed, worst quality, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, surreal portrait of the same person, half-emerging from glowing dynamic vortex or portal of pure light, volumetric dust and energy particles swirling around figure, dramatic rim lighting, deep shadows ||| natural light, normal background, ugly, deformed, worst quality, low quality, blurry, text, watermark, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Винтаж 70-х (Фотография)",
       "description_ru": "Применяет винтажный эффект: теплые сепия-тона, легкое пленочное зерно (35 мм) и выцветшие цвета. Сохраняет одежду и фон, но меняет обработку.",
-      "prompt_combined_en": "Vintage 1970s analog photograph of the subject (preserve original scene and pose). Warm, faded sepia tones, film grain 35 mm, soft focus, high saturation, retro aesthetic. Preserve original background. ||| sharp focus, modern photo, low quality, deformed, blurry, text, watermark, clean digital look"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, vintage 1970s analog photograph of the subject, warm faded sepia tones, film grain 35 mm, soft focus, high saturation, retro aesthetic, preserve original background ||| sharp focus, modern photo, low quality, deformed, blurry, text, watermark, clean digital look, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "3D Рендер",
       "title_ru": "Одиночный: Низкополигональная Графика (Low Poly)",
       "description_ru": "Преобразует фото в 3D-модель с угловатыми, упрощенными формами, характерными для ранней компьютерной графики. Идеально для аватарок в стиле Low Poly.",
-      "prompt_combined_en": "Low Poly 3D render of the same person, identical face, using simplified, large angular polygons and minimal textures. Bright, even lighting, solid color background, sharp edges, geometric style. ||| photorealistic, hyperrealistic, soft, blurry, oil painting, watercolor, worst quality, deformed, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, low poly 3D render of the same person, identical face, simplified large angular polygons, minimal textures, bright even lighting, solid color background, sharp edges, geometric style ||| photorealistic, hyperrealistic, soft, blurry, oil painting, watercolor, worst quality, deformed, text, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Скульптурная Элегантность",
       "description_ru": "Использует свет, чтобы придать лицу и телу скульптурный вид, подчеркивая костную структуру и линии. Идеально для черно-белых портретов.",
-      "prompt_combined_en": "Close-up portrait, identical face, with sculptural elegance and powerful lighting. Hard side light emphasizes the jawline, cheekbones, and muscle tone. Deep shadows, strong contrast, bust shot, black and white monochrome, micro-details, 8K RAW. ||| soft light, high key, blurry, low quality, warm tones, color photo, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, close-up portrait, identical face, sculptural elegance, powerful hard side light emphasizing jawline cheekbones muscle tone, deep shadows, strong contrast, bust shot, black and white monochrome ||| soft light, high key, blurry, low quality, warm tones, color photo, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Портрет под дождем",
       "description_ru": "Добавляет драматический эффект ливня: капли воды на коже, мокрые волосы, яркие отражения от источников света.",
-      "prompt_combined_en": "Dramatic portrait of the same person, identical face, standing in heavy rain at night. Water droplets clinging to hair and skin (wet look), cinematic blue and white lighting, depth of field, sharp focus on eyes, ultra-detailed. ||| sunny, warm day, dry, low quality, blurry, cartoon, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, dramatic portrait of the same person, identical face, standing in heavy rain at night, water droplets clinging to hair and skin (wet look), cinematic blue and white lighting, depth of field, sharp focus on eyes ||| sunny, warm day, dry, low quality, blurry, cartoon, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Живопись",
       "title_ru": "Одиночный: Пейзаж в стиле Ван Гога",
       "description_ru": "Превращает человека и фон в картину, написанную густыми, вихревыми мазками в стиле Ван Гога. Сохраняет фигуру, но меняет текстуру и стиль.",
-      "prompt_combined_en": "Full body shot of the subject (preserve original pose) transformed into a highly textural oil painting in the style of Van Gogh. Thick, expressive, swirling brushstrokes (Post-Impressionism). Vibrant colors, dramatic, moving sky background. ||| photorealistic, smooth, clean lines, digital art, cartoon, blurry, low quality, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, full body shot of subject transformed into highly textural oil painting in style of Van Gogh, thick expressive swirling brushstrokes (Post-Impressionism), vibrant colors, dramatic moving sky background ||| photorealistic, smooth, clean lines, digital art, cartoon, blurry, low quality, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Одиночный: Мистика с Туманом",
       "description_ru": "Добавляет атмосферу таинственности и мистики: фигура окутана густым, низким туманом, а свет пробивается через него мягкими лучами.",
-      "prompt_combined_en": "Mysterious portrait of the same person, full body shot, standing in a field covered in thick, volumetric ground fog/mist. Soft, cool lighting, subtle glow effect, deep focus, cinematic. Preserve original clothing and pose. ||| bright sun, clear sky, sunny, cartoon, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, mysterious portrait of the same person, full body shot, standing in field covered in thick volumetric ground fog/mist, soft cool lighting, subtle glow effect, deep focus, cinematic, preserve original clothing ||| bright sun, clear sky, sunny, cartoon, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Цифровое искусство",
       "title_ru": "Одиночный: Эффект Цифрового Сбоя (Glitch Art)",
       "description_ru": "Применяет стилизацию под цифровой сбой или 'глюк': смещенные пиксели, цветовые полосы и эффект искажения сигнала.",
-      "prompt_combined_en": "Close-up portrait of the same person, identical face, rendered with a Glitch Art / Data Moshing aesthetic. Digital distortion effect, RGB split, color shifting, horizontal and vertical pixel misalignment, chromatic aberration. Sharp focus, conceptual style. ||| clean image, no distortion, photorealistic, smooth, soft light, worst quality, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, close-up portrait of the same person, identical face, rendered with Glitch Art / Data Moshing aesthetic, digital distortion effect, RGB split, color shifting, horizontal and vertical pixel misalignment, chromatic aberration ||| clean image, no distortion, photorealistic, smooth, soft light, worst quality, text, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Групповой",
       "title_ru": "Групповой: Уютный Рождественский Портрет (Семья)",
       "description_ru": "Превращает групповое фото в идеальный рождественский кадр: теплый свет камина, свитера, мягкий фокус и атмосфера уюта. Сохраняет позы и композицию.",
-      "prompt_combined_en": "Family group portrait (maintain subject identities), cozy Christmas setting indoors. Soft, warm lighting from a fireplace and string lights (bokeh). Subjects wearing chunky knit sweaters, relaxed and happy expressions. Golden hour, cinematic, hyperrealistic. ||| hard light, cold tones, summer scene, blurred faces, deformed hands, worst quality, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group portrait, cozy Christmas setting indoors, soft warm lighting from fireplace and string lights (bokeh), subjects wearing chunky knit sweaters, relaxed happy expressions, golden hour, cinematic ||| hard light, cold tones, summer scene, blurred faces, deformed hands, worst quality, low quality, text, watermark, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Групповой",
       "title_ru": "Групповой: Семейный Кадр 70-х (Винтаж)",
       "description_ru": "Стилизует групповое фото под винтажную семейную фотографию 70-х годов с высокой насыщенностью, зерном и ретро-одеждой.",
-      "prompt_combined_en": "Family group shot (preserve original poses) stylized as a vintage 1970s photograph. High color saturation, subtle sepia tint, heavy film grain, retro clothing and interior design, analog look, 3:2 aspect ratio. ||| sharp focus, modern aesthetic, clean quality, low quality, deformed, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group shot stylized as vintage 1970s photograph, high color saturation, subtle sepia tint, heavy film grain, retro clothing and interior design, analog look, 3:2 aspect ratio ||| sharp focus, modern aesthetic, clean quality, low quality, deformed, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Групповой",
       "title_ru": "Групповой: Силуэт на Закате (Пляж)",
       "description_ru": "Переносит семью на пляж на закате, превращая фигуры в четкие силуэты на фоне яркого неба. Идеально для фото, где не нужно сохранять черты лица.",
-      "prompt_combined_en": "Family group photo (preserve original poses), silhouettes against a dramatic, colorful sunset over the ocean. Low angle, wide shot, deep focus, warm golden light, cinematic. Crisp outlines, deep shadows, 16:9 aspect ratio. ||| visible face details, midday sun, blurry, low quality, text, watermark, deformed, worst quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group photo silhouettes against dramatic colorful sunset over ocean, low angle wide shot, deep focus, warm golden light, cinematic, crisp outlines, deep shadows, 16:9 aspect ratio ||| visible face details, midday sun, blurry, low quality, text, watermark, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Иллюстрация",
       "title_ru": "Групповой: Семейный Арт в Акварели",
       "description_ru": "Преобразует групповой снимок в мягкую, воздушную акварельную картину с использованием пастельных тонов. Сохраняет расположение фигур.",
-      "prompt_combined_en": "Family group photo transformed into a watercolor painting. Soft, diffused edges, visible brushstrokes, pastel color palette. Preserved composition and joyful mood. Artistic, gentle light, fine art. ||| photorealistic, hyperrealistic, oil painting, hard light, low quality, deformed, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group photo transformed into watercolor painting, soft diffused edges, visible brushstrokes, pastel color palette, preserved composition and joyful mood, artistic gentle light ||| photorealistic, hyperrealistic, oil painting, hard light, low quality, deformed, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Групповой: Репортажный Стиль (Ч/Б)",
       "description_ru": "Придает групповому фото документальный, 'живой' вид, используя черно-белую обработку, зерно и высокий контраст.",
-      "prompt_combined_en": "Candid family moment, documentary style photography. Black and white monochrome, strong contrast, visible film grain 35mm, natural expressions. Preserve original environment (street/park). ||| color photo, low quality, blurry, cartoon, text, watermark, soft light, low contrast"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, candid family moment, documentary style photography, black and white monochrome, strong contrast, visible film grain 35mm, natural expressions, preserve original environment (street/park) ||| color photo, low quality, blurry, cartoon, text, watermark, soft light, low contrast, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фэнтези",
       "title_ru": "Групповой: Эпическое Фэнтези",
       "description_ru": "Стилизует членов семьи под эпических фэнтези-персонажей (рыцарей, магов) в средневековых костюмах на фоне замка или гор. Сохраняет композицию и позы.",
-      "prompt_combined_en": "Epic fantasy group portrait (family/group of people), dressed as detailed medieval characters (knights, mages). Standing on a mountain overlooking a valley/castle. Dramatic volumetric light, cinematic, high detail, masterpiece. ||| modern clothing, car, street scene, photorealistic, ugly, deformed, worst quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, epic fantasy group portrait (family/group), dressed as detailed medieval characters (knights, mages), standing on mountain overlooking valley/castle, dramatic volumetric light, cinematic, high detail ||| modern clothing, car, street scene, photorealistic, ugly, deformed, worst quality, blurry, text, watermark, low quality, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Аниме",
       "title_ru": "Групповой: Семейный Снимок в Стиле Pixar",
       "description_ru": "Преобразует групповой портрет в 3D-графику, стилизованную под персонажей студии Pixar/Disney. Сохраняет лица и позы, но делает их мультяшными.",
-      "prompt_combined_en": "Family group photo transformed into a high-quality 3D render in the style of Pixar/Disney animation. Bright, cheerful colors, soft, exaggerated features (maintain subject identity), warm studio lighting. Full body shot, best quality. ||| photorealistic, oil painting, blurry, low quality, deformed, text, watermark, cartoon 2d"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group photo transformed into high-quality 3D render in style of Pixar/Disney animation, bright cheerful colors, soft exaggerated features, warm studio lighting, full body shot ||| photorealistic, oil painting, blurry, low quality, deformed, text, watermark, cartoon 2d, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Групповой: Минималистичная Студия (Высокий Ключ)",
       "description_ru": "Переносит группу в студию. Все одеты в белое, фон чистый белый. Фокус на эмоциях и линиях. Идеально для чистых, модных семейных портретов.",
-      "prompt_combined_en": "Family group shot, minimalist studio photography. Subjects wearing clean white clothing, isolated against a pure white background (high key). Soft, even lighting, focus on clean lines and subtle shadows. Sharp focus, editorial style. ||| low key, deep shadows, dark background, busy background, deformed, worst quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group shot, minimalist studio photography, subjects wearing clean white clothing, isolated against pure white background (high key), soft even lighting, focus on clean lines and subtle shadows ||| low key, deep shadows, dark background, busy background, deformed, worst quality, text, watermark, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Групповой: Динамичный Кадр (Прыжок)",
       "description_ru": "Создает эффект, будто вся группа подпрыгивает в кадре с веселым выражением лица. Идеально для фото, где нужно усилить движение и радость.",
-      "prompt_combined_en": "Dynamic group photo, all subjects (maintain subject identities) captured mid-air, jumping together in an open field/beach. Joyful expressions, strong motion, full body shot. Bright natural lighting, cinematic. ||| static pose, blurry, deformed hands, worst quality, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, dynamic group photo, all subjects captured mid-air jumping together in open field/beach, joyful expressions, strong motion, full body shot, bright natural lighting ||| static pose, blurry, deformed hands, worst quality, low quality, text, watermark, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фотография",
       "title_ru": "Групповой: Семейный Кадр у Окна",
       "description_ru": "Меняет освещение и фон: группа стоит у большого окна, используя естественный, рассеянный свет. Мягкие, теплые тени. Идеально для уютных домашних снимков.",
-      "prompt_combined_en": "Family group portrait (preserve original composition) standing near a large window, utilizing soft, diffused natural light (window light). Warm tones, deep focus, interior scene, cozy atmosphere, micro-details. ||| hard light, night scene, neon light, blurry, deformed, worst quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, family group portrait standing near large window, utilizing soft diffused natural light (window light), warm tones, deep focus, interior scene, cozy atmosphere ||| hard light, night scene, neon light, blurry, deformed, worst quality, text, watermark, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Живопись",
       "title_ru": "Одиночный: Готический Портрет",
       "description_ru": "Применяет готический стиль: бледная кожа, темная одежда, драматический свет и фон (заброшенный замок или собор).",
-      "prompt_combined_en": "Gothic portrait of the same person, identical face, standing in a dark, vaulted stone cathedral or abandoned castle. Dramatic low key lighting, pale skin, deep shadows, intricate details on velvet and lace clothing. ||| bright colors, high key, soft light, joyful, deformed, worst quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, gothic portrait, identical face, pale skin, dark clothing, dramatic lighting, abandoned castle or cathedral background, low key, deep shadows, cinematic atmosphere ||| modern clothing, bright light, low quality, deformed, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
-      "category": "Футуризм",
-      "title_ru": "Одиночный: В стиле 'Бегущего по лезвию' (Blade Runner)",
-      "description_ru": "Стилизует фото под атмосферу 'Бегущего по лезвию': влажные улицы, дым, туман и многоцветные, грязные неоновые огни.",
-      "prompt_combined_en": "Portrait shot, solo subject, 'Blade Runner' aesthetic. Standing in a dark, rainy, smoke-filled future city. Hard, multi-colored (orange, blue, green) neon lights reflecting off wet surfaces. Cinematic, high contrast, ultra-detailed. ||| daylight, clean street, natural light, cartoon, low quality, blurry, text, watermark"
-    },
-    {
-      "category": "Цифровое искусство",
-      "title_ru": "Одиночный: Абстрактная Цифровая Живопись",
-      "description_ru": "Преобразует фото в цифровую живопись, используя абстрактные формы, линии и яркие цветовые блоки, сохраняя при этом контуры лица.",
-      "prompt_combined_en": "Abstract digital painting style portrait of the same person, identical face. Stylized with large, expressive, non-photorealistic color blocks, sharp geometric lines, and strong visual texture. High saturation, concept art. ||| photorealistic, blurry, smooth, soft light, worst quality, deformed, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Одиночный: Портрет с 'Эффектом Рыбьего Глаза'",
-      "description_ru": "Добавляет искажение, характерное для объектива 'рыбий глаз', делая кадр округлым и динамичным. Сохраняет лицо, но искажает окружение.",
-      "prompt_combined_en": "Full body shot, identical face, captured with strong fisheye lens distortion. The image edges are severely warped, central subject is magnified. Wide angle, dynamic composition, 8K photorealistic. ||| no distortion, clean lens, smooth, low quality, blurry, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Одиночный: Портрет на Пленочную Камеру 35 мм",
-      "description_ru": "Имитирует съемку на классическую пленочную камеру (Kodak Portra): легкая зернистость, мягкие тени и теплая цветовая гамма.",
-      "prompt_combined_en": "Portrait of the same person, shot on 35mm film (Kodak Portra 400). Visible fine grain texture, soft highlights, subtle warm tones, natural light, diffused shadows. Preserve original composition. ||| digital photo, high contrast, neon light, blurry, low quality, deformed, text, watermark"
-    },
-    {
-      "category": "Групповой",
-      "title_ru": "Групповой: Семейное Приключение (Горы)",
-      "description_ru": "Переносит группу на фон эпического горного пейзажа (Альпы/Гималаи). Широкий угол, ощущение масштаба и чистого воздуха. Идеально для фото на природе.",
-      "prompt_combined_en": "Family group shot (full body, preserve original pose) standing on a dramatic mountain ridge, wide angle shot, establishing shot. Clear atmosphere, deep blue sky, cinematic volumetric lighting, 8K hyperrealistic. ||| city scene, low quality, blurry, cartoon, text, watermark, deformed, soft focus"
-    },
-    {
-      "category": "Пиксель-арт",
-      "title_ru": "Групповой: Групповое Селфи в 8-битном Стиле",
-      "description_ru": "Преобразует групповое фото в пиксельную графику (Pixel Art), имитируя старые 8-битные видеоигры. Сохраняет расположение лиц и фигур.",
-      "prompt_combined_en": "Family group photo (preserve poses) rendered in detailed 8-bit Pixel Art style. Large, clear pixels, retro video game aesthetic, bright primary colors, clean lines. ||| photorealistic, 3D render, smooth, soft, blurry, worst quality, text"
-    },
-    {
-      "category": "Живопись",
-      "title_ru": "Групповой: Натюрморт с Людьми",
-      "description_ru": "Стилизует группу под классический натюрморт или картину эпохи Возрождения. Фокус на тканях, текстурах и драматическом свете.",
-      "prompt_combined_en": "Group portrait styled as a Renaissance painting (Still Life). Deep, rich fabric textures (velvet, silk), detailed faces (maintain subject identity), warm directional light, dark, painterly background. Masterpiece, oil painting. ||| photorealistic, modern clothing, ugly, deformed, worst quality, blurry, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Групповой: Съемка для Журнала (Editorial)",
-      "description_ru": "Придает групповому фото гладкий, профессиональный вид для глянцевого журнала. Чистый фон, выверенный свет и поза.",
-      "prompt_combined_en": "Editorial style group portrait (family/group of people), clean composition, sharp focus, high-end commercial retouching. Minimalist background, professional studio lighting, perfect symmetry. 8K UHD, hyperrealistic. ||| documentary style, grainy, blurry, low quality, distorted anatomy, text, watermark, busy background"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Групповой: В Стиле Дэвида Лашапеля",
-      "description_ru": "Стилизует группу под сюрреалистичный, яркий и высококонтрастный стиль модного фотографа Дэвида Лашапеля. Сверхнасыщенные цвета.",
-      "prompt_combined_en": "Family group photo (preserve original scene) stylized with the exaggerated, hyper-saturated, surreal aesthetic of David LaChapelle. Vibrant, almost plastic-like colors, intense contrast, high gloss finish, elaborate set design. ||| natural colors, documentary, black and white, blurry, low quality, deformed, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Групповой: Зеркальная Симметрия",
-      "description_ru": "Усиливает симметрию композиции, размещая группу идеально по центру, с зеркальным отражением или архитектурным фоном.",
-      "prompt_combined_en": "Group photo with strong symmetrical composition (centered framing). Group positioned perfectly in the center of the frame against a highly symmetrical architectural background. Sharp focus, cinematic, maintain all subjects' identities and poses. ||| asymmetrical, random composition, busy background, blurry, low quality, deformed, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Групповой: Фото на Полароид",
-      "description_ru": "Применяет эффект мгновенного фото Polaroid: квадратный кадр, блеклые, синеватые тона, мягкий фокус и белая рамка.",
-      "prompt_combined_en": "Family group photo rendered as an aged Polaroid instant film print. Square format, desaturated colors, subtle blue tint, soft focus, visible white border (frame). Vintage aesthetic. ||| sharp focus, 8K RAW, digital photo, high quality, low quality, deformed, blurry, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Одиночный: Драматичный Контурный Свет",
-      "description_ru": "Использует только контурный свет (Rim Light), оставляя большую часть лица и фигуры в тени. Подчеркивает форму.",
-      "prompt_combined_en": "Solo portrait, extreme rim lighting only (backlight), completely obscuring the face in shadow, highlighting only the contours of the hair and shoulders. Dark, solid background. High contrast, low key, sculptural. ||| front light, soft light, high key, visible face, low quality, blurry, text"
-    },
-    {
-      "category": "Стимпанк",
-      "title_ru": "Одиночный: Стимпанк (Викторианская Эпоха)",
-      "description_ru": "Преобразует одежду и фон в эстетику Стимпанка: механизмы, медь, латунь, викторианская одежда и гогглы. Сохраняет черты лица.",
-      "prompt_combined_en": "Steampunk portrait of the same person, identical face, wearing elaborate Victorian-era clothing with brass and leather mechanical elements (goggles, armor). Studio background with visible cogs and steam pipes. Oil painting texture, dramatic light. ||| modern clothing, clean, cyberpunk, low quality, blurry, text, watermark"
-    },
-    {
-      "category": "Сюрреализм",
-      "title_ru": "Одиночный: Отражение в Зеркале (Сюрреализм)",
-      "description_ru": "Создает эффект, будто отражение в зеркале имеет совершенно другой стиль или выражение лица, чем оригинал.",
-      "prompt_combined_en": "Solo shot of the subject (maintain subject identity) looking into a mirror. The person is hyperrealistic, but their reflection in the mirror is stylized as a low-poly 3D render. Conceptual, surreal lighting, masterpiece. ||| reflection is identical, blurry, low quality, text, watermark, worst quality"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Одиночный: Макро-текстура (Мокрая Кожа)",
-      "description_ru": "Усиливает детализацию, добавляя эффект влажной кожи с видимыми каплями воды и порами. Идеально для крупного плана.",
-      "prompt_combined_en": "Extreme macro close-up portrait, identical face, emphasizing hyperrealistic wet skin texture with visible pores and suspended water droplets. Strong highlights on the wet surfaces, subsurface scattering. Studio light, 8K UHD. ||| matte skin, dry skin, blurry, low quality, cartoon, deformed, text, watermark"
-    },
-    {
-      "category": "Групповой",
-      "title_ru": "Групповой: Семейный Пикник (Теплый Свет)",
-      "description_ru": "Меняет фон на солнечный луг, добавляя атрибуты пикника (корзина, плед). Теплый, яркий свет, счастливые лица.",
-      "prompt_combined_en": "Family group shot (preserve original poses) enjoying a sunny picnic in a lush meadow. Warm, bright natural light, vibrant colors, soft bokeh background. Joyful, candid mood, hyperrealistic. ||| cold tones, rainy, dark, low quality, blurry, deformed hands, text, watermark"
-    },
-    {
-      "category": "Коллаж",
-      "title_ru": "Групповой: Семейный Кадр в Стиле Коллажа",
-      "description_ru": "Преобразует групповое фото в креативный, многослойный коллаж с использованием текстур, газетных вырезок и мазков краски.",
-      "prompt_combined_en": "Family group photo (preserve faces and poses) rendered as a detailed artistic collage. Layered elements, paper textures, newspaper clippings, paint splatters, mixed media, high contrast. ||| photorealistic, smooth, clean, blurry, low quality, deformed, text, watermark"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Групповой: Пейзаж в Снежной Буре",
-      "description_ru": "Добавляет эффект снежной бури: группа стоит на открытом воздухе, сильный ветер, летящий снег, холодные тона и драматическое освещение.",
-      "prompt_combined_en": "Family group photo (full body, preserve original pose) standing outdoors in a strong blizzard/snow storm. Volumetric snow particles, strong wind effect, dramatic cold blue and white lighting. Cinematic, high contrast. ||| sunny, warm day, low quality, blurry, text, watermark, deformed, worst quality"
-    },
-    {
-      "category": "Технический",
-      "title_ru": "Технический: Реставрация фотографий",
-      "description_ru": "Восстанавливает старое или поврежденное фото, улучшает детализацию, делает его чистым и профессиональным, добавляя реалистичную и исторически правдоподобную раскраску.",
-      "prompt_combined_en": "Restore this into a clean, detailed, professional photo with colorization, maintain subject identity: add accurate and historically plausible colors to this image. Enhance sharpness, remove scratches and noise, restore faded areas. ||| blurry, low quality, deformed, worst quality, black and white, grayscale, text, watermark, bad anatomy"
-    },
-    {
-      "category": "Игровой стиль",
-      "title_ru": "Стилизация: Фото в стиле GTA",
-      "description_ru": "Преобразует загруженное фото в стилизацию под обложку видеоигры GTA. Лицо и фигура сохраняются узнаваемыми, но приобретают яркие, мультяшные контуры. Фон заменяется на городской пейзаж с пальмами, машинами и неоновыми вывесками. Освещение кинематографичное, закатное.",
-      "prompt_combined_en": "Transform the uploaded photo into a GTA video game cover style. Maintain subject identity, recognizable face and figure, but apply bright, cartoonish outlines and saturated colors with subtle gradients. Replace background with an urban landscape featuring palm trees, classic cars, and neon signs. Cinematic sunset lighting: warm orange glow and long shadows. Front camera angle with a slight tilt. HD quality, 2000s digital graphics style. Bold, stylish, criminal atmosphere. ||| photorealistic, blurry, low quality, watercolor, oil painting, soft light, natural light, deformed, worst quality, text, watermark"
-    },
-    {
-      "category": "Профессиональный",
-      "title_ru": "Профессиональный: Бизнес портрет",
-      "description_ru": "Создает профессиональный, высокодетализированный и гиперреалистичный бизнес-портрет. Сохраняет черты лица и идентичность человека. Кадр от груди, прямой взгляд в камеру. Фон — нейтральная студия. Мягкий, рассеянный свет подчеркивает лицо, создавая чистый и уверенный образ.",
-      "prompt_combined_en": "A professional, high-resolution, hyperrealism, profile photo, maintaining the exact facial structure, identity, and key features of the person in the input image. The subject is framed from the chest up, with ample headroom and negative space above their head, ensuring the top of their head is not cropped. The person looks directly at the camera, and the subject's body is also directly facing the camera. They are styled for a professional photo studio shoot, wearing a smart casual blazer. The background is a solid '#161616' neutral studio. Shot from a high angle with bright and airy soft, diffused studio lighting, gently illuminating the face and creating a subtle catchlight in the eyes, conveying a sense of clarity. Captured on an 85mm f/1.8 lens with a shallow depth of field, exquisite focus on the eyes, and beautiful, soft bokeh. Observe crisp detail on the fabric texture of the blazer, individual strands of hair, and natural, realistic skin texture. The atmosphere exudes confidence, professionalism, and approachability. Clean and bright cinematic color grading with subtle warmth and balanced tones, ensuring a polished and contemporary feel. ||| cartoon, painting, low quality, blurry, distorted anatomy, bad lighting, busy background, deformed, worst quality, text, watermark, exaggerated features"
-    },
-    {
-      "category": "Иллюстрация",
-      "title_ru": "Иллюстрация: Новорожденный (Pixar)",
-      "description_ru": "Реалистичная 3D-иллюстрация в стиле упаковки куклы: милый малыш в ярком наряде лежит в красивой коробке как кукла. Стиль — Pixar. Внутри коробки игрушки, цветы. Цветовая палитра: синий, белый, зелёный, пастельный фон. С возможностью добавить текст (имя, параметры).",
-      "prompt_combined_en": "Realistic 3D illustration, Pixar style, like a doll packaging. Cute baby boy (or girl, specify gender if desired), identical face, in a bright watermelon-print outfit, lying in a beautiful box like a doll. Softness and vibrant details. Inside the box: colorful toys, ring, detailed leaves, flowers. Color palette: blue, white, green, pastel background. Text on the box: 'Mikhail', bottom parameters: '3902g, 56cm, 12.04'. Design: baby shower style, with floral elements, soft animated aesthetic. Sunny, summer, tropical joy, and family warmth atmosphere. ||| photorealistic, low quality, blurry, deformed, worst quality, text errors, watermark, cartoon 2d, oil painting"
-    },
-    {
-      "category": "Пиксель-арт",
-      "title_ru": "Аватар: 8-битная Аватарка (Пиксель-арт)",
-      "description_ru": "Создает пиксельный портрет, используя загруженного человека. Сохраняет 100% реальную структуру лица, выражение и прическу, но преобразует в детализированный аниме пиксельный стиль. Изображение напоминает классического ретро аниме персонажа, состоящего из маленьких квадратных блоков. Только половина лица, обрезанная вертикально по центру, с большой яркой улыбкой. С теплым персиковым оттенком кожи, черными контурами, белыми зубами и плоским цветом.",
-      "prompt_combined_en": "Create a pixel art portrait using the uploaded person. Keep 100% of the real facial structure, expression, and hairstyle, but transform it into a detailed anime pixel style. The art should resemble a classic retro anime character made entirely of small square color blocks. Show only half of the face, cropped vertically at the center, with a big bright smile. Use a warm peach skin tone, black outlines, white teeth, and flat color. ||| photorealistic, blurry, low quality, 3D render, cartoon 2d, deformed, worst quality, text, watermark, smooth lines, gradient"
-    },
-    {
-      "category": "Профессиональный",
-      "title_ru": "Профессиональный: Портрет на Паспорт/Визу",
-      "description_ru": "Максимально чистый, студийный портрет для документов. Нейтральное выражение лица, равномерный свет, белый или светло-серый фон. Фокус на сохранении идентичности.",
-      "prompt_combined_en": "Official ID photo, solo portrait, strictly identical face, neutral expression, centered composition, smooth white or light gray background (solid color). Flat, even studio lighting (fill light only), high detail, sharp focus, hyperrealistic. Preserve natural skin and hair texture. ||| artistic, exaggerated, dramatic light, shadows, cartoon, low quality, deformed, text, watermark, colorized"
-    },
-    {
-      "category": "Профессиональный",
-      "title_ru": "Профессиональный: Корпоративный Headshot",
-      "description_ru": "Профессиональный портрет крупным планом (headshot), выполненный с идеальным студийным освещением. Мягкие, но четкие тени. Фон — слегка размытый офис или нейтральный цвет.",
-      "prompt_combined_en": "Corporate headshot, same person, identical face, smart attire (suit/blouse). Professional studio setup, soft box lighting, gentle catchlights in the eyes. Blurred neutral office background (bokeh). Sharp focus, micro-details, editorial quality, hyperrealistic 8K. ||| dark, moody, artistic painting, wide shot, deformed, worst quality, text"
-    },
-    {
-      "category": "Фотография",
-      "title_ru": "Профессиональный: Портрет (Стиль Vanity Fair)",
-      "description_ru": "Глянцевый, высококонтрастный черно-белый портрет. Фокус на текстуре кожи и волос, драматическое освещение (часто боковое или верхнее) для придания 'звездности'.",
-      "prompt_combined_en": "Black and white editorial portrait, high fashion, style of Vanity Fair or Peter Lindbergh. Strong contrast, dramatic side light, emphasizing facial structure and texture of skin and hair. Medium close-up, black background, 8K RAW. ||| color photo, soft light, blurry, low quality, high key, cartoon, text, deformed"
-    },
-    {
-      "category": "Иллюстрация",
-      "title_ru": "Одиночный: AI-Арт с подписью",
-      "description_ru": "Превращает портрет в цифровую иллюстрацию в стиле известных AI-художников с элегантной подписью в правом нижнем углу. Идеально для публикаций.",
-      "prompt_combined_en": "Digital art portrait of the same person, identical face, in the style of trending AI artwork on ArtStation. Clean, vibrant, high detail, 8K. Signature of the artist in the bottom right corner, subtle and elegant. ||| photorealistic, no signature, blurry, text in center, deformed, worst quality, watermark"
-    },
-    {
-      "category": "Профессиональный",
-      "title_ru": "Профессиональный: LinkedIn Headshot (Современный)",
-      "description_ru": "Современный, дружелюбный, но профессиональный портрет для LinkedIn. Нейтральный фон, мягкое освещение, деловая одежда.",
-      "prompt_combined_en": "Professional LinkedIn headshot, same person, identical face, wearing business casual attire (blazer or blouse). Soft, diffused lighting, shallow depth of field, neutral gray background. Confident, approachable expression. 8K, hyperrealistic. ||| artistic, dramatic light, cartoon, low quality, busy background, deformed, text, watermark"
-    },
-    {
-      "category": "Футуризм",
-      "title_ru": "Одиночный: Cyberpunk Samurai",
-      "description_ru": "Сливает японскую эстетику самурая с киберпанком: кибер-доспехи, неоновые узоры, меч с голограммой на фоне ночного Токио.",
-      "prompt_combined_en": "Cyberpunk Samurai portrait, same person, identical face, wearing futuristic samurai armor with glowing neon circuits. Holding a holographic katana, standing in neon-lit Tokyo alley at night. Volumetric rain, cinematic, 8K ultra-detailed. ||| historical samurai, daylight, photorealistic, low quality, deformed, text"
-    },
-    {
-      "category": "Технический",
-      "title_ru": "Технический: Фиксация позы (OpenPose)",
-      "description_ru": "Не добавляет стиль, а строго сохраняет позу и пропорции для последующей стилизации. Идеально как первый этап обработки.",
-      "prompt_combined_en": "Exact pose and body proportions preserved from input image, no style applied, neutral lighting, plain gray background, full body shot. Technical reference image for pose alignment. ||| artistic style, dramatic light, blur, deformed, worst quality, text, watermark"
-    },
-    {
-      "category": "Иллюстрация",
-      "title_ru": "Групповой: Друзья в стиле граффити",
-      "description_ru": "Групповой портрет в уличном стиле: спреи, брызги краски, урбанистический фон. Сохраняет позы и композицию.",
-      "prompt_combined_en": "Group of friends, preserve original poses, stylized as urban graffiti art. Splattered paint, spray can effects, vibrant colors on a brick wall background. Street art aesthetic, high energy. ||| photorealistic, clean, soft light, low quality, deformed, text, watermark"
-    },
-    {
-      "category": "Живопись",
-      "title_ru": "Стилизация: Портрет в стиле Дали (Сюрреализм)",
-      "description_ru": "Превращает лицо в сюрреалистическое полотно в духе Сальвадора Дали: плавящиеся часы, пустыня, искажённое пространство.",
-      "prompt_combined_en": "Surrealist portrait in the style of Salvador Dalí. Melting clocks draped over the subject's shoulders, infinite desert horizon, distorted perspective, dreamlike atmosphere. Identical face preserved, oil painting texture. ||| photorealistic, sharp geometry, logical scene, low quality, deformed, text"
-    },
-    {
-      "category": "Профессиональный",
-      "title_ru": "Профессиональный: Аватар для Zoom/Teams",
-      "description_ru": "Крупный план для видеоконференций: чистый фон, мягкое освещение, нейтральное выражение, без отвлекающих деталей.",
-      "prompt_combined_en": "Professional video call avatar, close-up head and shoulders, same person, identical face. Soft studio lighting, solid light gray background, neutral expression, crisp focus. Optimized for Zoom/Teams. ||| full body, artistic, dramatic shadow, blurry, low quality, deformed, text, watermark"
-    },
-    {
-      "category": "Улучшение",
-      "title_ru": "Улучшение: Умное Улучшение Лица (Face Refinement)",
-      "description_ru": "Сохраняет исходное фото полностью, но улучшает детали лица: сглаживает кожу, убирает мелкие недостатки, усиливает взгляд и четкость глаз. Идеально для портретов без потери реалистичности.",
-      "prompt_combined_en": "Realistic photo of the same person, identical pose and expression, skin retouched for smoothness while preserving natural texture, enhanced eye clarity with subtle catchlight, sharp focus on facial features, professional color grading, 8K detail. No changes to clothing, background, or pose. ||| cartoon, painting, blur, deformed, plastic skin, over-smoothed, low quality, text, watermark"
-    },
-    {
-      "category": "Освещение",
-      "title_ru": "Освещение: Студийный Свет на Улице (Outdoor Studio)",
-      "description_ru": "Преобразует уличное фото в студийный портрет: добавляет мягкое студийное освещение, убирает резкие тени и блики, сохраняя фон и позу без изменений.",
-      "prompt_combined_en": "Same outdoor photo, but relit with professional softbox studio lighting. Natural background preserved, but harsh shadows and highlights removed. Even, flattering illumination on the face, cinematic color balance. Person and pose unchanged. ||| indoors, changed background, cartoon, blurry, deformed, low quality, text, watermark"
-    },
-    {
-      "category": "Фон",
-      "title_ru": "Фон: Замена Фона (Без Потери Качества)",
-      "description_ru": "Полностью заменяет фон на чистый студийный (белый, серый или черный), но не трогает человека: поза, одежда, освещение на лице остаются как в оригинале.",
-      "prompt_combined_en": "Same person, identical pose, expression, and clothing, but background replaced with a clean, professional studio backdrop (pure white). Original lighting on the subject preserved. No changes to the person. Ultra-sharp focus, 8K. ||| changed pose, different lighting on face, cartoon, blur, deformed, low quality, text, watermark"
-    },
-    {
-      "category": "Групповой",
-      "title_ru": "Групповой: Баланс Освещения (Выравнивание)",
-      "description_ru": "Для групповых фото с неравномерным освещением: делает свет на всех лицах одинаково ровным и естественным, сохраняя оригинальный фон и позы.",
-      "prompt_combined_en": "Group photo with balanced, even lighting on all faces. Original poses, expressions, clothing, and background fully preserved. No overexposure or underexposure, natural skin tones for everyone. Professional photo retouch. ||| changed expressions, altered background, cartoon, blur, deformed, low quality, text, watermark"
+      "category": "Ретушь",
+      "title_ru": "Групповой: Выравнивание Освещения",
+      "description_ru": "Делает освещение на всех лицах одинаково ровным и естественным, сохраняя оригинальный фон и позы.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, group photo with balanced even lighting on all faces, original poses expressions clothing and background fully preserved, no overexposure or underexposure, natural skin tones for everyone, professional photo retouch ||| changed expressions, altered background, cartoon, blur, deformed, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Возраст",
       "title_ru": "Возраст: Молодой Взгляд (Anti-Aging Soft)",
       "description_ru": "Мягко уменьшает признаки усталости и возраста (мешки под глазами, морщины), не делая лицо 'пластиковым'. Сохраняет характер и эмоции.",
-      "prompt_combined_en": "Same person, gentle and realistic anti-aging retouch. Reduced eye bags and fine lines, refreshed skin tone, but natural facial structure and expression fully preserved. No plastic or doll-like look. Professional photography. ||| cartoon, smooth plastic skin, changed expression, deformed, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, same person, gentle realistic anti-aging retouch, reduced eye bags and fine lines, refreshed skin tone, natural facial structure and expression fully preserved, no plastic or doll-like look, professional photography ||| cartoon, smooth plastic skin, changed expression, deformed, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Ретушь",
       "title_ru": "Ретушь: Удаление Объектов (Фон/Одежда)",
       "description_ru": "Удаляет нежелательные объекты с фото: провода, мусор на земле, блики на очках, пятна на одежде. Человек и основной фон остаются без изменений.",
-      "prompt_combined_en": "Same photo with unwanted elements removed: power lines, trash on ground, glare on eyeglasses, stains on clothing. Person, pose, and main background unchanged. Clean, professional image. ||| changed person, altered pose, cartoon, blur, deformed, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, same photo with unwanted elements removed: power lines, trash on ground, glare on eyeglasses, stains on clothing, person pose and main background unchanged, clean professional image ||| changed person, altered pose, cartoon, blur, deformed, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Тональность",
       "title_ru": "Тональность: Кинематографическая Цветокоррекция",
       "description_ru": "Применяет профессиональную цветокоррекцию в стиле фильмов: насыщенные, но естественные цвета, глубокие тени и мягкие света. Не меняет содержание фото.",
-      "prompt_combined_en": "Same photo with cinematic color grading: rich, filmic tones, balanced shadows and highlights, subtle teal-and-orange palette, enhanced contrast without clipping. Person and scene unchanged. Professional movie aesthetic. ||| changed scene, cartoon, painting, blur, deformed, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, same photo with cinematic color grading, rich filmic tones, balanced shadows and highlights, subtle teal-and-orange palette, enhanced contrast without clipping, person and scene unchanged, professional movie aesthetic ||| changed scene, cartoon, painting, blur, deformed, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Групповой",
       "title_ru": "Групповой: Выравнивание Взглядов (Глаза в Камеру)",
       "description_ru": "Корректирует направление взгляда всех людей в группе, чтобы они смотрели прямо в камеру. Позы и выражения лиц сохраняются максимально близко к оригиналу.",
-      "prompt_combined_en": "Group photo with all subjects adjusted to look directly into the camera. Original expressions, poses, and clothing preserved as much as possible. Natural eye direction correction, no distortion. Professional group portrait. ||| changed expressions, altered poses, cartoon, blur, deformed, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, group photo with all subjects adjusted to look directly into camera, original expressions poses and clothing preserved as much as possible, natural eye direction correction, no distortion, professional group portrait ||| changed expressions, altered poses, cartoon, blur, deformed, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Glow-Up",
       "title_ru": "Glow-Up: Натуральная Красота",
       "description_ru": "Мягкое улучшение внешности: сияющая кожа, яркий взгляд, ухоженные волосы. Сохраняет все черты лица и индивидуальность. Идеально для аватарок и соцсетей.",
-      "prompt_combined_en": "Natural beauty glow-up, same person, identical face and features, flawless but realistic skin texture, bright and clear eyes with subtle catchlight, healthy shiny hair. Soft, even lighting, shallow depth of field. No plastic surgery look, no cartoonish features. ||| deformed, blurry, over-smoothed, plastic skin, cartoon, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, natural beauty glow-up, same person, identical face and features, flawless but realistic skin texture, bright clear eyes with subtle catchlight, healthy shiny hair, soft even lighting, shallow depth of field, no plastic surgery look ||| deformed, blurry, over-smoothed, plastic skin, cartoon, low quality, text, watermark, worst quality, ugly, bad anatomy, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Профессия",
       "title_ru": "Профессия: Кибер-Детектив",
       "description_ru": "Преобразует одежду в стильную кибер-экипировку: кожаная куртка с неоновыми вставками, AR-очки. Фон — дождливый ночной город. Лицо остаётся без изменений.",
-      "prompt_combined_en": "Cyber-detective portrait, same person, identical face, wearing a sleek black leather jacket with glowing neon blue lines, augmented reality smart glasses. Background: rainy neon-lit city street at night. Cinematic, volumetric fog, sharp focus on eyes. ||| historical costume, photorealistic, daylight, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, cyber-detective portrait, same person, identical face, wearing sleek black leather jacket with glowing neon blue lines, augmented reality smart glasses, background rainy neon-lit city street at night, cinematic volumetric fog ||| historical costume, photorealistic, daylight, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "История",
       "title_ru": "История: Джазовая Эпоха (1920-е)",
       "description_ru": "Погружает в эпоху джаза: женщина в платье с бахромой и перьями, мужчина в костюме и федоре. Фон — дымный джаз-клуб. Лицо и поза сохраняются.",
-      "prompt_combined_en": "1920s Jazz Age portrait, same person, identical face and pose, wearing authentic Roaring Twenties attire (flapper dress with fringe or pinstripe suit with fedora). Background: smoky, dimly lit jazz club with brass instruments. Warm, amber lighting, film grain. ||| modern clothing, daylight, blurry, low quality, deformed, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, 1920s Jazz Age portrait, same person, identical face and pose, wearing authentic Roaring Twenties attire (flapper dress with fringe or pinstripe suit with fedora), background smoky dimly lit jazz club with brass instruments, warm amber lighting, film grain ||| modern clothing, daylight, blurry, low quality, deformed, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Пара",
       "title_ru": "Пара: В Диснеевском Стиле",
       "description_ru": "Преобразует пару в классических диснеевских персонажей (стиль 1990-х): мягкие линии, выразительные глаза, яркие, но не кричащие цвета. Сохраняет прически и позы.",
-      "prompt_combined_en": "Disney animation style (1990s Renaissance era), couple portrait, maintain both subjects' identities, hairstyles and poses. Soft outlines, expressive eyes, rich but natural colors. Background: enchanted forest or castle. ||| Pixar style, 3D render, photorealistic, low quality, deformed, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, Disney animation style (1990s Renaissance era), couple portrait, maintain both subjects' identities hairstyles and poses, soft outlines, expressive eyes, rich but natural colors, background enchanted forest or castle ||| Pixar style, 3D render, photorealistic, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Сезон",
       "title_ru": "Сезон: Зимний Гламур",
       "description_ru": "Добавляет зимнюю эстетику: иней на ресницах, перламутровое сияние кожи, теплая одежда (кашемир, мех). Фон — уютный интерьер с огнём. Идеально для новогодних аватарок.",
-      "prompt_combined_en": "Winter glamour portrait, same person, identical face, subtle frost on eyelashes, luminous pearl-like skin, wearing luxurious cashmere or faux fur. Background: cozy interior with fireplace glow. Cool blue and warm amber tones, cinematic. ||| summer, beach, sunny, low quality, blurry, deformed, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, winter glamour portrait, same person, identical face, subtle frost on eyelashes, luminous pearl-like skin, wearing luxurious cashmere or faux fur, background cozy interior with fireplace glow, cool blue and warm amber tones ||| summer, beach, sunny, low quality, blurry, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Абстракция",
       "title_ru": "Одиночный: Абстрактный Фрагмент",
       "description_ru": "Разбивает фото на абстрактные геометрические фрагменты, сохраняя цветовую гамму и контуры лица.",
-      "prompt_combined_en": "Abstract portrait, identical face fragmented into geometric shapes (cubes, triangles), vibrant original colors preserved. Minimal background, high contrast, conceptual art, 8K. ||| photorealistic, whole figure, blurry, low quality, deformed, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, abstract portrait, identical face fragmented into geometric shapes (cubes triangles), vibrant original colors preserved, minimal background, high contrast, conceptual art ||| photorealistic, whole figure, blurry, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Космос",
       "title_ru": "Одиночный: Космический Путешественник",
       "description_ru": "Помещает фигуру в космический скафандр на фоне звезд и планет, с эффектом невесомости.",
-      "prompt_combined_en": "Space explorer portrait, same person, identical face, in detailed spacesuit floating in space. Nebula background, zero gravity pose, volumetric stars, cinematic, 8K hyperrealistic. ||| earthbound, blurry, low quality, cartoon, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, space explorer portrait, same person, identical face, in detailed spacesuit floating in space, nebula background, zero gravity pose, volumetric stars ||| earthbound, blurry, low quality, cartoon, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Мифология",
       "title_ru": "Одиночный: Греческий Бог",
       "description_ru": "Преобразует в образ греческого бога (Зевс/Афина), с лавровым венком и тогой на фоне Олимпа.",
-      "prompt_combined_en": "Mythical Greek god portrait, identical face, wearing toga and laurel wreath, standing on Mount Olympus. Dramatic thunder lighting, epic atmosphere, masterpiece, 8K. ||| modern clothing, low quality, deformed, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, mythical Greek god portrait, identical face, wearing toga and laurel wreath, standing on Mount Olympus, dramatic thunder lighting, epic atmosphere ||| modern clothing, low quality, deformed, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Подводный",
       "title_ru": "Одиночный: Подводный Мир",
       "description_ru": "Добавляет подводную среду: пузыри, рыбы, кораллы, с эффектом преломления света.",
-      "prompt_combined_en": "Underwater portrait, same person, identical face, surrounded by bubbles and colorful fish. Refracted light, blue-green tones, sharp focus, hyperrealistic 8K. ||| surface level, dry, blurry, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, underwater portrait, same person, identical face, surrounded by bubbles and colorful fish, refracted light, blue-green tones ||| surface level, dry, blurry, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Викторианский",
       "title_ru": "Одиночный: Викторианская Леди/Джентльмен",
       "description_ru": "Стилизует под викторианскую эпоху: корсет/сюртук, кружева, на фоне интерьера 19 века.",
-      "prompt_combined_en": "Victorian era portrait, identical face, in elaborate gown or tailcoat with lace. Opulent room background, soft gaslight, oil painting style, 8K. ||| casual wear, modern, blurry, deformed, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, Victorian era portrait, identical face, in elaborate gown or tailcoat with lace, opulent room background, soft gaslight, oil painting style ||| casual wear, modern, blurry, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Минимализм",
       "title_ru": "Одиночный: Минималистичный Силуэт",
       "description_ru": "Упрощает до черного силуэта на цветном градиенте, подчеркивая форму.",
-      "prompt_combined_en": "Minimalist silhouette portrait, identical outline, black figure on smooth gradient background (pastel). Clean lines, no details, conceptual, 8K. ||| detailed face, busy, photorealistic, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, minimalist silhouette portrait, identical outline, black figure on smooth gradient background (pastel), clean lines, no details, conceptual ||| detailed face, busy, photorealistic, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Экология",
       "title_ru": "Одиночный: Эко-Воин",
       "description_ru": "Добавляет элементы природы: листья в волосах, зеленые тона, на фоне леса.",
-      "prompt_combined_en": "Eco-warrior portrait, same person, identical face, with leaves and vines integrated. Lush forest background, natural green tones, cinematic, 8K. ||| urban, synthetic, low quality, blurry, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, eco-warrior portrait, same person, identical face, with leaves and vines integrated, lush forest background, natural green tones ||| urban, synthetic, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Спорт",
       "title_ru": "Одиночный: Спортивный Герой",
       "description_ru": "Преобразует в атлета в форме, с медалью, на фоне стадиона.",
-      "prompt_combined_en": "Athletic hero portrait, identical face, in sportswear with medal. Stadium background, dynamic lighting, motivational, hyperrealistic 8K. ||| sedentary pose, blurry, deformed, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, athletic hero portrait, identical face, in sportswear with medal, stadium background, dynamic lighting, motivational ||| sedentary pose, blurry, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Музыка",
       "title_ru": "Одиночный: Рок-Звезда",
       "description_ru": "Стилизует под рок-музыканта: гитара, кожаная куртка, на сцене с огнями.",
-      "prompt_combined_en": "Rock star portrait, same person, identical face, holding electric guitar in leather jacket. Stage with spotlights, energetic, 8K RAW. ||| classical music, calm, low quality, blurry, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, rock star portrait, same person, identical face, holding electric guitar in leather jacket, stage with spotlights, energetic ||| classical music, calm, low quality, blurry, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Кино",
       "title_ru": "Одиночный: Супергерой Marvel",
       "description_ru": "Превращает в супергероя в костюме, с плащом, на фоне города.",
-      "prompt_combined_en": "Marvel superhero portrait, identical face, in detailed costume with cape. City skyline background, heroic pose, cinematic, 8K. ||| villain, realistic, blurry, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, Marvel superhero portrait, identical face, in detailed costume with cape, city skyline background, heroic pose ||| villain, realistic, blurry, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Абстракция",
       "title_ru": "Групповой: Абстрактный Коллаж",
       "description_ru": "Собирает группу в коллаж из форм и цветов, сохраняя лица.",
-      "prompt_combined_en": "Group abstract collage, maintain identities, faces in geometric overlays. Vibrant colors, layered, conceptual, 8K. ||| photorealistic, separate, blurry, deformed, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, group abstract collage, faces in geometric overlays, vibrant colors, layered, conceptual ||| photorealistic, separate, blurry, deformed, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Космос",
       "title_ru": "Групповой: Космическая Команда",
       "description_ru": "Группа в скафандрах на космической станции, с видом на Землю.",
-      "prompt_combined_en": "Space team group shot, identical faces, in suits on station. Earth view, zero-g, sci-fi, hyperrealistic 8K. ||| earthbound, casual, low quality, blurry, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, space team group shot, identical faces, in suits on station, Earth view, zero-g, sci-fi ||| earthbound, casual, low quality, blurry, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Мифология",
       "title_ru": "Групповой: Олимпийские Боги",
       "description_ru": "Стилизует группу под пантеон богов на Олимпе.",
-      "prompt_combined_en": "Olympian gods group portrait, maintain identities, in togas. Cloudy summit background, divine light, epic, 8K. ||| mortals, modern, deformed, blurry, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, Olympian gods group portrait, in togas, cloudy summit background, divine light, epic ||| mortals, modern, deformed, blurry, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Подводный",
       "title_ru": "Групповой: Подводное Приключение",
       "description_ru": "Группа в аквалангах среди рифов и рыб.",
-      "prompt_combined_en": "Underwater group adventure, identical poses, in diving gear. Coral reef background, bubbles, blue tones, 8K. ||| surface, dry, low quality, text, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, underwater group adventure, in diving gear, coral reef background, bubbles, blue tones ||| surface, dry, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Викторианский",
       "title_ru": "Групповой: Викторианский Бал",
       "description_ru": "Группа в бальных нарядах на фоне зала 19 века.",
-      "prompt_combined_en": "Victorian ball group shot, maintain identities, in gowns and suits. Grand hall background, candlelight, elegant, 8K. ||| casual, modern, blurry, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, Victorian ball group shot, in gowns and suits, grand hall background, candlelight, elegant ||| casual, modern, blurry, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Минимализм",
       "title_ru": "Групповой: Минималистичные Силуэты",
       "description_ru": "Группа как черные силуэты на белом фоне.",
-      "prompt_combined_en": "Minimalist group silhouettes, identical outlines, black on white. Clean, no details, conceptual, 8K. ||| colored, detailed, photorealistic, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, minimalist group silhouettes, identical outlines, black on white, clean no details, conceptual ||| colored, detailed, photorealistic, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Экология",
       "title_ru": "Групповой: Эко-Активисты",
       "description_ru": "Группа с плакатами в зеленой зоне, подчеркивая единство.",
-      "prompt_combined_en": "Eco-activists group, identical faces, holding signs in park. Natural light, green tones, inspirational, 8K. ||| pollution, urban, low quality, blurry"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, eco-activists group, holding signs in park, natural light, green tones, inspirational ||| pollution, urban, low quality, blurry, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Спорт",
       "title_ru": "Групповой: Команда Чемпионов",
       "description_ru": "Группа в униформе с трофеем на поле.",
-      "prompt_combined_en": "Champion team group shot, maintain poses, in uniforms with trophy. Field background, victorious, dynamic, 8K. ||| losing, casual, deformed, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, champion team group shot, in uniforms with trophy, field background, victorious, dynamic ||| losing, casual, deformed, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Музыка",
       "title_ru": "Групповой: Рок-Группа",
       "description_ru": "Группа с инструментами на сцене.",
-      "prompt_combined_en": "Rock band group portrait, identical faces, with instruments on stage. Spotlights, energetic, rock aesthetic, 8K. ||| solo, calm, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, rock band group portrait, with instruments on stage, spotlights, energetic, rock aesthetic ||| solo, calm, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Кино",
       "title_ru": "Групповой: Отряд Супергероев",
       "description_ru": "Группа в костюмах на фоне апокалипсиса.",
-      "prompt_combined_en": "Superhero squad group, maintain identities, in costumes. Apocalyptic city, heroic, cinematic, 8K. ||| villains, realistic, blurry"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, superhero squad group, in costumes, apocalyptic city, heroic, cinematic ||| villains, realistic, blurry, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фантастика",
       "title_ru": "Одиночный: Волшебник Гарри Поттер",
       "description_ru": "В образе волшебника с палочкой в Хогвартсе.",
-      "prompt_combined_en": "Harry Potter wizard portrait, identical face, with wand in robes. Hogwarts hall background, magical glow, 8K. ||| muggle, modern, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, Harry Potter wizard portrait, identical face, with wand in robes, Hogwarts hall background, magical glow ||| muggle, modern, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Хоррор",
       "title_ru": "Одиночный: Зомби-Апокалипсис",
       "description_ru": "Преобразует в зомби с рваной одеждой на фоне руин.",
-      "prompt_combined_en": "Zombie portrait, same face, torn clothes in ruins. Eerie green light, horror atmosphere, detailed, 8K. ||| healthy, bright, cartoon"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, zombie portrait, same face, torn clothes in ruins, eerie green light, horror atmosphere, detailed ||| healthy, bright, cartoon, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Романтика",
       "title_ru": "Одиночный: Романтический Герой",
       "description_ru": "В элегантном наряде на фоне розового сада.",
-      "prompt_combined_en": "Romantic hero portrait, identical face, in suit/gown. Rose garden background, soft pink tones, dreamy, 8K. ||| action, dark, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, romantic hero portrait, identical face, in suit/gown, rose garden background, soft pink tones, dreamy ||| action, dark, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Наука",
       "title_ru": "Одиночный: Ученый в Лаборатории",
       "description_ru": "В белом халате с пробирками на фоне оборудования.",
-      "prompt_combined_en": "Scientist portrait, same person, in lab coat with beakers. High-tech lab background, focused light, realistic 8K. ||| fantasy, blurry, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, scientist portrait, same person, in lab coat with beakers, high-tech lab background, focused light, realistic ||| fantasy, blurry, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Искусство",
       "title_ru": "Одиночный: В Стиле Пикассо",
       "description_ru": "Кубистический портрет с искаженными формами.",
-      "prompt_combined_en": "Picasso cubist portrait, identical features distorted. Angular shapes, bold colors, artistic, 8K. ||| realistic, smooth, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, Picasso cubist portrait, identical features distorted, angular shapes, bold colors, artistic ||| realistic, smooth, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Путешествия",
       "title_ru": "Одиночный: Путешественник в Джунглях",
       "description_ru": "В экспедиционной одежде среди лиан.",
-      "prompt_combined_en": "Jungle explorer portrait, identical face, in gear among vines. Humid green tones, adventurous, 8K. ||| urban, dry, blurry"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, jungle explorer portrait, identical face, in gear among vines, humid green tones, adventurous ||| urban, dry, blurry, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Еда",
       "title_ru": "Одиночный: Шеф-Повар",
       "description_ru": "С ножом и ингредиентами на кухне.",
-      "prompt_combined_en": "Chef portrait, same person, with knife and ingredients. Kitchen background, warm light, appetizing, 8K. ||| fast food, messy, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, chef portrait, same person, with knife and ingredients, kitchen background, warm light, appetizing ||| fast food, messy, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Танец",
       "title_ru": "Одиночный: Балерина",
       "description_ru": "В пачке на сцене с грациозной позой.",
-      "prompt_combined_en": "Ballerina portrait, identical face, in tutu on stage. Soft spotlight, elegant, hyperrealistic 8K. ||| casual, static, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, ballerina portrait, identical face, in tutu on stage, soft spotlight, elegant ||| casual, static, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Авто",
       "title_ru": "Одиночный: Гонщик Формулы-1",
       "description_ru": "В шлеме у болида на трассе.",
-      "prompt_combined_en": "F1 racer portrait, same face, in helmet by car. Racetrack background, speed blur, dynamic, 8K. ||| slow, pedestrian, blurry"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, F1 racer portrait, same face, in helmet by car, racetrack background, speed blur, dynamic ||| slow, pedestrian, blurry, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Животные",
       "title_ru": "Одиночный: Друид с Животными",
       "description_ru": "Окруженный лесными животными в магическом лесу.",
-      "prompt_combined_en": "Druid portrait, identical face, surrounded by animals. Enchanted forest, mystical light, detailed, 8K. ||| alone, urban, cartoon"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, druid portrait, identical face, surrounded by animals, enchanted forest, mystical light, detailed ||| alone, urban, cartoon, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Фантастика",
       "title_ru": "Групповой: Волшебники Хогвартса",
       "description_ru": "Группа в мантиях с палочками в замке.",
-      "prompt_combined_en": "Hogwarts wizards group, maintain identities, in robes with wands. Castle hall, magical, 8K. ||| muggles, modern, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, Hogwarts wizards group, in robes with wands, castle hall, magical ||| muggles, modern, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Хоррор",
       "title_ru": "Групповой: Зомби-Орда",
       "description_ru": "Группа как зомби в постапокалипсисе.",
-      "prompt_combined_en": "Zombie horde group shot, identical faces decayed. Ruins background, horror, green tones, 8K. ||| healthy, bright, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, zombie horde group shot, identical faces decayed, ruins background, horror, green tones ||| healthy, bright, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Романтика",
       "title_ru": "Групповой: Романтическая Компания",
       "description_ru": "Группа на пикнике при свечах.",
-      "prompt_combined_en": "Romantic group picnic, maintain poses, candlelight in garden. Soft pink, dreamy, 8K. ||| action, dark horror, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, romantic group picnic, candlelight in garden, soft pink, dreamy ||| action, dark horror, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Наука",
       "title_ru": "Групповой: Лабораторная Команда",
       "description_ru": "Группа в халатах за экспериментами.",
-      "prompt_combined_en": "Lab team group, identical faces, in coats at benches. Equipment background, focused, 8K. ||| fantasy, chaotic, blurry"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, lab team group, in coats at benches, equipment background, focused ||| fantasy, chaotic, blurry, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Искусство",
       "title_ru": "Групповой: Кубистическая Группа",
       "description_ru": "Группа в кубистическом стиле Пикассо.",
-      "prompt_combined_en": "Picasso cubist group portrait, maintain features distorted. Angular, bold colors, 8K. ||| realistic, smooth, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, Picasso cubist group portrait, features distorted, angular bold colors ||| realistic, smooth, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Путешествия",
       "title_ru": "Групповой: Экспедиция в Пустыне",
       "description_ru": "Группа в пустыне с верблюдами.",
-      "prompt_combined_en": "Desert expedition group, identical poses, with camels. Sandy dunes, hot light, adventurous, 8K. ||| snowy, urban, blurry"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, desert expedition group, with camels, sandy dunes, hot light, adventurous ||| snowy, urban, blurry, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Еда",
       "title_ru": "Групповой: Кулинарная Команда",
       "description_ru": "Группа шефов на кухне.",
-      "prompt_combined_en": "Culinary team group, maintain identities, with utensils. Busy kitchen, warm, appetizing, 8K. ||| empty, cold, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, culinary team group, with utensils, busy kitchen, warm, appetizing ||| empty, cold, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Танец",
       "title_ru": "Групповой: Танцевальный Ансамбль",
       "description_ru": "Группа в движении на сцене.",
-      "prompt_combined_en": "Dance ensemble group shot, identical poses dynamic. Stage lights, graceful, 8K hyperrealistic. ||| static, solo, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, dance ensemble group shot, dynamic poses, stage lights, graceful ||| static, solo, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Авто",
       "title_ru": "Групповой: Гоночная Команда",
       "description_ru": "Группа у машин на пит-стопе.",
-      "prompt_combined_en": "Racing team group, maintain faces, by cars on pit. Track background, fast-paced, 8K. ||| slow, pedestrian, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, racing team group, by cars on pit, track background, fast-paced ||| slow, pedestrian, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Животные",
       "title_ru": "Групповой: Сафари Группа",
       "description_ru": "Группа с животными в саванне.",
-      "prompt_combined_en": "Safari group shot, identical poses, with wildlife. Savanna background, natural light, 8K. ||| zoo, urban, cartoon"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, safari group shot, with wildlife, savanna background, natural light ||| zoo, urban, cartoon, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Архитектура",
       "title_ru": "Одиночный: Архитектор с Чертежами",
       "description_ru": "С чертежами на фоне современного здания.",
-      "prompt_combined_en": "Architect portrait, same face, with blueprints. Modern building background, professional, 8K. ||| amateur, blurry, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, architect portrait, same face, with blueprints, modern building background, professional ||| amateur, blurry, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Мода",
       "title_ru": "Одиночный: Модель на Подиуме",
       "description_ru": "В haute couture на подиуме.",
-      "prompt_combined_en": "Fashion model portrait, identical face, in couture on runway. Spotlights, glamorous, 8K. ||| casual, low quality, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, fashion model portrait, identical face, in couture on runway, spotlights, glamorous ||| casual, low quality, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Игры",
       "title_ru": "Одиночный: Геймер в VR",
       "description_ru": "В VR-шлеме с контроллерами.",
-      "prompt_combined_en": "Gamer portrait, same person, in VR headset with controllers. Virtual background bleed, immersive, 8K. ||| analog, blurry, watermark"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, gamer portrait, same person, in VR headset with controllers, virtual background bleed, immersive ||| analog, blurry, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Природа",
       "title_ru": "Одиночный: Альпинист на Вершине",
       "description_ru": "На пике горы с видом.",
-      "prompt_combined_en": "Mountaineer portrait, identical face, on summit with view. Crisp air, epic, hyperrealistic 8K. ||| flat land, indoor, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, mountaineer portrait, identical face, on summit with view, crisp air, epic ||| flat land, indoor, deformed, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Технологии",
       "title_ru": "Одиночный: Хакер в Матрице",
       "description_ru": "С кодом на фоне, зеленые тона.",
-      "prompt_combined_en": "Hacker portrait, same face, with code overlay. Matrix green tones, cyber, detailed, 8K. ||| analog, bright, low quality"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, hacker portrait, same face, with code overlay, Matrix green tones, cyber, detailed ||| analog, bright, low quality, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Архитектура",
       "title_ru": "Групповой: Архитектурная Фирма",
       "description_ru": "Группа с моделями зданий.",
-      "prompt_combined_en": "Architecture firm group, maintain identities, with models. Office background, professional, 8K. ||| chaotic, blurry, text"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, architecture firm group, with models, office background, professional ||| chaotic, blurry, text, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
+        
     {
       "category": "Мода",
       "title_ru": "Групповой: Модный Шоу",
       "description_ru": "Группа моделей на подиуме.",
-      "prompt_combined_en": "Fashion show group shot, identical poses, in couture. Runway lights, glamorous, 8K. ||| casual, solo, deformed"
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, fashion show group shot, in couture outfits, runway with dramatic spotlights, confident strides, glamorous atmosphere, high fashion editorial ||| casual clothing, solo, deformed, blurry, text, watermark, worst quality, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Игры",
-      "title_ru": "Групповой: Команда Геймеров",
-      "description_ru": "Группа за компьютерами в LAN.",
-      "prompt_combined_en": "Gamer team group, maintain faces, at PCs in LAN. Neon setup, competitive, 8K. ||| outdoor, analog, low quality"
+      "title_ru": "Групповой: Киберспорт Команда",
+      "description_ru": "Команда геймеров за мониторами с трофеем.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, esports team group portrait, wearing team jerseys, behind RGB gaming setups, trophy on table, intense focus, dark arena background with LED lights ||| casual gamers, no gear, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Природа",
-      "title_ru": "Групповой: Экотуристы",
-      "description_ru": "Группа в походе по лесу.",
-      "prompt_combined_en": "Ecotourist group shot, identical poses, hiking in forest. Natural light, adventurous, 8K. ||| urban, sedentary, blurry"
+      "title_ru": "Групповой: Эко-Тур в Горах",
+      "description_ru": "Группа туристов на горной тропе с рюкзаками.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, eco-tour group hiking in mountains, wearing backpacks and outdoor gear, panoramic alpine view, golden hour light, fresh crisp air, adventurous spirit ||| urban setting, indoor, blurry, deformed, worst quality, low quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     },
     {
       "category": "Технологии",
-      "title_ru": "Групповой: IT-Команда",
-      "description_ru": "Группа за кодом в офисе.",
-      "prompt_combined_en": "IT team group, maintain identities, coding at desks. Tech office, innovative, 8K. ||| manual labor, old tech, deformed"
+      "title_ru": "Групповой: Стартап в Офисе",
+      "description_ru": "Молодая команда в современном опен-спейсе с ноутбуками.",
+      "prompt_combined_en": " pygame masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, startup team in modern open-space office, casual smart attire, laptops and whiteboards, bright natural light, collaborative energy, glass walls background ||| formal suits, old office, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Портрет с Дымом (Smoke Art)",
+      "description_ru": "Лицо окутано разноцветным дымом, создавая абстрактные узоры.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, portrait with colorful smoke swirling around face, vibrant magenta cyan yellow smoke, dark background, sharp eyes piercing through, cinematic lighting, mysterious mood ||| no smoke, bright background, low quality, deformed, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Левитация",
+      "description_ru": "Человек парит в воздухе с легким свечением снизу.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, levitation portrait, same person floating 30cm above ground, subtle glow from below, long shadows, dark minimalist studio, surreal calm expression ||| standing on ground, wires visible, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Живопись",
+      "title_ru": "Одиночный: Импрессионизм (Моне)",
+      "description_ru": "Стилизация под картину Клода Моне: мягкие мазки, свет и цвет важнее деталей.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, impressionist oil painting in style of Claude Monet, visible loose brushstrokes, emphasis on light and color, soft pastel palette, garden or water lilies background, dreamy atmosphere ||| photorealistic, hard edges, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Инфракрасная Фотография",
+      "description_ru": "Фото в инфракрасном спектре: белая листва, розовое небо, сюрреалистичные цвета.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, infrared photography style, white glowing foliage, magenta pink sky, surreal color shift, same person in landscape, crisp details, ethereal look ||| normal colors, realistic tones, blurry, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Сюрреализм",
+      "title_ru": "Одиночный: Человек-Часы (Дали)",
+      "description_ru": "Лицо и тело плавятся как часы на картинах Сальвадора Дали.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, surreal portrait in style of Salvador Dalí, face and body melting like soft clocks, desert landscape with ants, distorted perspective, dreamlike atmosphere ||| realistic proportions, hard surfaces, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Лайт-пейнтинг (Светографика)",
+      "description_ru": "Человек рисует светом в темноте, оставляя яркие следы.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, light painting portrait, long exposure, person holding glowing light source creating neon trails (blue red green), pitch black background, sharp silhouette ||| daylight, no light trails, blurry, low quality, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "3D Рендер",
+      "title_ru": "Одиночный: Стеклянный Человек",
+      "description_ru": "Полностью прозрачное стеклянное тело с преломлением света.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, full-body glass sculpture of the same person, transparent refractive glass material, caustics and rainbow reflections, studio soft lighting, black background ||| opaque skin, matte, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Боке Портрет (Световые Круги)",
+      "description_ru": "Максимально размытый фон с круглыми боке от гирлянд.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, bokeh portrait, subject tack sharp, background filled with creamy circular bokeh lights (golden white), shallow depth of field f/1.4, dreamy evening atmosphere ||| sharp background, no bokeh, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Аниме",
+      "title_ru": "Одиночный: Киберпанк Аниме Герой",
+      "description_ru": "Стиль аниме 90-х с неоновыми волосами и кибер-имплантами.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, cyberpunk anime style portrait, 90s aesthetic, vibrant neon hair, glowing cybernetic eyes, rain-soaked street background, dramatic rim lighting ||| realistic, no neon, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Силуэт с Цветным Рим-лайтом",
+      "description_ru": "Черный силуэт с яркой цветной подсветкой контура.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, dramatic silhouette portrait, completely black figure, vibrant colored rim light (magenta cyan yellow), dark studio, high contrast, mysterious mood ||| visible face, soft light, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Живопись",
+      "title_ru": "Одиночный: Акварельный Портрет",
+      "description_ru": "Мягкая акварель с размытыми краями и прозрачными слоями.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, watercolor portrait painting, delicate transparent layers, soft diffused edges, pastel color palette, visible paper texture, gentle light ||| oil paint, hard edges, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Двойной Портрет (Зеркало)",
+      "description_ru": "Человек и его отражение в зеркале с легким искажением.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, mirror double portrait, same person and perfect reflection, antique mirror frame, subtle distortion in glass, moody low-key lighting ||| no mirror, single image, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Сюрреализм",
+      "title_ru": "Одиночный: Голова в Облаках",
+      "description_ru": "Голова заменена пушистым облаком, тело остается реалистичным.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless blend, surreal portrait, realistic body with fluffy white cloud instead of head, blue sky background, seamless transition, dreamlike calm ||| normal head, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Портрет через Стекло с Каплями",
+      "description_ru": "Съемка через мокрое стекло с каплями и бликами.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, portrait through wet glass window, water droplets and streaks distorting view, soft diffused light, melancholic mood, sharp eyes visible ||| clear glass, no droplets, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "3D Рендер",
+      "title_ru": "Одиночный: Неоновый Скелет",
+      "description_ru": "Прозрачное тело с ярко светящимся неоновым скелетом внутри.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, neon skeleton render, transparent skin revealing glowing cyan magenta skeleton inside, dark background, volumetric glow, futuristic aesthetic ||| opaque, no glow, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Портрет с Песком",
+      "description_ru": "Песок сыпется с лица и рук, создавая эффект распада.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, sand dispersion portrait, fine golden sand pouring from face and hands, particles in mid-air, desert background, cinematic warm light ||| no sand, static, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Макро Портрет (Глаза)",
+      "description_ru": "Крупный план глаз с отражением пейзажа в зрачках.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, extreme close-up eye portrait, hyper-detailed iris, reflection of mountain landscape in pupil, shallow depth of field, 100mm macro look ||| full face, no reflection, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Живопись",
+      "title_ru": "Одиночный: Портрет в Стиле Фриды Кало",
+      "description_ru": "Яркие цвета, символизм, цветы в волосах, сюрреалистические элементы.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, portrait in style of Frida Kahlo, vibrant colors, flowers and symbolic elements, thick eyebrows, traditional Mexican attire, intense emotional expression ||| muted colors, realistic, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Портрет с Перьями",
+      "description_ru": "Легкие перья парят вокруг лица, создавая воздушный эффект.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, portrait with floating white feathers around face, soft natural light, minimalist white background, delicate ethereal mood ||| no feathers, dark background, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Сюрреализм",
+      "title_ru": "Одиночный: Бесконечная Лестница",
+      "description_ru": "Человек стоит на невозможной лестнице в стиле Эшера.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, surreal portrait on impossible Escher staircase, gravity-defying architecture, monochrome, optical illusion, seamless loop perspective ||| realistic stairs, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фотография",
+      "title_ru": "Одиночный: Портрет с Книгами",
+      "description_ru": "Человек окружен парящими открытыми книгами.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, portrait surrounded by floating open books, pages turning, warm library lighting, magical scholarly atmosphere ||| no books, modern setting, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Групповой",
+      "title_ru": "Групповой: Портрет с Песочными Часами",
+      "description_ru": "Группа внутри гигантских песочных часов, песок сыпется.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, surreal group portrait inside giant hourglass, golden sand falling, dramatic lighting, time concept, cinematic ||| normal setting, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Групповой",
+      "title_ru": "Групповой: Подводный Семейный Портрет",
+      "description_ru": "Вся семья под водой с пузырями и рыбами.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, underwater family portrait, everyone smiling with bubbles, tropical fish swimming by, blue filtered light, magical realistic ||| on land, no water, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Групповой",
+      "title_ru": "Групповой: Портрет в Зеркальной Комнате",
+      "description_ru": "Бесконечные отражения группы в зеркалах.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, mirror room group portrait, infinite reflections in all directions, dramatic spotlight, surreal depth, perfect symmetry ||| single reflection, outdoor, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Групповой",
+      "title_ru": "Групповой: Парящая Семья",
+      "description_ru": "Вся семья левитирует в воздухе в комнате.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identities, preserve original poses, seamless integration, levitating family group portrait, everyone floating gently, soft shadows below, cozy living room, magical realism ||| on ground, wires, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Галактические глаза",
+      "description_ru": "Твои глазами превращаются в порталы в другую галактику — звёзды, туманности и световые лучи прямо из зрачков.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, extreme close-up portrait, identical eyes transformed into glowing cosmic portals, swirling galaxies and nebulae visible inside pupils, shooting star trails from eyes, volumetric god rays, pure black background ||| closed eyes, no glow, low quality, deformed, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Кристалл вместо лица",
+      "description_ru": "Лицо превращается в гигантский идеальный бриллиант с узнаваемыми чертами сквозь грани.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, face crystallizing into giant flawless diamond, refractive caustics, rainbow reflections inside crystal, facial features still recognizable through facets, dramatic side light, black velvet background ||| normal skin, matte, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Жидкое золото по коже",
+      "description_ru": "По коже стекает настоящее жидкое золото 24 карата, капли застыли в воздухе.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, liquid 24k gold dripping down skin, golden droplets frozen mid-air, perfect mirror reflections, warm cinematic lighting, pure black background ||| dry skin, no gold, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Плазма изо рта и глаз",
+      "description_ru": "Из открытого рта и глаз вырывается мощная неоновая плазма — бирюзово-фиолетовая энергия.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, intense cyan-magenta plasma energy blasting from open mouth and glowing eyes, volumetric particles, shockwave ripples in air, dark background ||| calm face, no energy, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Разрыв пространства за спиной",
+      "description_ru": "Прямо за спиной рвётся ткань реальности — видны другие измерения и светящиеся трещины.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, reality tearing open directly behind person, glowing white cracks spreading, floating debris, otherworldly purple dimension visible through rift, cinematic rim light ||| normal background, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Северное сияние внутри тела",
+      "description_ru": "Силуэт заполнен настоящим северным сиянием — зелёные, фиолетовые и розовые волны внутри тела.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, transparent silhouette filled with vibrant aurora borealis, green-purple-pink waves flowing inside body, starry arctic night background ||| solid body, no aurora, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Пиксельный распад",
+      "description_ru": "Тело распадается на тысячи ярких пикселей, лицо в центре остаётся чётким.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, body disintegrating into thousands of glowing colorful pixels flying outward, sharp face still intact in center, dark background, frozen moment ||| whole body, no pixels, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Ледяной феникс",
+      "description_ru": "Из спины вырастают огромные крылья ледяного феникса из кристального инея.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, majestic ice phoenix wings made of crystal frost spreading from back, glowing blue core, snow particles in air, arctic palace background ||| no wings, warm tones, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Голографические ДНК",
+      "description_ru": "Вокруг тебя вращаются светящиеся голографические спирали ДНК в неоновых цветах.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, glowing double-helix DNA strands floating and rotating around person, cyan-magenta holographic effect, dark sci-fi lab background, microscopic detail ||| no DNA, simple background, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Вау-эффекты",
+      "title_ru": "Одиночный: Обсидиановое зеркало",
+      "description_ru": "Кожа превращается в идеально чёрное обсидиановое зеркало с отражением окружения.",
+      "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, skin turned into perfectly reflective black obsidian mirror, environment and lights perfectly reflected, razor sharp edges, dramatic studio lighting ||| matte skin, no reflection, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     }
   ]
 }
