@@ -52,8 +52,8 @@ def main():
     os.makedirs(build_data_dir, exist_ok=True)
     os.makedirs(dist_data_dir, exist_ok=True)
     
-    # Copy data files to both locations
-    data_files = ["theme_prompts.json", "keyword_library.json"]
+    # Copy additional data files
+    data_files = ["theme_prompts.json", "keyword_library.json", "icon.ico"]
     for file in data_files:
         src = script_dir / file
         if src.exists():
@@ -72,9 +72,10 @@ def main():
         "--name", "PromptGenie",
         "--windowed",
         "--onefile",
-        "--icon=NONE",
+        f"--icon={script_dir}/icon.ico",
         f"--add-data={script_dir}/theme_prompts.json;.",
         f"--add-data={script_dir}/keyword_library.json;.",
+        f"--add-data={script_dir}/icon.ico;.",
         "--hidden-import", "PyQt6",
         "--hidden-import", "PyQt6.QtCore",
         "--hidden-import", "PyQt6.QtGui",
