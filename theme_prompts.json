@@ -786,6 +786,42 @@
       "title_ru": "Одиночный: Обсидиановое зеркало",
       "description_ru": "Кожа превращается в идеально чёрное обсидиановое зеркало с отражением окружения.",
       "prompt_combined_en": "masterpiece, best quality, hyperrealistic, 8K RAW, sharp focus, micro-details, maintain subject identity, preserve original pose, seamless integration, skin turned into perfectly reflective black obsidian mirror, environment and lights perfectly reflected, razor sharp edges, dramatic studio lighting ||| matte skin, no reflection, low quality, deformed, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фэнтези",
+      "title_ru": "Майнкрафт-реализм",
+      "description_ru": "Ребёнок выглядит как живой герой из Minecraft — вокруг яркие блоки травы и камня, мягкий дневной свет, реалистичная текстура кожи и одежды. Подходит для изображений в стиле приключенческой сказки или постера.",
+      "prompt_combined_en": "hyper-realistic full-body portrait of a child explorer standing in a Minecraft-inspired world, accurate body-to-head ratio, realistic anatomy and proportions, natural standing pose, cinematic volumetric daylight, detailed textures, pixel-style background blocks of grass and stone, adventure atmosphere, realistic clothing with Minecraft colors, 8k ultra-detailed, realistic lighting, perfect facial symmetry, no distortion, no big head effect ||| cartoon, 3D render, deformed face, big head, enlarged eyes, short body, stretched limbs, unreal proportions, anime, low detail, blur"
+    },
+    {
+      "category": "Фэнтези",
+      "title_ru": "Фэнтези-приключение",
+      "description_ru": "Фэнтезийная атмосфера путешествий: ребёнок — маленький герой с магическим кристаллом, мягкий рассеянный свет, реалистичная кожа, пропорциональное тело и лицо.",
+      "prompt_combined_en": "hyper-realistic cinematic portrait of a child dressed as a young fantasy adventurer, correct anatomy, realistic head-to-body ratio, natural posture, detailed leather armor, glowing crystal in hand, warm sunlight through mist, enchanted forest background, volumetric fog, expressive eyes, 8k ultra-detail, inspired by The Witcher and LOTR, no distortion, no oversized head ||| cartoon, deformed, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фэнтези",
+      "title_ru": "Волшебник / Ученик магии",
+      "description_ru": "Мир магии и волшебства — ребёнок-ученик магической школы, реалистичное лицо, ровные пропорции тела, сияние палочки и магическая аура вокруг.",
+      "prompt_combined_en": "photorealistic medium-full portrait of a young wizard child with balanced anatomy, proportional head and shoulders, cinematic golden-blue light, realistic skin and hair detail, glowing wand with sparks of magic, Hogwarts-inspired mood, detailed robe with faint runes, soft depth of field, 8k professional photo realism, no distortion, correct perspective ||| cartoon, anime, deformed, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фантастика",
+      "title_ru": "Космический герой",
+      "description_ru": "Футуристическая сцена: ребёнок в космической броне, с отражением туманности на шлеме. Пропорции естественные, композиция как в фильмах про космос.",
+      "prompt_combined_en": "realistic sci-fi full-body portrait of a child in futuristic armor, physically correct proportions, realistic scale of head and limbs, cosmic nebula background, cinematic volumetric lighting, detailed metal reflections, inspired by Star Wars and Destiny, photorealistic face preserved, 8k ultra-detail, no distortion, no big head effect ||| cartoon, deformed, low quality, blurry, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фэнтези",
+      "title_ru": "Мир блоков и фэнтези",
+      "description_ru": "Мир из кубов и волшебства — ребёнок-исследователь среди пиксельных гор, на заднем плане туманные фантастические существа, лицо реалистичное, масштаб точный.",
+      "prompt_combined_en": "hyper-realistic full-body portrait of a child explorer in a Minecraft-like fantasy world, anatomically correct proportions, balanced head size, realistic posture, soft daylight, pixel mountains in background, blurred fantasy creatures, cinematic depth of field, realistic lighting, 8k adventure photo realism, no distortion, no big head ||| cartoon, 3D render, deformed face, big head, enlarged eyes, short body, stretched limbs, unreal proportions, anime, low detail, blur"
+    },
+    {
+      "category": "Игры",
+      "title_ru": "Герой из мира Roblox",
+      "description_ru": "Ребёнок-геймер выглядит как живой персонаж Roblox — ровные пропорции, естественная поза, яркое окружение из кубических построек.",
+      "prompt_combined_en": "ultra-realistic full-body portrait of a child hero inspired by Roblox universe, correct body-to-head ratio, natural pose, cinematic lighting, detailed hoodie and sneakers with Roblox-style colors, realistic background with square buildings and bright sky, 8k photo-realistic detail, perfect anatomy, natural proportions, no distortion ||| cartoon, 3D render, deformed face, big head, enlarged eyes, short body, stretched limbs, unreal proportions, anime, low detail, blur, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
     }
   ]
 }

@@ -2,188 +2,436 @@
 import sys
 import json
 import os
-import pyperclip
 import logging
-from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Union, Tuple
-from PyQt6.QtWidgets import *
-from PyQt6.QtCore import Qt, QSettings
-from PyQt6.QtGui import QAction, QIcon
+from typing import Dict, List, Optional, Any, Union
 
-# Local UI components
-from ui_components import (
-    TooltipCheckBox, 
-    StyledTabWidget,
-    GradientButton,
-    SearchBox,
-    GlassPanel,
-    StatusLabel,
-    TemplateDescriptionEdit,
-    TemplatePreviewEdit
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('prompt_genie.log'),
+        logging.StreamHandler()
+    ]
 )
+logger = logging.getLogger(__name__)
 
-def setup_logging():
-    """Настройка системы логирования."""
-    # Создаем директорию для логов, если её нет
-    log_dir = Path("logs")
-    log_dir.mkdir(exist_ok=True)
-    
-    # Формат логов
-    log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    formatter = logging.Formatter(log_format)
-    
-    # Основной логгер
-    logger = logging.getLogger('PromptGenie')
-    logger.setLevel(logging.DEBUG)
-    
-    # Обработчик для записи в файл
-    log_file = log_dir / f"prompt_genie_{datetime.now().strftime('%Y%m%d')}.log"
-    file_handler = logging.FileHandler(log_file, encoding='utf-8')
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(formatter)
-    
-    # Обработчик для вывода в консоль
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(formatter)
-    
-    # Удаляем существующие обработчики, если они есть
-    if logger.hasHandlers():
-        logger.handlers.clear()
-    
-    # Добавляем обработчики
-    logger.addHandler(file_handler)
-    logger.addHandler(console_handler)
-    
-    # Логирование необработанных исключений
-    def handle_exception(exc_type, exc_value, exc_traceback):
-        if issubclass(exc_type, KeyboardInterrupt):
-            sys.__excepthook__(exc_type, exc_value, exc_traceback)
-            return
+from PyQt6.QtCore import Qt, QSize, QThread, pyqtSignal, QTimer, QSettings
+
+# Constants
+THEMES_FILE = Path(__file__).parent / "theme_prompts.json"
+from PyQt6.QtGui import QAction, QIcon, QPixmap, QFont, QTextCursor, QPainter, QLinearGradient, QColor, QPen
+from PyQt6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QLabel, 
+                           QPushButton, QListWidget, QListWidgetItem, QTextEdit, 
+                           QComboBox, QWidget, QFileDialog, QMessageBox, QSplitter,
+                           QInputDialog, QLineEdit, QScrollArea, QFrame, QCheckBox,
+                           QProgressBar, QStatusBar, QMenu, QSystemTrayIcon, QStyle,
+                           QDialog, QDialogButtonBox, QFormLayout, QTabWidget, QTabBar,
+                           QToolButton, QGroupBox, QSpinBox, QSlider)
+
+# Local imports
+from ui_theme import Ui_MainWindow
+import version
+from utils import resource_path, load_json_schema, validate_json_schema, safe_json_load
+from theme_editor import show_theme_editor
+
+# API Integration
+class APIIntegrationDialog(QDialog):
+    """Dialog for API integration settings"""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Настройки API")
+        self.setMinimumWidth(400)
         
-        logger.critical("Необработанное исключение", 
-                      exc_info=(exc_type, exc_value, exc_traceback))
+        layout = QVBoxLayout(self)
+        form = QFormLayout()
         
-        # Показываем пользователю понятное сообщение об ошибке
-        error_msg = (
-            f"Произошла непредвиденная ошибка.\n\n"
-            f"Тип: {exc_type.__name__}\n"
-            f"Сообщение: {str(exc_value)}"
+        self.api_key_edit = QLineEdit()
+        self.api_key_edit.setEchoMode(QLineEdit.EchoMode.Password)
+        self.api_key_edit.setPlaceholderText("Введите ваш API ключ")
+        
+        form.addRow("API ключ:", self.api_key_edit)
+        
+        # API Selection
+        self.api_combo = QComboBox()
+        self.api_combo.addItems(["Stable Diffusion API", "OpenAI DALL-E", "Midjourney (если доступно)"])
+        form.addRow("Сервис:", self.api_combo)
+        
+        # Settings group
+        settings_group = QGroupBox("Настройки генерации")
+        settings_layout = QFormLayout()
+        
+        self.width_spin = QSpinBox()
+        self.width_spin.setRange(256, 1024)
+        self.width_spin.setValue(512)
+        settings_layout.addRow("Ширина:", self.width_spin)
+        
+        self.height_spin = QSpinBox()
+        self.height_spin.setRange(256, 1024)
+        self.height_spin.setValue(512)
+        settings_layout.addRow("Высота:", self.height_spin)
+        
+        self.steps_slider = QSlider(Qt.Orientation.Horizontal)
+        self.steps_slider.setRange(10, 150)
+        self.steps_slider.setValue(30)
+        settings_layout.addRow("Шаги генерации:", self.steps_slider)
+        
+        settings_group.setLayout(settings_layout)
+        
+        # Buttons
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
         
-        # Создаем окно для отображения ошибки, если приложение запущено
-        app = QApplication.instance()
-        if app is not None:
-            error_box = QMessageBox()
-            error_box.setIcon(QMessageBox.Icon.Critical)
-            error_box.setWindowTitle("Критическая ошибка")
-            error_box.setText("В приложении произошла ошибка")
-            error_box.setInformativeText(
-                "Приносим извинения за неудобства. "
-                "Подробности ошибки записаны в лог-файл."
-            )
-            error_box.setDetailedText(error_msg)
-            error_box.exec()
-    
-    sys.excepthook = handle_exception
-    
-    return logger
+        layout.addLayout(form)
+        layout.addWidget(settings_group)
+        layout.addWidget(buttons)
+        
+    def get_settings(self) -> dict:
+        """Get the API settings"""
+        return {
+            "api_key": self.api_key_edit.text().strip(),
+            "service": self.api_combo.currentText(),
+            "width": self.width_spin.value(),
+            "height": self.height_spin.value(),
+            "steps": self.steps_slider.value()
+        }
 
-# Инициализация логгера
-logger = setup_logging()
+class TemplatePreviewEdit(QTextEdit):
+    """A custom text edit for template previews with syntax highlighting and line numbers."""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setPlaceholderText("Предпросмотр шаблона...")
+        self.setStyleSheet("""
+            QTextEdit {
+                background-color: #1e1e1e;
+                color: #d4d4d4;
+                border: 1px solid #3e3e3e;
+                border-radius: 4px;
+                padding: 8px;
+                font-family: 'Consolas', 'Courier New', monospace;
+                font-size: 13px;
+                min-height: 200px;
+            }
+            QTextEdit:focus {
+                border: 1px solid #4a9cff;
+            }
+        """)
+        self.setLineWrapMode(QTextEdit.LineWrapMode.NoWrap)
+        self.setAcceptRichText(False)
+        
+        # Set up the document with a monospace font
+        font = QFont('Consolas', 10)
+        self.setFont(font)
 
-def log_method_call(func):
-    """Декоратор для логирования вызовов методов.
+
+class TemplateDescriptionEdit(QTextEdit):
+    """A custom text edit for template descriptions with placeholder text and styling."""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setPlaceholderText("Введите описание шаблона...")
+        self.setStyleSheet("""
+            QTextEdit {
+                background-color: #2d2d2d;
+                color: #e0e0e0;
+                border: 1px solid #3e3e3e;
+                border-radius: 4px;
+                padding: 8px;
+                font-size: 14px;
+                min-height: 100px;
+            }
+            QTextEdit:focus {
+                border: 1px solid #4a9cff;
+            }
+        """)
+        self.setAcceptRichText(False)
+
+
+class GradientButton(QPushButton):
+    """A button with a gradient background."""
+    def __init__(self, text, color, parent=None):
+        super().__init__(text, parent)
+        self.color = color
+        self.setMinimumHeight(32)
+        self.setStyleSheet("""
+            QPushButton {
+                border: none;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-weight: bold;
+                text-align: center;
+            }
+            QPushButton:hover {
+                opacity: 0.9;
+            }
+            QPushButton:pressed {
+                padding-top: 9px;
+                padding-bottom: 7px;
+            }
+        """)
+
+    def paintEvent(self, event):
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        
+        # Create gradient
+        gradient = QLinearGradient(0, 0, 0, self.height())
+        gradient.setColorAt(0, QColor(self.color).lighter(120))
+        gradient.setColorAt(1, QColor(self.color).darker(120))
+        
+        # Draw button background with gradient
+        painter.setBrush(gradient)
+        painter.setPen(Qt.PenStyle.NoPen)
+        painter.drawRoundedRect(0, 0, self.width(), self.height(), 4, 4)
+        
+        # Draw text
+        painter.setPen(QPen(Qt.GlobalColor.white))
+        painter.drawText(self.rect(), Qt.AlignmentFlag.AlignCenter, self.text())
+
+
+class SearchBox(QLineEdit):
+    """A custom search box with a clear button."""
+    def __init__(self, placeholder="", parent=None):
+        super().__init__(parent)
+        self.setPlaceholderText(placeholder)
+        self.setClearButtonEnabled(True)
+        self.setStyleSheet("""
+            QLineEdit {
+                padding: 5px 10px;
+                border: 1px solid #3e3e3e;
+                border-radius: 4px;
+                background: #2d2d2d;
+                color: #e0e0e0;
+                font-size: 14px;
+            }
+            QLineEdit:focus {
+                border: 1px solid #4a9cff;
+            }
+        """)
+
+
+class StatusLabel(QLabel):
+    """A custom status label that shows messages with different styles."""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setStyleSheet("""
+            QLabel {
+                color: #e0e0e0;
+                padding: 2px 8px;
+                border-radius: 4px;
+                margin: 2px;
+            }
+        """)
+        self.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+        self.setMinimumWidth(200)
+        
+    def set_message(self, message, message_type="info"):
+        """Set the status message with optional type styling.
+        
+        Args:
+            message (str): The message to display
+            message_type (str): Type of message (info, success, warning, error)
+        """
+        # Remove any existing style classes
+        self.setStyleSheet("""
+            QLabel {
+                color: #e0e0e0;
+                padding: 2px 8px;
+                border-radius: 4px;
+                margin: 2px;
+        """)
+        
+        # Add style based on message type
+        if message_type == "success":
+            self.setStyleSheet(self.styleSheet() + """
+                background-color: #2e7d32;
+                color: #e8f5e9;
+                border: 1px solid #1b5e20;
+            """)
+        elif message_type == "warning":
+            self.setStyleSheet(self.styleSheet() + """
+                background-color: #ff8f00;
+                color: #fff3e0;
+                border: 1px solid #e65100;
+            """)
+        elif message_type == "error":
+            self.setStyleSheet(self.styleSheet() + """
+                background-color: #c62828;
+                color: #ffebee;
+                border: 1px solid #b71c1c;
+            """)
+        else:  # info
+            self.setStyleSheet(self.styleSheet() + """
+                background-color: #1565c0;
+                color: #e3f2fd;
+                border: 1px solid #0d47a1;
+            """)
+            
+        self.setText(message)
+
+
+class TooltipCheckBox(QCheckBox):
+    """A custom QCheckBox that shows a tooltip with the full text when hovered.
     
     Args:
-        func: Декорируемая функция или метод.
-        
-    Returns:
-        Обертка вокруг функции, добавляющая логирование вызовов.
+        text (str): The text to display next to the checkbox
+        tooltip (str, optional): The tooltip text to show on hover
+        effect (str, optional): Additional effect information
+        word_type (str, optional): Type of word ('positive' or 'negative') to style accordingly
+        parent (QWidget, optional): Parent widget
     """
-    def wrapper(*args, **kwargs):
-        if logger.level > logging.DEBUG:
-            return func(*args, **kwargs)
-            
-        # Логируем вызов метода
-        logger.debug(
-            "Вызов %s с аргументами: %s, %s",
-            func.__name__,
-            args[1:],  # Пропускаем self
-            kwargs
-        )
+    def __init__(self, text, tooltip="", effect="", word_type="positive", parent=None):
+        super().__init__(text, parent)
+        # Combine tooltip and effect for the tooltip text
+        full_tooltip = tooltip
+        if effect:
+            full_tooltip = f"{tooltip}\n\nEffect: {effect}" if tooltip else f"Effect: {effect}"
+        self.setToolTip(full_tooltip)
         
-        try:
-            # Вызываем оригинальную функцию
-            result = func(*args, **kwargs)
-            
-            # Логируем успешное завершение
-            logger.debug("Завершение %s", func.__name__)
-            return result
-            
-        except Exception as e:
-            # Логируем исключение, если оно возникло
-            logger.exception("Ошибка в методе %s: %s", func.__name__, str(e))
-            raise
-            
-    # Копируем имя и документацию оригинальной функции
-    wrapper.__name__ = func.__name__
-    wrapper.__doc__ = func.__doc__
-    wrapper.__module__ = func.__module__
-    
-    return wrapper
+        # Set styling based on word type
+        if word_type.lower() == "negative":
+            self.setStyleSheet("""
+                QCheckBox {
+                    color: #ff6b6b;
+                    padding: 4px 0;
+                    spacing: 8px;
+                }
+                QCheckBox::indicator:unchecked {
+                    border: 1px solid #ff6b6b;
+                    background: #2d2d2d;
+                    border-radius: 3px;
+                }
+                QCheckBox::indicator:checked {
+                    border: 1px solid #ff6b6b;
+                    background: #ff6b6b;
+                    border-radius: 3px;
+                }
+                QCheckBox:hover {
+                    color: #ff8e8e;
+                }
+            """)
+        else:
+            self.setStyleSheet("""
+                QCheckBox {
+                    color: #e0e0e0;
+                    padding: 4px 0;
+                    spacing: 8px;
+                }
+                QCheckBox::indicator {
+                    width: 16px;
+                    height: 16px;
+                }
+                QCheckBox::indicator:unchecked {
+                    border: 1px solid #4a4a4a;
+                    background: #2d2d2d;
+                    border-radius: 3px;
+                }
+                QCheckBox::indicator:checked {
+                    border: 1px solid #4a9cff;
+                    background: #4a9cff;
+                    border-radius: 3px;
+                }
+                QCheckBox:hover {
+                    color: #ffffff;
+                }
+            """)
+
+
+class StyledTabWidget(QTabWidget):
+    """A custom tab widget with styled tabs."""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setStyleSheet("""
+            QTabWidget::pane {
+                border: 1px solid #3e3e3e;
+                background: #2d2d2d;
+                border-radius: 4px;
+                margin: 1px;
+            }
+            QTabBar::tab {
+                background: #3e3e3e;
+                color: #e0e0e0;
+                padding: 8px 16px;
+                margin-right: 2px;
+                border: 1px solid #3e3e3e;
+                border-bottom: none;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            QTabBar::tab:selected {
+                background: #2d2d2d;
+                border-bottom: 1px solid #2d2d2d;
+                margin-bottom: -1px;
+            }
+            QTabBar::tab:!selected {
+                margin-top: 2px;
+            }
+            QTabBar::tab:hover {
+                background: #4a4a4a;
+            }
+        """)
 
 
 class PromptGenie(QMainWindow):
-    def get_data_dir(self):
-        """Возвращает путь к директории с данными приложения."""
-        base_path = Path()
-        if getattr(sys, 'frozen', False):
-            # Если приложение упаковано (например, в exe)
-            base_path = Path(sys.executable).parent
-        else:
-            # При запуске из исходников
-            base_path = Path(__file__).parent
+    def get_data_dir(self) -> Path:
+        """Get the application data directory."""
+        # Use local directory for now
+        data_dir = Path(__file__).parent / "data"
+        data_dir.mkdir(exist_ok=True)
+        return data_dir
         
-        # Проверяем возможные пути к данным
-        possible_paths = [
-            base_path,                          # Текущая директория
-            base_path / 'data',                 # Поддиректория data
-            base_path.parent / 'data',          # data в родительской директории
-            base_path / 'dist' / 'data',        # Для PyInstaller --onefile
-            base_path.parent / 'dist' / 'data'  # Для PyInstaller --onefile (если запускаем из корня)
-        ]
+    def get_config_path(self) -> Path:
+        """Get the path to the config file."""
+        return self.data_dir / "config.json"
         
-        # Ищем существующую директорию с данными
-        for path in possible_paths:
-            if (path / 'theme_prompts.json').exists() and (path / 'keyword_library.json').exists():
-                logger.debug(f"Найдена директория с данными: {path}")
-                return path
+    def load_config(self) -> dict:
+        """Load the application configuration."""
+        config_path = self.get_config_path()
+        if config_path.exists():
+            try:
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception as e:
+                logger.error(f"Error loading config: {e}")
+        return {}
         
-        # Если не нашли, возвращаем базовый путь и логируем предупреждение
-        logger.warning(f"Не удалось найти директорию с данными. Используется: {base_path}")
-        return base_path
-
+    def save_config(self, config: dict) -> bool:
+        """Save the application configuration."""
+        try:
+            config_path = self.get_config_path()
+            with open(config_path, 'w', encoding='utf-8') as f:
+                json.dump(config, f, indent=4, ensure_ascii=False)
+            return True
+        except Exception as e:
+            logger.error(f"Error saving config: {e}")
+            return False
+    
     def __init__(self):
         super(QMainWindow, self).__init__()
         logger.info("Инициализация приложения PromptGenie")
         
         try:
-            # Инициализация переменных
+            # Initialize variables
             self.themes = []
             self.kw_data = {}
             self.selected_words = {}
             self.data_dir = self.get_data_dir()
+            self.config = self.load_config()
             
-            # Сначала загружаем данные
-            logger.debug("Загрузка данных...")
+            # Load data
+            logger.debug("Loading data...")
             self.load_data()
             
-            # Затем инициализируем UI
+            # Initialize UI
             self.setWindowTitle("PromptGenie 3.0")
             self.setMinimumSize(1280, 720)
             self.setStyleSheet("background:#1e1e1e; color:#e0e0e0; font-family:Segoe UI;")
+            
+            # Initialize UI components
             self._init_ui_components()
             
             logger.info("Приложение успешно инициализировано")
@@ -191,218 +439,53 @@ class PromptGenie(QMainWindow):
         except Exception as e:
             logger.critical("Ошибка при инициализации приложения", exc_info=True)
             raise
+            
+    def load_data(self):
+        """Load theme and keyword data."""
+        try:
+            # Load themes
+            if THEMES_FILE.exists():
+                with open(THEMES_FILE, 'r', encoding='utf-8') as f:
+                    themes_data = json.load(f)
+                    # Access the 'themes' key from the loaded data
+                    self.themes = themes_data.get('themes', [])
+                logger.info(f"Loaded {len(self.themes)} themes from {THEMES_FILE}")
+            else:
+                logger.warning(f"Themes file not found: {THEMES_FILE}")
+                self.themes = []
+                
+            # Load keyword library
+            keyword_file = Path(__file__).parent / "keyword_library.json"
+            if keyword_file.exists():
+                with open(keyword_file, 'r', encoding='utf-8') as f:
+                    keyword_data = json.load(f)
+                    # Access the 'keywords' key from the loaded data
+                    self.kw_data = keyword_data.get('keywords', {})
+                logger.info(f"Loaded keyword library from {keyword_file}")
+            else:
+                logger.warning(f"Keyword library not found: {keyword_file}")
+                self.kw_data = {}
+                
+            # Initialize selected words
+            for category in self.kw_data.keys():
+                self.selected_words[category] = []
+                
+            logger.info("Data loading completed successfully")
+            
+        except Exception as e:
+            logger.error(f"Error loading data: {e}")
+            QMessageBox.critical(
+                self,
+                "Ошибка загрузки данных",
+                f"Не удалось загрузить данные: {str(e)}"
+            )
+            raise
+            raise
     
     def _init_ui_components(self):
         """Инициализация компонентов пользовательского интерфейса."""
         logger.debug("Инициализация компонентов UI")
         self.init_ui()
-
-    def validate_json_schema(self, data: Dict, schema: Dict, file_path: str) -> bool:
-        """Валидация JSON по схеме."""
-        try:
-            from jsonschema import validate, ValidationError
-            validate(instance=data, schema=schema)
-            return True
-        except ValidationError as e:
-            error_msg = f"Ошибка валидации {file_path}: {str(e)}"
-            logger.error(error_msg)
-            QMessageBox.critical(self, "Ошибка валидации", 
-                              f"Ошибка в файле {file_path}:\n{str(e)}\n\n"
-                              "Проверьте структуру файла.")
-            return False
-        except ImportError:
-            logger.warning("Модуль jsonschema не установлен, пропуск валидации схемы")
-            return True
-
-    def safe_json_load(self, file_path: str, default: Any = None, schema: Optional[Dict] = None) -> Any:
-        """Безопасная загрузка JSON с обработкой ошибок.
-        
-        Args:
-            file_path: Путь к файлу JSON (может быть строкой или объектом Path).
-            default: Значение по умолчанию, возвращаемое при ошибке загрузки.
-            schema: Схема для валидации JSON (опционально).
-            
-        Returns:
-            Загруженные данные или значение по умолчанию в случае ошибки.
-        """
-        try:
-            # Преобразуем в Path, если это строка
-            file_path = Path(file_path) if isinstance(file_path, str) else file_path
-            file_path = file_path.resolve()  # Получаем абсолютный путь
-            
-            # Проверяем существование файла
-            if not file_path.exists():
-                error_msg = f"Файл не найден: {file_path}"
-                logger.warning(error_msg)
-                if default is not None:
-                    return default
-                raise FileNotFoundError(error_msg)
-
-            # Читаем и парсим JSON
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    
-                # Валидируем по схеме, если она предоставлена
-                if schema and not self.validate_json_schema(data, schema, str(file_path)):
-                    if default is not None:
-                        return default
-                    return {}
-                    
-                return data
-                
-            except json.JSONDecodeError as e:
-                error_msg = f"Ошибка разбора JSON в файле {file_path}: {str(e)}"
-                logger.error(error_msg)
-                QMessageBox.critical(
-                    self, 
-                    "Ошибка формата", 
-                    f"Ошибка в файле {file_path}:\n{str(e)}\n\n"
-                    "Проверьте правильность формата JSON."
-                )
-                return default if default is not None else {}
-
-        except Exception as e:
-            error_msg = f"Ошибка при загрузке файла {file_path}: {str(e)}"
-            logger.error(error_msg, exc_info=True)
-            QMessageBox.critical(
-                self,
-                "Ошибка загрузки",
-                f"Не удалось загрузить файл {file_path}:\n{str(e)}"
-            )
-            return default if default is not None else {}
-
-    def create_backup(self, file_path: str) -> None:
-        """Создание резервной копии файла.
-        
-        Args:
-            file_path: Путь к файлу, для которого создается резервная копия.
-        """
-        try:
-            from datetime import datetime
-            file_path = Path(file_path)
-            if not file_path.exists():
-                logger.warning(f"Файл для резервного копирования не найден: {file_path}")
-                return
-                
-            # Создаем имя резервной копии с временной меткой
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            backup_path = file_path.parent / f"{file_path.stem}_{timestamp}{file_path.suffix}.bak"
-            
-            # Копируем файл
-            import shutil
-            shutil.copy2(file_path, backup_path)
-            logger.info(f"Создана резервная копия: {backup_path}")
-            
-        except Exception as e:
-            error_msg = f"Не удалось создать резервную копию {file_path}: {str(e)}"
-            logger.error(error_msg, exc_info=True)
-            raise RuntimeError(error_msg) from e
-
-    def save_themes(self) -> bool:
-        """Сохраняет темы в JSON файл.
-        
-        Returns:
-            bool: True если сохранение прошло успешно, иначе False.
-        """
-        try:
-            themes_path = self.data_dir / "theme_prompts.json"
-            # Создаем резервную копию перед сохранением
-            self.create_backup(themes_path)
-            
-            # Подготавливаем данные для сохранения
-            data = {"themes": self.themes}
-            
-            # Сохраняем с отступами для читаемости
-            with open(themes_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-                
-            logger.info(f"Темы успешно сохранены в {themes_path}")
-            self.status_label.show_message("Темы успешно сохранены", "success")
-            return True
-            
-        except Exception as e:
-            error_msg = f"Ошибка при сохранении тем: {str(e)}"
-            logger.error(error_msg, exc_info=True)
-            QMessageBox.critical(
-                self,
-                "Ошибка сохранения",
-                f"Не удалось сохранить темы:\n{str(e)}"
-            )
-            return False
-
-    def load_data(self) -> None:
-        """Загрузка данных из JSON файлов."""
-        logger.info("Начало загрузки данных")
-        
-        # Словарь для быстрого поиска категории по слову
-        self.word_to_category = {}
-        
-        # Схема для валидации keyword_library.json
-        keyword_schema = {
-            "type": "object",
-            "required": ["keywords"],
-            "properties": {
-                "keywords": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "required": ["word", "effect"],
-                            "properties": {
-                                "word": {"type": "string"},
-                                "trans": {"type": ["string", "null"]},
-                                "translate": {"type": ["string", "null"]},
-                                "effect": {"type": "string"},
-                                "type": {"type": "string", "enum": ["positive", "negative"]},
-                                "when": {"type": ["string", "null"]}
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        try:
-            # Формируем пути к файлам
-            themes_path = self.data_dir / "theme_prompts.json"
-            keywords_path = self.data_dir / "keyword_library.json"
-            
-            logger.debug(f"Загрузка тем из {themes_path}")
-            themes_data = self.safe_json_load(str(themes_path), {"themes": []})
-            self.themes = themes_data.get("themes", [])
-            logger.info(f"Загружено {len(self.themes)} тем")
-
-            # Загрузка ключевых слов
-            logger.debug(f"Загрузка ключевых слов из {keywords_path}")
-            kw_data = self.safe_json_load(keywords_path, {"keywords": {}}, keyword_schema)
-            self.kw_data = kw_data.get("keywords", {})
-            
-            # Создаем словарь для быстрого поиска категории по слову
-            for category, words in self.kw_data.items():
-                for word_info in words:
-                    word = word_info.get("word")
-                    if word:
-                        self.word_to_category[word] = category
-            
-            logger.info(f"Загружено {sum(len(v) for v in self.kw_data.values())} ключевых слов в {len(self.kw_data)} категориях")
-            
-        except Exception as e:
-            logger.error(f"Ошибка при загрузке данных: {str(e)}", exc_info=True)
-            raise
-        logger.info(f"Загружено категорий: {len(self.kw_data)}")
-        
-        # Логируем статистику по загруженным данным
-        total_keywords = sum(len(keywords) for keywords in self.kw_data.values())
-        logger.info(f"Загружено {total_keywords} ключевых слов в {len(self.kw_data)} категориях")
-
-        if not self.themes:
-            logger.warning("Список тем пуст или не загружен")
-        if not self.kw_data:
-            logger.warning("Библиотека ключевых слов пуста или не загружена")
-            
-        logger.debug("Загрузка данных завершена")
 
     def init_ui(self):
         """Инициализация главного окна приложения."""
@@ -905,33 +988,89 @@ class PromptGenie(QMainWindow):
         return w
 
     def load_cat(self, row):
-        if row < 0: return
+        if row < 0: 
+            return
+            
+        logger.debug(f"Loading category at row {row}")
         cat_key = list(self.kw_data.keys())[row]
-        items = self.kw_data[cat_key]
-
+        logger.debug(f"Category key: {cat_key}")
+        
+        # Get the list of keyword dictionaries for this category
+        keyword_items = self.kw_data[cat_key]
+        logger.debug(f"Number of items in category: {len(keyword_items) if keyword_items else 0}")
+        
+        # Clear existing items
         for i in reversed(range(self.kw_layout.count())):
             w = self.kw_layout.itemAt(i).widget()
-            if w: w.setParent(None)
-
-        for item in items:
+            if w: 
+                w.setParent(None)
+        
+        # If there are no items, show a message
+        if not keyword_items:
+            label = QLabel("No keywords found in this category.")
+            label.setStyleSheet("color: #888888; font-style: italic;")
+            self.kw_layout.addWidget(label)
+            return
+            
+        # Add new items
+        for item in keyword_items:
+            if not isinstance(item, dict):
+                logger.warning(f"Skipping invalid item in category {cat_key}: {item}")
+                continue
+                
+            word = item.get("word", "")
+            if not word:
+                logger.warning(f"Skipping item with missing 'word' key: {item}")
+                continue
+                
+            logger.debug(f"Adding keyword: {word}")
+            
             cb = TooltipCheckBox(
-                item["word"],
+                word,
                 item.get("translate", ""),
                 item.get("effect", ""),
                 "negative" if "негатив" in cat_key.lower() else "positive"
             )
+            
             cb.stateChanged.connect(self.on_checkbox_changed)
-            if item["word"] in self.selected_words:
-                cb.setChecked(self.selected_words[item["word"]])
+            
+            # Check if this word is in the selected_words dictionary
+            if word in self.selected_words.get(cat_key, []):
+                cb.setChecked(True)
+                
             self.kw_layout.addWidget(cb)
 
         self.update_preview()
 
     def on_checkbox_changed(self, state):
         cb = self.sender()
-        if cb:
-            self.selected_words[cb.text()] = (state == Qt.CheckState.Checked.value)
-            self.update_preview()
+        if not cb:
+            return
+            
+        # Get the current category
+        current_row = self.cat_list.currentRow()
+        if current_row < 0:
+            return
+            
+        cat_key = list(self.kw_data.keys())[current_row]
+        
+        # Initialize the category in selected_words if it doesn't exist
+        if cat_key not in self.selected_words:
+            self.selected_words[cat_key] = []
+            
+        # Get the word from the checkbox text
+        word = cb.text()
+        
+        # Update the selected words list for this category
+        if state == Qt.CheckState.Checked.value:
+            if word not in self.selected_words[cat_key]:
+                self.selected_words[cat_key].append(word)
+        else:
+            if word in self.selected_words[cat_key]:
+                self.selected_words[cat_key].remove(word)
+        
+        logger.debug(f"Updated selected words for {cat_key}: {self.selected_words[cat_key]}")
+        self.update_preview()
 
     def filter_kw(self, text):
         text = text.lower()
@@ -1029,20 +1168,17 @@ def main():
         # Enable high DPI scaling
         if hasattr(Qt, 'AA_EnableHighDpiScaling'):
             QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
-        if hasattr(Qt, 'AA_UseHighDpiPixmaps'):
             QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
         
-        # Инициализация приложения
         app = QApplication(sys.argv)
-        app.setStyle('Fusion')  # Use Fusion style for consistent look
         
         # Set application information
         app.setApplicationName("PromptGenie")
-        app.setApplicationVersion("3.0")
+        app.setApplicationVersion("1.0.0")
         app.setOrganizationName("PromptGenie")
         
         # Create and show the main window
-        logger.info("Создание главного окна")
+        logger.info("Application initialized")
         win = PromptGenie()
         
         # Ensure the window is properly sized and centered
@@ -1060,22 +1196,22 @@ def main():
         # Process events to ensure the window is fully initialized
         app.processEvents()
         
-        logger.info("Приложение успешно запущено")
+        logger.info("Application started successfully")
         
         # Start the event loop
         return app.exec()
         
     except Exception as e:
-        logger.critical("Критическая ошибка при запуске приложения", exc_info=True)
+        logger.critical("Critical error while starting the application", exc_info=True)
         
-        # Создаем простое окно для отображения ошибки
+        # Create a simple error dialog
         error_box = QMessageBox()
         error_box.setIcon(QMessageBox.Icon.Critical)
-        error_box.setWindowTitle("Ошибка запуска")
-        error_box.setText("Не удалось запустить приложение")
+        error_box.setWindowTitle("Startup Error")
+        error_box.setText("Failed to start the application")
         error_box.setInformativeText(
-            f"Ошибка: {str(e)}\n\n"
-            "Проверьте логи для получения дополнительной информации."
+            f"Error: {str(e)}\n\n"
+            "Please check the logs for more information."
         )
         error_box.exec()
         
