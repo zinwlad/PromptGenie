@@ -822,6 +822,20 @@
       "title_ru": "Герой из мира Roblox",
       "description_ru": "Ребёнок-геймер выглядит как живой персонаж Roblox — ровные пропорции, естественная поза, яркое окружение из кубических построек.",
       "prompt_combined_en": "ultra-realistic full-body portrait of a child hero inspired by Roblox universe, correct body-to-head ratio, natural pose, cinematic lighting, detailed hoodie and sneakers with Roblox-style colors, realistic background with square buildings and bright sky, 8k photo-realistic detail, perfect anatomy, natural proportions, no distortion ||| cartoon, 3D render, deformed face, big head, enlarged eyes, short body, stretched limbs, unreal proportions, anime, low detail, blur, text, watermark, worst quality, ugly, bad anatomy, over-smoothed skin, distorted face, extra fingers, changed pose"
+    },
+    {
+      "category": "Фото",
+      "title_ru": "Превращаем ваше фото или вашего питомца в раскраску",
+      "description_ru": "Преобразуй загруженную фотографию в простую детскую страницу-раскраску, подходящую для детей младшего школьного возраста. Создай черно-белый контурный рисунок сцены с чистыми линиями, упрощенными формами, без теней, текстур и градиентов. Фон должен быть полностью белым. Контур должен повторять композицию оригинала, но упрощенно и дружелюбно.",
+      "prompt_combined_en": "Преобразуй загруженную фотографию в простую детскую страницу-раскраску, подходящую для детей младшего школьного возраста. Создай черно-белый контурный рисунок сцены с чистыми линиями, упрощенными формами, без теней, текстур и градиентов. Фон должен быть полностью белым. Контур должен повторять композицию оригинала, но упрощенно и дружелюбно.",
+      "image_path": "photo_2026-01-05_10-16-18.jpg"
+    },
+    {
+      "category": "Групповой",
+      "title_ru": "Создаём идеальное семейное новогоднее фото с настоящим Дедом Морозом",
+      "description_ru": "Этот промпт — инструкция для ИИ, как объединить фото ваших детей с образом Деда Мороза в уютной праздничной обстановке",
+      "prompt_combined_en": "Photorealistic family holiday portrait: Traditional Russian Ded Moroz centered in frame, kind warm welcoming expression, long thick white beard, round glasses, wearing classic red fur-trimmed coat, matching fur hat, white gloves. Two children -- exactly preserving faces, hairstyles, body proportions, clothing, and appearance from provided reference photos, no changes or stylization -- sitting comfortably on Ded Moroz's lap with natural scale, anatomy, and perspective. Ded Moroz gently embraces both children by the shoulders, creating tender caring interaction. Vintage cozy Christmas interior background: richly decorated tree with garlands, ornaments, and warm lights on the right; table lamp with cream lampshade emitting soft glow; decorative wreaths and garlands; dark rich tones enhancing warmth and magic. Soft warm even lighting, no harsh shadows, sharp focus on subjects, subtle natural bokeh blur on background. Ultra-high detail, realistic textures, professional photography, festive magical atmosphere, 8K",
+      "image_path": "photo_2026-01-05_10-31-36.jpg"
     }
   ]
 }

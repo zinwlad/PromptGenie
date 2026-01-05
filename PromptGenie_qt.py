@@ -3,6 +3,7 @@ import sys
 import json
 import os
 import logging
+import shutil
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Union
 
@@ -382,6 +383,12 @@ class PromptGenie(QMainWindow):
         # Use local directory for now
         data_dir = Path(__file__).parent / "data"
         data_dir.mkdir(exist_ok=True)
+
+        # Папка для изображений шаблонов
+        images_dir = data_dir / "template_images"
+        images_dir.mkdir(exist_ok=True)
+        self.images_dir = images_dir
+
         return data_dir
         
     def get_config_path(self) -> Path:
@@ -409,6 +416,33 @@ class PromptGenie(QMainWindow):
         except Exception as e:
             logger.error(f"Error saving config: {e}")
             return False
+
+    def save_themes(self) -> bool:
+        """Сохраняет текущие шаблоны в файл THEMES_FILE."""
+        try:
+            data = {"themes": self.themes}
+            with open(THEMES_FILE, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            logger.info(f"Saved {len(self.themes)} themes to {THEMES_FILE}")
+            return True
+        except Exception as e:
+            logger.error(f"Error saving themes: {e}")
+            QMessageBox.critical(
+                self,
+                "Ошибка сохранения",
+                f"Не удалось сохранить шаблоны: {str(e)}"
+            )
+            return False
+
+    def validate_template_data(self, title: str, prompt: str) -> bool:
+        """Проверяет корректность введенных данных шаблона."""
+        if not title.strip():
+            QMessageBox.warning(self, "Ошибка", "Пожалуйста, укажите название шаблона")
+            return False
+        if not prompt.strip():
+            QMessageBox.warning(self, "Ошибка", "Пожалуйста, введите текст промпта")
+            return False
+        return True
     
     def __init__(self):
         super(QMainWindow, self).__init__()
@@ -449,12 +483,12 @@ class PromptGenie(QMainWindow):
                     themes_data = json.load(f)
                     # Access the 'themes' key from the loaded data
                     self.themes = themes_data.get('themes', [])
+
+                # Гарантируем наличие поля image_path у каждого шаблона
+                for theme in self.themes:
+                    if "image_path" not in theme:
+                        theme["image_path"] = ""
                 logger.info(f"Loaded {len(self.themes)} themes from {THEMES_FILE}")
-            else:
-                logger.warning(f"Themes file not found: {THEMES_FILE}")
-                self.themes = []
-                
-            # Load keyword library
             keyword_file = Path(__file__).parent / "keyword_library.json"
             if keyword_file.exists():
                 with open(keyword_file, 'r', encoding='utf-8') as f:
@@ -521,90 +555,94 @@ class PromptGenie(QMainWindow):
             tabs.setCurrentIndex(0)
             
             logger.debug("Главное окно успешно инициализировано")
-            
         except Exception as e:
             logger.error(f"Ошибка при инициализации интерфейса: {str(e)}", exc_info=True)
             raise
-
+            
     def templates_tab(self):
         """Создает и возвращает вкладку с шаблонами."""
         try:
             logger.debug("Инициализация вкладки шаблонов")
-            
+
             # Основной виджет вкладки
             w = QWidget()
             layout = QHBoxLayout(w)
             layout.setSpacing(15)
             layout.setContentsMargins(5, 5, 5, 5)
-            
+
             # Левая панель - список шаблонов
             left_panel = QWidget()
             left_layout = QVBoxLayout(left_panel)
             left_layout.setSpacing(10)
-            
+
             # Поле поиска
             self.search_edit = SearchBox("Поиск по названию или описанию...")
             self.search_edit.textChanged.connect(self.filter_templates)
             left_layout.addWidget(self.search_edit)
-            
+
             # Выбор категории
             self.category_combo = QComboBox()
             self.category_combo.addItem("Все категории", "")
             self.category_combo.currentIndexChanged.connect(self.filter_templates)
             left_layout.addWidget(self.category_combo)
-            
+
             # Список шаблонов
             self.template_list = QListWidget()
             self.template_list.itemClicked.connect(self.show_temp)
-            left_layout.addWidget(self.template_list, 1)  # Растягиваем на все доступное пространство
-            
+            left_layout.addWidget(self.template_list, 1)
+
             # Кнопки управления
             btn_frame = QFrame()
             btn_layout = QHBoxLayout(btn_frame)
-            
+
             self.btn_add = GradientButton("Добавить", "#007acc")
             self.btn_add.clicked.connect(lambda: self.open_template_dialog())
-            
+
             self.btn_edit = GradientButton("Изменить", "#ff9800")
             self.btn_edit.clicked.connect(self.edit_current_template)
             self.btn_edit.setEnabled(False)
-            
+
             self.btn_delete = GradientButton("Удалить", "#f44336")
             self.btn_delete.clicked.connect(self.delete_current_template)
             self.btn_delete.setEnabled(False)
-            
+
             self.btn_copy = GradientButton("Копировать", "#4caf50")
             self.btn_copy.clicked.connect(self.copy_template_prompt)
             self.btn_copy.setEnabled(False)
-            
+
             btn_layout.addWidget(self.btn_add)
             btn_layout.addWidget(self.btn_edit)
             btn_layout.addWidget(self.btn_delete)
             btn_layout.addWidget(self.btn_copy)
-            
+
             left_layout.addWidget(btn_frame)
-            
-            # Правая панель - просмотр шаблона
+
+            # Правая панель - предпросмотр шаблона
             right_panel = QWidget()
             right_layout = QVBoxLayout(right_panel)
             right_layout.setSpacing(10)
-            
+
             # Категория шаблона
             self.temp_category = QLabel()
             self.temp_category.setStyleSheet("font-size: 14px; color: #4fc3f7;")
             right_layout.addWidget(self.temp_category)
-            
+
             # Заголовок шаблона
             self.temp_title = QLabel()
             self.temp_title.setStyleSheet("font-size: 16px; font-weight: bold; margin-bottom: 10px;")
             right_layout.addWidget(self.temp_title)
-            
-            # Описание шаблона
+
+            # Описание + промпт и картинка справа
             self.temp_desc = TemplateDescriptionEdit(self)
             self.temp_desc.setReadOnly(True)
-            right_layout.addWidget(self.temp_desc)
-            
-            # Просмотр шаблона
+
+            content_row = QHBoxLayout()
+            content_row.setSpacing(10)
+
+            text_col = QVBoxLayout()
+            text_col.setSpacing(8)
+            text_col.addWidget(self.temp_desc)
+
             self.temp_preview = TemplatePreviewEdit(self)
             self.temp_preview.setReadOnly(True)
             self.temp_preview.setStyleSheet("""
@@ -617,46 +655,37 @@ class PromptGenie(QMainWindow):
                     font-size: 12px;
                 }
             """)
-            right_layout.addWidget(self.temp_preview, 1)  # Растягиваем на все доступное пространство
-            
-            # Кнопка копирования
+            text_col.addWidget(self.temp_preview, 1)
+
+            self.temp_image = QLabel()
+            self.temp_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.temp_image.setMinimumSize(260, 220)
+            self.temp_image.setStyleSheet("background:#151515; border:1px solid #333; border-radius:4px;")
+
+            content_row.addLayout(text_col, 2)
+            content_row.addWidget(self.temp_image, 1)
+            right_layout.addLayout(content_row, 1)
+
+            # Кнопка копирования промпта
             self.copy_btn = GradientButton("Копировать промпт", "#4caf50")
             self.copy_btn.clicked.connect(self.copy_template_prompt)
             right_layout.addWidget(self.copy_btn)
-            
+
             # Добавляем панели в основной макет
-            layout.addWidget(left_panel, 1)
-            layout.addWidget(right_panel, 2)
-            
-            # Загружаем список шаблонов
+            layout = self.centralWidget().layout() if isinstance(self.centralWidget().layout(), QVBoxLayout) else None
+            # Но для вкладки используем локальный layout
+            layout_tab = w.layout()  # QHBoxLayout(w)
+            layout_tab.addWidget(left_panel, 1)
+            layout_tab.addWidget(right_panel, 2)
+
+            # Загружаем список шаблонов после создания всех виджетов
             self.refresh_template_list()
-            
+
             logger.debug("Вкладка шаблонов успешно инициализирована")
             return w
-            
         except Exception as e:
             logger.error(f"Ошибка при инициализации вкладки шаблонов: {str(e)}", exc_info=True)
             raise
-
-    def clear_template_preview(self):
-        """Очищает предпросмотр шаблона."""
-        # Обработка старых имен атрибутов
-        if hasattr(self, 'temp_preview'):
-            self.temp_preview.clear()
-        if hasattr(self, 'temp_desc'):
-            self.temp_desc.clear()
-        if hasattr(self, 'temp_category'):
-            self.temp_category.clear()
-        if hasattr(self, 'temp_title'):
-            self.temp_title.clear()
-            
-        # Обработка новых имен атрибутов
-        if hasattr(self, 'template_preview'):
-            self.template_preview.clear()
-        if hasattr(self, 'template_description'):
-            self.template_description.clear()
-        if hasattr(self, 'template_variables_list'):
-            self.template_variables_list.clear()
 
     def refresh_template_list(self):
         """Обновляет список шаблонов и категорий."""
@@ -745,9 +774,6 @@ class PromptGenie(QMainWindow):
             # Копируем в буфер обмена
             clipboard = QApplication.clipboard()
             clipboard.setText(prompt_text)
-            
-            # Показываем уведомление
-            QMessageBox.information(self, "Успех", "Промпт скопирован в буфер обмена")
             
         except Exception as e:
             logger.error(f"Ошибка при копировании промпта: {str(e)}", exc_info=True)
@@ -859,13 +885,61 @@ class PromptGenie(QMainWindow):
         prompt_edit = QTextEdit()
         prompt_edit.setPlaceholderText("Промпт (можно использовать ||| для разделения позитивных и негативных подсказок)")
         form.addRow("Промпт:", prompt_edit)
-        
-        # Заполняем поля, если это редактирование
+
+        image_path = ""
+        image_path_edit = QLineEdit()
+        image_path_edit.setReadOnly(True)
+        btn_image_choose = QPushButton("Выбрать...")
+        btn_image_clear = QPushButton("Очистить")
+
+        image_row = QHBoxLayout()
+        image_row.addWidget(image_path_edit, 1)
+        image_row.addWidget(btn_image_choose)
+        image_row.addWidget(btn_image_clear)
+        form.addRow("Изображение:", image_row)
+
         if theme:
             category_edit.setCurrentText(theme.get("category", ""))
             title_edit.setText(theme.get("title_ru", ""))
             desc_edit.setText(theme.get("description_ru", ""))
             prompt_edit.setText(theme.get("prompt_combined_en", ""))
+            image_path = theme.get("image_path", "") or ""
+            if image_path:
+                image_path_edit.setText(image_path)
+
+        def choose_image():
+            nonlocal image_path
+            file_path, _ = QFileDialog.getOpenFileName(
+                self,
+                "Выбрать изображение",
+                "",
+                "Изображения (*.png *.jpg *.jpeg *.bmp *.gif)"
+            )
+            if not file_path:
+                return
+            try:
+                base_name = os.path.basename(file_path)
+                target_name = base_name
+                counter = 1
+                while (self.images_dir / target_name).exists():
+                    name, ext = os.path.splitext(base_name)
+                    target_name = f"{name}_{counter}{ext}"
+                    counter += 1
+                target_path = self.images_dir / target_name
+                shutil.copy(file_path, target_path)
+                image_path = target_name
+                image_path_edit.setText(image_path)
+            except Exception as e:
+                logger.error(f"Error copying image file: {e}")
+                QMessageBox.critical(self, "Ошибка", f"Не удалось скопировать изображение:\n{e}")
+
+        def clear_image():
+            nonlocal image_path
+            image_path = ""
+            image_path_edit.clear()
+
+        btn_image_choose.clicked.connect(choose_image)
+        btn_image_clear.clicked.connect(clear_image)
         
         layout.addLayout(form)
         
@@ -881,7 +955,8 @@ class PromptGenie(QMainWindow):
                 "category": category_edit.currentText().strip(),
                 "title_ru": title_edit.text().strip(),
                 "description_ru": desc_edit.toPlainText().strip(),
-                "prompt_combined_en": prompt_edit.toPlainText().strip()
+                "prompt_combined_en": prompt_edit.toPlainText().strip(),
+                "image_path": image_path
             }
             
             # Валидация
@@ -912,6 +987,23 @@ class PromptGenie(QMainWindow):
         self.temp_title.setText(theme["title_ru"])
         self.temp_desc.setText(theme["description_ru"])
         self.temp_preview.setText(theme["prompt_combined_en"])
+
+        # Изображение шаблона
+        if hasattr(self, "temp_image"):
+            self.temp_image.clear()
+            image_name = theme.get("image_path") or ""
+            if image_name:
+                image_file = self.images_dir / image_name
+                if image_file.exists():
+                    pix = QPixmap(str(image_file))
+                    if not pix.isNull():
+                        scaled = pix.scaled(
+                            self.temp_image.width() if self.temp_image.width() > 0 else 400,
+                            self.temp_image.height() if self.temp_image.height() > 0 else 250,
+                            Qt.AspectRatioMode.KeepAspectRatio,
+                            Qt.TransformationMode.SmoothTransformation,
+                        )
+                        self.temp_image.setPixmap(scaled)
         
         # Активируем кнопки
         if hasattr(self, 'btn_edit'):
